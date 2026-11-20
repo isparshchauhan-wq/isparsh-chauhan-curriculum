@@ -8,7 +8,7 @@ Usage:
 Exit code 0 = no FAIL. Prints one line per finding: FAIL (must fix) or WARN (look at it).
 It checks structure, numbers and wording rules only. It cannot judge accuracy; the verifier does that.
 """
-import os, re, sys
+import json, os, re, sys
 
 BANNED = [  # (label, regex, apply_to_code)
     ("synthetic", r"(?i)\bsynthetic\b"),
@@ -145,16 +145,23 @@ def main(argv):
     agenda_txt = ""
     if pos[0] and pos[1]:
         agenda_txt = "\n".join(lines[pos[0]:pos[1] - 1])
-    if "los" in opt:
-        for lo in [x.strip() for x in opt["los"].split(";") if x.strip()]:
-            agenda_los = []
-            for row in agenda_txt.splitlines():
-                cells = row.split("|")
-                if len(cells) >= 5 and cells[1].strip() in ("1", "2", "3", "4"):
-                    agenda_los.extend(x.strip() for x in re.split(r"<br\s*/?>", cells[3]))
-            c = agenda_los.count(lo)
-            if c != 1:
-                fail(f"LO not verbatim exactly once in the Agenda ({c} times): {lo[:70]}")
+    if "los" in opt or "los-json" in opt:
+        try:
+            expected = json.loads(opt["los-json"]) if "los-json" in opt else opt["los"].split(";")
+            if not isinstance(expected, list) or any(not isinstance(lo, str) for lo in expected):
+                raise ValueError()
+        except ValueError:
+            print("FAIL --los-json expects a JSON array of strings")
+            return 1
+        agenda_los = []
+        for row in agenda_txt.splitlines():
+            cells = re.split(r"(?<!\\)\|", row)
+            if len(cells) >= 5 and cells[1].strip() in ("1", "2", "3", "4"):
+                agenda_los.extend(x.strip().replace(r"\|", "|") for x in re.split(r"<br\s*/?>", cells[3]))
+        for lo in [lo.strip() for lo in expected if lo.strip()]:
+            count = agenda_los.count(lo)
+            if count != 1:
+                fail(f"LO not verbatim exactly once in the Agenda ({count} times): {lo[:70]}")
 
     # quizzes
     qpos = [n for n, ln in prose if re.match(r"^###\s.*Quiz \d", ln)]

@@ -1,6 +1,6 @@
 # Lecture Script Guidelines (Format v2, frozen)
 
-A lecture script is the mentor's single document for a 120-minute session. It reads top to bottom as one story, in one Why, What, How structure.
+A lecture script is the mentor's single document for a 90- or 120-minute session. It reads top to bottom as one story, in one Why, What, How structure.
 
 ## 1. Non-negotiables
 1. **Pedagogy order is fixed.** Agenda, Scenario, Problem Statement (Why), What We Will Use (What), How with Topic 1 to 4 (How), Closing, Announcements (only if Yes), Launch the Feedback Poll.
@@ -9,7 +9,7 @@ A lecture script is the mentor's single document for a 120-minute session. It re
 4. **LOs are verbatim** in the Agenda, in teaching order, each appearing once.
 
 ## 2. Structure
-- **Agenda:** table of four Topics (Topic / What we do / Learning objectives covered / Minutes) and a Closing row. Total is 120. One Instructor Note on pacing.
+- **Agenda:** table of four Topics (Topic / What we do / Learning objectives covered / Minutes) and a Closing row. Total matches the source duration. One Instructor Note on pacing.
 - **Scenario:** a famous Indian company as framing only. The layout varies per script. Instructor Note: the data is invented, no claim about the company.
 - **Problem Statement:** a short story of a mistake with its consequence, one purple question, a poll Instructor Note.
 - **What We Will Use:** once, short. SQL or tool topics: one intro line and a toolkit table. Maths topics: a terms table and key formulas.
@@ -55,5 +55,5 @@ Resolve the destination from `curriculum-index.json`, using the exact batch, mod
 Save `lecture-script.md` in that existing lecture directory, with `images/` and `data/` beside it. Never create a dated root folder.
 Use `lecture/tools/curriculum_context.py` with the repository index or a supplied CSV. Only explicit delivery/coverage status can establish completed material; `ready` describes an artifact and does not mean taught.
 When status is missing, report earlier sessions as scheduled/unconfirmed and do not claim learners completed them.
-This pack's pacing is 120 minutes. If an authoritative session duration differs, resolve the pacing decision with the user before authoring.
+Use the indexed 90- or 120-minute duration. If the source duration is unknown or unsupported, confirm the duration before authoring.
 The source specifies four topics and normally one or two LOs per topic. For fewer than four LOs, or conflicting grouping rules, resolve an explicit coverage plan rather than inventing or duplicating verbatim Agenda LOs.

@@ -10,7 +10,7 @@ The parent owns curriculum-index status updates and commits.
 ## Purpose
 
 Given the inputs below, write one complete `lecture-script.md` and save it, with its `images/` and `data/`, to `output_directory`.
-The script is the mentor's single document for a 120-minute lecture. Accuracy is 100%.
+The script is the mentor's single document for a lecture with its indexed duration. Accuracy is 100%.
 
 ---
 
@@ -65,7 +65,7 @@ Read ALL of these in full before writing a line:
 
 ### Step 4: Frame the LOs into four topics
 
-- Follow `lecture/playbook.md` section 2: group 1 or 2 LOs per topic in teaching order, choose deep and light LOs, set minutes (Closing included) to total 120.
+- Follow `lecture/playbook.md` section 2: group 1 or 2 LOs per topic in teaching order, choose deep and light LOs, set minutes (Closing included) to match the source duration.
 - Name the parts "Topic 1" to "Topic 4". Never "Step".
 - Show depth by minutes and by the number of "Extending it" variations only.
 
@@ -81,7 +81,7 @@ Read ALL of these in full before writing a line:
 
 Follow `lecture/template.md` exactly:
 
-1. Title and Agenda: table of four Topics with verbatim LOs and minutes, Closing row, Total 120, one pacing Instructor Note.
+1. Title and Agenda: table of four Topics with verbatim LOs and minutes, Closing row, source-duration total, one pacing Instructor Note.
 2. Scenario (varied layout) and its Instructor Note.
 3. Problem Statement with one purple question and a poll Instructor Note.
 4. What We Will Use, once and short.

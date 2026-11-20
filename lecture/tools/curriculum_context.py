@@ -4,10 +4,12 @@ import argparse,csv,difflib,json,re,sys
 ALIASES={
  'title':['session title','session name','session_name','title','lecture title','lecture'],
  'topics':['topics covered','topics','subtopics','concepts','topic','description'],
- 'objectives':['learning objectives','learning objective','lo_statement','los','objectives','objective'],
- 'module':['module','module name','module number','module_name','module_id'],
+ 'objectives':['learning_objectives','learning objectives','learning objective','lo_statement','los','objectives','objective'],
+ 'module':['module','module name','module number','module_name'],
+ 'module_id':['module_id','module code','module_code'],
  'session':['session','session number','session no','session_no','source_session','#'],
- 'date':['date','session date'],
+ 'date':['date','session date','scheduled_date'],
+ 'duration_minutes':['duration_minutes','duration minutes'],
  'status':['delivery status','delivery_status','coverage status','status','state'],
  'batch':['batch','batch id','batch_id']}
 DONE_WORDS={'done','completed','complete','covered','delivered','yes','taught'}
@@ -44,7 +46,7 @@ def read_index(path,batch):
  with open(path,encoding='utf-8') as f: data=json.load(f)
  matches=[b for b in data['batches'] if b['batch']==batch]
  if len(matches)!=1: raise ValueError('Unknown or ambiguous batch')
- return [{'batch':batch,'title':s['title'],'session':str(s['source_session']),'module':m['title'],'module_id':m['module_id'],'topics':s.get('topics',[]),'objectives':s.get('learning_objectives',[]),'status':s.get('delivery_status',''),'path':s['path']} for m in matches[0]['modules'] for s in m['sessions']]
+ return [{'batch':batch,'title':s['title'],'session':str(s['source_session']),'module':m['title'],'module_id':m['module_id'],'topics':s.get('topics',[]),'objectives':s.get('learning_objectives',[]),'status':s.get('delivery_status',''),'path':s['path'],**{key:s.get(key) for key in ('scheduled_date','duration_minutes','source','authoring_notes','curriculum_review_required','supplemental_learning_objectives','supplemental_objectives_source')}} for m in matches[0]['modules'] for s in m['sessions']]
 
 def context(rows,idx,last=8):
  if last<0: raise ValueError('--last must be nonnegative')

@@ -5,13 +5,18 @@
 - Source session: 27.1
 - Status: scaffold — content not yet authored
 
-This file reserves the agreed location for the lecture script. It is not a completed teaching script.
+This file reserves the agreed location for the session teaching script. It is not completed teaching material.
+
+Source objectives, topics, schedule, and authoring caveats are recorded in [the batch curriculum](../../curriculum.md). Read that reference before authoring.
 
 Use [the shared lecture-script template](../../../templates/lecture-script-template.md) when preparing this session.
 
 ## Learning objectives
 
-Pending source-aligned authoring.
+- Explain what an AI agent is and how it differs from a single LLM call
+- Describe the components of an agent: planning, reasoning, tools, and memory
+- Recognise tasks that suit an agent versus a single prompt
+- Survey LangChain and CrewAI as agent frameworks at a concepts level
 
 ## Teaching sequence and instructor notes
 

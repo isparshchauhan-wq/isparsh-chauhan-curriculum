@@ -53,6 +53,8 @@ Their recorded outputs are not evidence of a fresh code run.
 
 ## Source conflicts to resolve before authoring
 
+The index and context helper now include source objectives, source durations, schedules, and authoring caveats for all three batches. BITSoM tracker checkbox values are recorded separately and do not establish delivery.
+
 The supplied format is fixed at 120 minutes. The BITSoM calendar includes 90-minute sessions and AIML contains shorter masterclasses. Do not silently stretch those sessions; agree on pacing before creating their scripts.
 The source says four topics, normally one or two LOs per topic, and each verbatim Agenda LO once. Its fewer-than-four-LO advice is ambiguous. Obtain an explicit coverage plan in that case rather than inventing or duplicating objectives.
 Treat the source's numerical confidence/accuracy language as a quality requirement, not a measurable guarantee from the checker.

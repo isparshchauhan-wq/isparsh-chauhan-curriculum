@@ -5,13 +5,15 @@
 - Source session: 52
 - Status: scaffold — content not yet authored
 
-This file reserves the agreed location for the lecture script. It is not a completed teaching script.
+This file reserves the agreed location for the session teaching script. It is not completed teaching material.
+
+Source objectives, topics, schedule, and authoring caveats are recorded in [the batch curriculum](../../curriculum.md). Read that reference before authoring.
 
 Use [the shared lecture-script template](../../../templates/lecture-script-template.md) when preparing this session.
 
 ## Learning objectives
 
-Pending source-aligned authoring.
+Pending a source-aligned project brief.
 
 ## Teaching sequence and instructor notes
 

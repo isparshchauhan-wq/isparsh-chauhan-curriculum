@@ -63,7 +63,7 @@ Before changing a rule to make a document pass, check for a real rule conflict a
 ## Current limits
 
 The full Codex client was not available as a command-line executable in the setup environment. Configuration, paths, and scripts can be checked here; native role discovery and a full authored pre-read still need a run inside a checkout opened in a supported Codex client.
-DSAI coverage remains partial as documented in [SOURCES.md](../SOURCES.md).
+DSAI now includes the full 56-session syllabus. Resolve objectives, topics, source dates/durations and authoring caveats through the shared index. See [SOURCES.md](../SOURCES.md) for BITSoM title/objective conflicts and unspecified capstone details.
 
 ## Platform references
 

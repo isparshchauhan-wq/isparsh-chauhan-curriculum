@@ -5,13 +5,19 @@
 - Source session: 14.3
 - Status: scaffold — content not yet authored
 
-This file reserves the agreed location for the session pre-read. It is not a completed pre-read.
+This file reserves the agreed location for the session pre-read. It is not completed teaching material.
+
+Source objectives, topics, schedule, and authoring caveats are recorded in [the batch curriculum](../../curriculum.md). Read that reference before authoring.
 
 Use [the shared pre-read template](../../../templates/pre-read-template.md) when preparing this session.
 
 ## Learning objectives
 
-Pending source-aligned authoring.
+- Summarise a dataset with measures of central tendency: mean, median, and mode
+- Measure spread with range, variance, standard deviation, and IQR
+- Read a distribution: skew, outliers, and what they mean for analysis
+- Choose the right summary statistic for a business question
+- Connect these summaries to the visual patterns seen in the EDA module
 
 ## Learning journey
 

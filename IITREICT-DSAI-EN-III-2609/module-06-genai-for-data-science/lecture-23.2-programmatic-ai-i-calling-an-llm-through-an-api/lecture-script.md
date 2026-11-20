@@ -1,0 +1,34 @@
+# Programmatic AI I: Calling an LLM through an API — Lecture script
+
+- Batch: IITREICT-DSAI-EN-III-2609
+- Module: 06 — GenAI for Data Science
+- Source session: 23.2
+- Status: scaffold — content not yet authored
+
+This file reserves the agreed location for the session teaching script. It is not completed teaching material.
+
+Source objectives, topics, schedule, and authoring caveats are recorded in [the batch curriculum](../../curriculum.md). Read that reference before authoring.
+
+Use [the shared lecture-script template](../../../templates/lecture-script-template.md) when preparing this session.
+
+## Learning objectives
+
+- Explain what an API is, in plain terms
+- Make a simple API call to an LLM such as OpenAI or Claude from Python Pass a prompt and read the response in code
+- Recognise when an API beats a chat interface
+
+## Teaching sequence and instructor notes
+
+Pending.
+
+## Demonstrations and expected outputs
+
+Pending.
+
+## Practice and checks for understanding
+
+Pending.
+
+## Limitations and next steps
+
+Pending.

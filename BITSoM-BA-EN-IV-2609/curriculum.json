@@ -1,0 +1,2836 @@
+{
+  "batch": "BITSoM-BA-EN-IV-2609",
+  "coverage": "55 session scaffolds: LO tracker sessions 1–46 plus calendar capstone sessions 47–55.",
+  "source": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+  "modules": [
+    {
+      "module_id": "01a",
+      "title": "Foundations of Business Analytics & Data Science",
+      "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science",
+      "title_status": "source-aligned",
+      "sessions": [
+        {
+          "source_session": "1",
+          "title": "Introduction to Business Analytics & Problem Framing",
+          "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science/lecture-01-introduction-to-business-analytics-and-problem-framing",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Overview of business analytics domain",
+            "Importance of framing problems correctly",
+            "Examples of business questions",
+            "Methodology for defining problem scope and success metrics"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "1.1",
+              "page": 1,
+              "text": "Overview of business analytics domain",
+              "covered": false
+            },
+            {
+              "id": "1.2",
+              "page": 1,
+              "text": "Importance of framing problems correctly",
+              "covered": false
+            },
+            {
+              "id": "1.3",
+              "page": 1,
+              "text": "Examples of business questions",
+              "covered": false
+            },
+            {
+              "id": "1.4",
+              "page": 1,
+              "text": "Methodology for defining problem scope and success metrics",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-10-03",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              1
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "2",
+          "title": "Understanding Data Distributions",
+          "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science/lecture-02-understanding-data-distributions",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Understanding KPIs and their role",
+            "Characteristics of good KPIs",
+            "Linking KPIs to business objectives",
+            "Interactive exercise selecting KPIs for a sample scenario"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "2.1",
+              "page": 1,
+              "text": "Understanding KPIs and their role",
+              "covered": false
+            },
+            {
+              "id": "2.2",
+              "page": 1,
+              "text": "Characteristics of good KPIs",
+              "covered": false
+            },
+            {
+              "id": "2.3",
+              "page": 1,
+              "text": "Linking KPIs to business objectives",
+              "covered": false
+            },
+            {
+              "id": "2.4",
+              "page": 1,
+              "text": "Interactive exercise selecting KPIs for a sample scenario",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-10-07",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              1
+            ]
+          },
+          "curriculum_review_required": true,
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "3",
+          "title": "Hypothesis Testing Fundamentals",
+          "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science/lecture-03-hypothesis-testing-fundamentals",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Excel basics for analytics (formulas, references)",
+            "Building a simple financial or sales model",
+            "What-if analysis",
+            "Scenario planning using Excel"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "3.1",
+              "page": 1,
+              "text": "Excel basics for analytics (formulas, references)",
+              "covered": false
+            },
+            {
+              "id": "3.2",
+              "page": 1,
+              "text": "Building a simple financial or sales model",
+              "covered": false
+            },
+            {
+              "id": "3.3",
+              "page": 1,
+              "text": "What-if analysis",
+              "covered": false
+            },
+            {
+              "id": "3.4",
+              "page": 1,
+              "text": "Scenario planning using Excel",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-10-10",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              1
+            ]
+          },
+          "curriculum_review_required": true,
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "4",
+          "title": "Designing A/B Tests and Experiments",
+          "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science/lecture-04-designing-a-b-tests-and-experiments",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Using Excel to calculate mean, median, variance",
+            "Introduction to distributions",
+            "Summarizing data sets with pivot tables",
+            "Interpreting statistical results in a business context"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "4.1",
+              "page": 1,
+              "text": "Using Excel to calculate mean, median, variance",
+              "covered": false
+            },
+            {
+              "id": "4.2",
+              "page": 1,
+              "text": "Introduction to distributions",
+              "covered": false
+            },
+            {
+              "id": "4.3",
+              "page": 1,
+              "text": "Summarizing data sets with pivot tables",
+              "covered": false
+            },
+            {
+              "id": "4.4",
+              "page": 1,
+              "text": "Interpreting statistical results in a business context",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-10-14",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              1
+            ]
+          },
+          "curriculum_review_required": true,
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "5",
+          "title": "Single Variable Regressions 1",
+          "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science/lecture-05-single-variable-regressions-1",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Introduction to statistical distributions (normal, binomial, etc.)",
+            "Visualization of distributions",
+            "Business examples of variability (e.g., sales variation)"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "5.1",
+              "page": 1,
+              "text": "Introduction to statistical distributions (normal, binomial, etc.)",
+              "covered": false
+            },
+            {
+              "id": "5.2",
+              "page": 1,
+              "text": "Visualization of distributions",
+              "covered": false
+            },
+            {
+              "id": "5.3",
+              "page": 1,
+              "text": "Business examples of variability (e.g., sales variation)",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-10-17",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              1
+            ]
+          },
+          "curriculum_review_required": true,
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "6",
+          "title": "Single Variable Regressions 2",
+          "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science/lecture-06-single-variable-regressions-2",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Concepts of hypothesis testing (null/alternative hypothesis, p-value, confidence intervals)",
+            "Performing a basic t-test (conceptually or in Excel)",
+            "Discussing when to use hypothesis tests"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "6.1",
+              "page": 1,
+              "text": "Concepts of hypothesis testing (null/alternative hypothesis, p-value, confidence intervals)",
+              "covered": false
+            },
+            {
+              "id": "6.2",
+              "page": 1,
+              "text": "Performing a basic t-test (conceptually or in Excel)",
+              "covered": false
+            },
+            {
+              "id": "6.3",
+              "page": 1,
+              "text": "Discussing when to use hypothesis tests",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-10-21",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              1
+            ]
+          },
+          "curriculum_review_required": true,
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "7",
+          "title": "Multivariable Regressions 1",
+          "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science/lecture-07-multivariable-regressions-1",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Principles of experimental design",
+            "Control vs. treatment groups",
+            "Selecting appropriate metrics for A/B tests",
+            "Pitfalls to avoid in experiments"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "7.1",
+              "page": 1,
+              "text": "Principles of experimental design",
+              "covered": false
+            },
+            {
+              "id": "7.2",
+              "page": 1,
+              "text": "Control vs. treatment groups",
+              "covered": false
+            },
+            {
+              "id": "7.3",
+              "page": 1,
+              "text": "Selecting appropriate metrics for A/B tests",
+              "covered": false
+            },
+            {
+              "id": "7.4",
+              "page": 1,
+              "text": "Pitfalls to avoid in experiments",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-10-24",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              1
+            ]
+          },
+          "curriculum_review_required": true,
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "8",
+          "title": "Multivariable Regressions 2",
+          "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science/lecture-08-multivariable-regressions-2",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Methods to analyze outcome data from experiments",
+            "Calculating lift, statistical significance",
+            "Case discussion of an A/B test (e.g., interpreting results of a website redesign experiment)"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "8.1",
+              "page": 1,
+              "text": "Methods to analyze outcome data from experiments",
+              "covered": false
+            },
+            {
+              "id": "8.2",
+              "page": 1,
+              "text": "Calculating lift, statistical significance",
+              "covered": false
+            },
+            {
+              "id": "8.3",
+              "page": 1,
+              "text": "Case discussion of an A/B test (e.g., interpreting results of a website redesign experiment)",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-10-28",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              1
+            ]
+          },
+          "curriculum_review_required": true,
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": "01b",
+      "title": "Data Visualization & Case Studies",
+      "path": "BITSoM-BA-EN-IV-2609/module-01b-data-visualization-and-case-studies",
+      "title_status": "source-aligned",
+      "sessions": [
+        {
+          "source_session": "9",
+          "title": "Introduction to visualization as a tool for business decision making, Visual Elements and Hierarchy",
+          "path": "BITSoM-BA-EN-IV-2609/module-01b-data-visualization-and-case-studies/lecture-09-introduction-to-visualization-as-a-tool-for-business-decision-making-visual-elements-and-hierarchy",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Visual Elements and Hierarchy",
+            "Design Principles and Heuristics",
+            "Choosing the right chart for the right data Case studies - discussion"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "9.1",
+              "page": 1,
+              "text": "Visual Elements and Hierarchy",
+              "covered": false
+            },
+            {
+              "id": "9.2",
+              "page": 1,
+              "text": "Design Principles and Heuristics",
+              "covered": false
+            },
+            {
+              "id": "9.3",
+              "page": 1,
+              "text": "Choosing the right chart for the right data Case studies - discussion",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-10-31",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              1
+            ]
+          },
+          "curriculum_review_required": true,
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.",
+            "Tracker module wording differs from the calendar module sequence. Folder placement follows the full calendar; see SOURCES.md.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "10",
+          "title": "Principles of effective data visualization, Design Principles and Heuristics",
+          "path": "BITSoM-BA-EN-IV-2609/module-01b-data-visualization-and-case-studies/lecture-10-principles-of-effective-data-visualization-design-principles-and-heuristics",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Introduction to tool: Tableau",
+            "Interface and Components",
+            "Data Sources and Connections",
+            "Calculated Fields",
+            "Data Preparation",
+            "Charting with Tableau"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "10.1",
+              "page": 1,
+              "text": "Introduction to tool: Tableau",
+              "covered": false
+            },
+            {
+              "id": "10.2",
+              "page": 1,
+              "text": "Interface and Components",
+              "covered": false
+            },
+            {
+              "id": "10.3",
+              "page": 1,
+              "text": "Data Sources and Connections",
+              "covered": false
+            },
+            {
+              "id": "10.4",
+              "page": 1,
+              "text": "Calculated Fields",
+              "covered": false
+            },
+            {
+              "id": "10.5",
+              "page": 1,
+              "text": "Data Preparation",
+              "covered": false
+            },
+            {
+              "id": "10.6",
+              "page": 1,
+              "text": "Charting with Tableau",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-11-04",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              1
+            ]
+          },
+          "curriculum_review_required": true,
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "11",
+          "title": "Charting with Tableau",
+          "path": "BITSoM-BA-EN-IV-2609/module-01b-data-visualization-and-case-studies/lecture-11-charting-with-tableau",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Creating dashboards for real-time business monitoring with Tableau",
+            "Layout and Design",
+            "Interactivity using filters, parameters, actions etc",
+            "Visual communication best practices for business reporting",
+            "Ethics in Data Visualization",
+            "Critique and refine visual representations"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "11.1",
+              "page": 1,
+              "text": "Creating dashboards for real-time business monitoring with Tableau",
+              "covered": false
+            },
+            {
+              "id": "11.2",
+              "page": 1,
+              "text": "Layout and Design",
+              "covered": false
+            },
+            {
+              "id": "11.3",
+              "page": 1,
+              "text": "Interactivity using filters, parameters, actions etc",
+              "covered": false
+            },
+            {
+              "id": "11.4",
+              "page": 1,
+              "text": "Visual communication best practices for business reporting",
+              "covered": false
+            },
+            {
+              "id": "11.5",
+              "page": 1,
+              "text": "Ethics in Data Visualization",
+              "covered": false
+            },
+            {
+              "id": "11.6",
+              "page": 1,
+              "text": "Critique and refine visual representations",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-11-07",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              1
+            ]
+          },
+          "curriculum_review_required": true,
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "12",
+          "title": "Charting with Tableau Contd. – Advanced Charts",
+          "path": "BITSoM-BA-EN-IV-2609/module-01b-data-visualization-and-case-studies/lecture-12-charting-with-tableau-contd-advanced-charts",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Storytelling with data",
+            "Framing business insights for non-technical audiences",
+            "Story structure and delivery",
+            "Wrap-up"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "12.1",
+              "page": 1,
+              "text": "Storytelling with data",
+              "covered": false
+            },
+            {
+              "id": "12.2",
+              "page": 1,
+              "text": "Framing business insights for non-technical audiences",
+              "covered": false
+            },
+            {
+              "id": "12.3",
+              "page": 1,
+              "text": "Story structure and delivery",
+              "covered": false
+            },
+            {
+              "id": "12.4",
+              "page": 1,
+              "text": "Wrap-up",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-11-14",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              1
+            ]
+          },
+          "curriculum_review_required": true,
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "13",
+          "title": "Creating dashboards for real-time business monitoring",
+          "path": "BITSoM-BA-EN-IV-2609/module-01b-data-visualization-and-case-studies/lecture-13-creating-dashboards-for-real-time-business-monitoring",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Creating dashboards for real-time business monitoring"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "13.1",
+              "page": 1,
+              "text": "Creating dashboards for real-time business monitoring",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-11-18",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              1
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ],
+          "supplemental_learning_objectives": [
+            "Layout and Design",
+            "Interactivity using filters etc.",
+            "Sample Dashboard creation"
+          ],
+          "supplemental_objectives_source": "User-provided objectives for BITSoM session 13; supplements the single printed tracker objective."
+        },
+        {
+          "source_session": "14",
+          "title": "Storytelling with data",
+          "path": "BITSoM-BA-EN-IV-2609/module-01b-data-visualization-and-case-studies/lecture-14-storytelling-with-data",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Storytelling with data"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "14.1",
+              "page": 2,
+              "text": "Storytelling with data",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-11-21",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              2
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": "02",
+      "title": "Data Warehouse for AI",
+      "path": "BITSoM-BA-EN-IV-2609/module-02-data-warehouse-for-ai",
+      "title_status": "source-aligned",
+      "sessions": [
+        {
+          "source_session": "15",
+          "title": "Foundation of AI Data Architecture",
+          "path": "BITSoM-BA-EN-IV-2609/module-02-data-warehouse-for-ai/lecture-15-foundation-of-ai-data-architecture",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Introduction to AI data requirements vs traditional data needs",
+            "Overview of structured, semi-structured, and unstructured data in AI contexts",
+            "Data velocity, volume, variety, and veracity considerations for AI",
+            "Introduction to the modern data stack for AI applications"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "15.1",
+              "page": 2,
+              "text": "Introduction to AI data requirements vs traditional data needs",
+              "covered": false
+            },
+            {
+              "id": "15.2",
+              "page": 2,
+              "text": "Overview of structured, semi-structured, and unstructured data in AI contexts",
+              "covered": false
+            },
+            {
+              "id": "15.3",
+              "page": 2,
+              "text": "Data velocity, volume, variety, and veracity considerations for AI",
+              "covered": false
+            },
+            {
+              "id": "15.4",
+              "page": 2,
+              "text": "Introduction to the modern data stack for AI applications",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-11-25",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              2
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Tracker module wording differs from the calendar module sequence. Folder placement follows the full calendar; see SOURCES.md.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "16",
+          "title": "Relational Database Management Systems",
+          "path": "BITSoM-BA-EN-IV-2609/module-02-data-warehouse-for-ai/lecture-16-relational-database-management-systems",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "When to use relational databases for AI applications",
+            "MySQL optimization for AI workloads and analytics",
+            "Database design patterns for AI training data and features",
+            "Indexing strategies for AI query performance",
+            "Introduction to data warehousing concepts for AI workloads",
+            "OLAP vs OLTP considerations for AI system"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "16.1",
+              "page": 2,
+              "text": "When to use relational databases for AI applications",
+              "covered": false
+            },
+            {
+              "id": "16.2",
+              "page": 2,
+              "text": "MySQL optimization for AI workloads and analytics",
+              "covered": false
+            },
+            {
+              "id": "16.3",
+              "page": 2,
+              "text": "Database design patterns for AI training data and features",
+              "covered": false
+            },
+            {
+              "id": "16.4",
+              "page": 2,
+              "text": "Indexing strategies for AI query performance",
+              "covered": false
+            },
+            {
+              "id": "16.5",
+              "page": 2,
+              "text": "Introduction to data warehousing concepts for AI workloads",
+              "covered": false
+            },
+            {
+              "id": "16.6",
+              "page": 2,
+              "text": "OLAP vs OLTP considerations for AI system",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-11-28",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              2
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "17",
+          "title": "NoSQL Databases",
+          "path": "BITSoM-BA-EN-IV-2609/module-02-data-warehouse-for-ai/lecture-17-nosql-databases",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Document databases for complex, nested AI data structures",
+            "MongoDB for AI training data and model metadata storage",
+            "Key-value stores for high-performance AI caching (theoretical)",
+            "Graph databases for relationship-driven AI applications (theoretical)",
+            "Choosing between NoSQL options based on AI use case requirements"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "17.1",
+              "page": 2,
+              "text": "Document databases for complex, nested AI data structures",
+              "covered": false
+            },
+            {
+              "id": "17.2",
+              "page": 2,
+              "text": "MongoDB for AI training data and model metadata storage",
+              "covered": false
+            },
+            {
+              "id": "17.3",
+              "page": 2,
+              "text": "Key-value stores for high-performance AI caching (theoretical)",
+              "covered": false
+            },
+            {
+              "id": "17.4",
+              "page": 2,
+              "text": "Graph databases for relationship-driven AI applications (theoretical)",
+              "covered": false
+            },
+            {
+              "id": "17.5",
+              "page": 2,
+              "text": "Choosing between NoSQL options based on AI use case requirements",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-12-02",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              2
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "18",
+          "title": "Data Warehouses",
+          "path": "BITSoM-BA-EN-IV-2609/module-02-data-warehouse-for-ai/lecture-18-data-warehouses",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Data warehouse architecture and design principles for AI",
+            "Dimensional modeling: facts, dimensions, and star/snowflake schemas",
+            "ETL/ELT processes for AI data preparation",
+            "OLAP operations and analytical processing for AI insights",
+            "Data warehouse vs data lake vs database trade-offs for AI",
+            "Modern cloud data warehouses: Snowflake, BigQuery, Redshift (theoretical)"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "18.1",
+              "page": 2,
+              "text": "Data warehouse architecture and design principles for AI",
+              "covered": false
+            },
+            {
+              "id": "18.2",
+              "page": 2,
+              "text": "Dimensional modeling: facts, dimensions, and star/snowflake schemas",
+              "covered": false
+            },
+            {
+              "id": "18.3",
+              "page": 2,
+              "text": "ETL/ELT processes for AI data preparation",
+              "covered": false
+            },
+            {
+              "id": "18.4",
+              "page": 2,
+              "text": "OLAP operations and analytical processing for AI insights",
+              "covered": false
+            },
+            {
+              "id": "18.5",
+              "page": 2,
+              "text": "Data warehouse vs data lake vs database trade-offs for AI",
+              "covered": false
+            },
+            {
+              "id": "18.6",
+              "page": 2,
+              "text": "Modern cloud data warehouses: Snowflake, BigQuery, Redshift (theoretical)",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-12-05",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              2
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "19",
+          "title": "Vector Databases and Embedding Storage",
+          "path": "BITSoM-BA-EN-IV-2609/module-02-data-warehouse-for-ai/lecture-19-vector-databases-and-embedding-storage",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Introduction to vector embeddings and their role in modern AI",
+            "Vector similarity search and nearest neighbor algorithms",
+            "Implementing RAG (Retrieval Augmented Generation) architectures",
+            "Comparing vector databases: Pinecone, Weaviate, Chroma, and Qdrant",
+            "Storage and indexing strategies for high-dimensional vectors"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "19.1",
+              "page": 2,
+              "text": "Introduction to vector embeddings and their role in modern AI",
+              "covered": false
+            },
+            {
+              "id": "19.2",
+              "page": 2,
+              "text": "Vector similarity search and nearest neighbor algorithms",
+              "covered": false
+            },
+            {
+              "id": "19.3",
+              "page": 2,
+              "text": "Implementing RAG (Retrieval Augmented Generation) architectures",
+              "covered": false
+            },
+            {
+              "id": "19.4",
+              "page": 2,
+              "text": "Comparing vector databases: Pinecone, Weaviate, Chroma, and Qdrant",
+              "covered": false
+            },
+            {
+              "id": "19.5",
+              "page": 2,
+              "text": "Storage and indexing strategies for high-dimensional vectors",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-12-09",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              2
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "20",
+          "title": "Data Lakes",
+          "path": "BITSoM-BA-EN-IV-2609/module-02-data-warehouse-for-ai/lecture-20-data-lakes",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Data lake architecture and organization for AI",
+            "Handling multimedia data: images, audio, video for AI processing",
+            "Data cataloging and metadata management in data lakes",
+            "Cost optimization strategies for large-scale AI data storage",
+            "File formats and storage optimization for AI workloads"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "20.1",
+              "page": 2,
+              "text": "Data lake architecture and organization for AI",
+              "covered": false
+            },
+            {
+              "id": "20.2",
+              "page": 2,
+              "text": "Handling multimedia data: images, audio, video for AI processing",
+              "covered": false
+            },
+            {
+              "id": "20.3",
+              "page": 2,
+              "text": "Data cataloging and metadata management in data lakes",
+              "covered": false
+            },
+            {
+              "id": "20.4",
+              "page": 2,
+              "text": "Cost optimization strategies for large-scale AI data storage",
+              "covered": false
+            },
+            {
+              "id": "20.5",
+              "page": 2,
+              "text": "File formats and storage optimization for AI workloads",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-12-12",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              2
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": "03",
+      "title": "Python Crash Course for GenAI",
+      "path": "BITSoM-BA-EN-IV-2609/module-03-python-crash-course-for-genai",
+      "title_status": "source-aligned",
+      "sessions": [
+        {
+          "source_session": "21",
+          "title": "Introduction to Python: Syntax, Strings, and Control Flow",
+          "path": "BITSoM-BA-EN-IV-2609/module-03-python-crash-course-for-genai/lecture-21-introduction-to-python-syntax-strings-and-control-flow",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Introduction to Python programming (using presentation)",
+            "Setting up the environment and IDE workflow",
+            "Basic syntax, variables, and data types (numbers, strings)",
+            "String operations: slicing, transformation, cleaning, searching, and formatting",
+            "Introduction to Lists"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "21.1",
+              "page": 2,
+              "text": "Introduction to Python programming (using presentation)",
+              "covered": false
+            },
+            {
+              "id": "21.2",
+              "page": 2,
+              "text": "Setting up the environment and IDE workflow",
+              "covered": false
+            },
+            {
+              "id": "21.3",
+              "page": 2,
+              "text": "Basic syntax, variables, and data types (numbers, strings)",
+              "covered": false
+            },
+            {
+              "id": "21.4",
+              "page": 2,
+              "text": "String operations: slicing, transformation, cleaning, searching, and formatting",
+              "covered": false
+            },
+            {
+              "id": "21.5",
+              "page": 2,
+              "text": "Introduction to Lists",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-12-16",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              2
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Tracker module wording differs from the calendar module sequence. Folder placement follows the full calendar; see SOURCES.md.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "22",
+          "title": "Control Flow and Data Structures",
+          "path": "BITSoM-BA-EN-IV-2609/module-03-python-crash-course-for-genai/lecture-22-control-flow-and-data-structures",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Boolean expressions and conditional logic (if, elif, else)",
+            "Loops and iteration: for loops, while loops, range(), and enumerate",
+            "Control flow with break and continue",
+            "Deep dive into Lists: mutability, slicing, and essential list methods"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "22.1",
+              "page": 2,
+              "text": "Boolean expressions and conditional logic (if, elif, else)",
+              "covered": false
+            },
+            {
+              "id": "22.2",
+              "page": 2,
+              "text": "Loops and iteration: for loops, while loops, range(), and enumerate",
+              "covered": false
+            },
+            {
+              "id": "22.3",
+              "page": 2,
+              "text": "Control flow with break and continue",
+              "covered": false
+            },
+            {
+              "id": "22.4",
+              "page": 2,
+              "text": "Deep dive into Lists: mutability, slicing, and essential list methods",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-12-19",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              2
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "23",
+          "title": "Advanced Data Structures and Error Handling",
+          "path": "BITSoM-BA-EN-IV-2609/module-03-python-crash-course-for-genai/lecture-23-advanced-data-structures-and-error-handling",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Advanced List operations (sorting, copying)",
+            "Dictionaries: creation, accessing values, methods, nested dictionaries, and merging",
+            "Error Handling & Exception Management: try, except, finally blocks, and raising custom errors"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "23.1",
+              "page": 2,
+              "text": "Advanced List operations (sorting, copying)",
+              "covered": false
+            },
+            {
+              "id": "23.2",
+              "page": 2,
+              "text": "Dictionaries: creation, accessing values, methods, nested dictionaries, and merging",
+              "covered": false
+            },
+            {
+              "id": "23.3",
+              "page": 2,
+              "text": "Error Handling & Exception Management: try, except, finally blocks, and raising custom errors",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-12-23",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              2
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "24",
+          "title": "Modular Programming, File I/O, and API Integration",
+          "path": "BITSoM-BA-EN-IV-2609/module-03-python-crash-course-for-genai/lecture-24-modular-programming-file-i-o-and-api-integration",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Modular programming with Functions and imports",
+            "File Handling: reading and writing text files using pathlib",
+            "API Integration: sending HTTP requests (GET, POST) and handling JSON responses using the requests library"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "24.1",
+              "page": 2,
+              "text": "Modular programming with Functions and imports",
+              "covered": false
+            },
+            {
+              "id": "24.2",
+              "page": 2,
+              "text": "File Handling: reading and writing text files using pathlib",
+              "covered": false
+            },
+            {
+              "id": "24.3",
+              "page": 3,
+              "text": "API Integration: sending HTTP requests (GET, POST) and handling JSON responses using the requests library",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-12-26",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              2,
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "25",
+          "title": "Introduction to Data Science: NumPy and Pandas",
+          "path": "BITSoM-BA-EN-IV-2609/module-03-python-crash-course-for-genai/lecture-25-introduction-to-data-science-numpy-and-pandas",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Introduction to NumPy: mental model (shapes, vectorization, broadcasting), array creation, indexing, and aggregation",
+            "Pandas for tabular data: understanding DataFrame and Series, selecting data (loc), filtering, and data assignment"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "25.1",
+              "page": 3,
+              "text": "Introduction to NumPy: mental model (shapes, vectorization, broadcasting), array creation, indexing, and aggregation",
+              "covered": false
+            },
+            {
+              "id": "25.2",
+              "page": 3,
+              "text": "Pandas for tabular data: understanding DataFrame and Series, selecting data (loc), filtering, and data assignment",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2026-12-30",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "26",
+          "title": "Machine Learning with Scikit-Learn and Visualization",
+          "path": "BITSoM-BA-EN-IV-2609/module-03-python-crash-course-for-genai/lecture-26-machine-learning-with-scikit-learn-and-visualization",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Machine Learning with Scikit-Learn: Estimator API workflow, train/test splitting, preprocessing (StandardScaler, OneHotEncoder), building pipelines, and training models (Linear/Logistic Regression)",
+            "Data Visualization using Matplotlib (Figure/Axes model) and Seaborn"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "26.1",
+              "page": 3,
+              "text": "Machine Learning with Scikit-Learn: Estimator API workflow, train/test splitting, preprocessing (StandardScaler, OneHotEncoder), building pipelines, and training models (Linear/Logistic Regression)",
+              "covered": false
+            },
+            {
+              "id": "26.2",
+              "page": 3,
+              "text": "Data Visualization using Matplotlib (Figure/Axes model) and Seaborn",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-01-02",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": "04a",
+      "title": "Machine Learning Concepts",
+      "path": "BITSoM-BA-EN-IV-2609/module-04a-machine-learning-concepts",
+      "title_status": "source-aligned",
+      "sessions": [
+        {
+          "source_session": "27",
+          "title": "Introduction to Machine Learning",
+          "path": "BITSoM-BA-EN-IV-2609/module-04a-machine-learning-concepts/lecture-27-introduction-to-machine-learning",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "This lecture covers the core concepts of Machine Learning",
+            "It introduces the main types of learning: supervised learning (regression and classification), unsupervised learning (clustering), and reinforcement learning at a high level",
+            "Key terminologies such as features, labels, datasets, training and testing sets, and models are discussed",
+            "The lecture also helps students visualize how a model learns patterns from data and generalizes to unseen examples"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "27.1",
+              "page": 3,
+              "text": "This lecture covers the core concepts of Machine Learning",
+              "covered": false
+            },
+            {
+              "id": "27.2",
+              "page": 3,
+              "text": "It introduces the main types of learning: supervised learning (regression and classification), unsupervised learning (clustering), and reinforcement learning at a high level",
+              "covered": false
+            },
+            {
+              "id": "27.3",
+              "page": 3,
+              "text": "Key terminologies such as features, labels, datasets, training and testing sets, and models are discussed",
+              "covered": false
+            },
+            {
+              "id": "27.4",
+              "page": 3,
+              "text": "The lecture also helps students visualize how a model learns patterns from data and generalizes to unseen examples",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-01-06",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "28",
+          "title": "Supervised Learning & Algorithms",
+          "path": "BITSoM-BA-EN-IV-2609/module-04a-machine-learning-concepts/lecture-28-supervised-learning-and-algorithms",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "This lecture dives deeper into supervised learning techniques",
+            "It explains regression methods such as Linear Regression for predicting continuous values and classification methods such as Logistic Regression and Decision Trees for assigning categories",
+            "The concepts of underfitting, overfitting, and the bias–variance tradeoff are introduced, along with visual demonstrations of model learning",
+            "The lecture also covers evaluation metrics, including Mean Squared Error (MSE) and R-squared for regression, and accuracy, confusion matrix, precision, recall, and F1-score for classification",
+            "Emphasis is placed on choosing appropriate metrics and the importance of proper model evaluation"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "28.1",
+              "page": 3,
+              "text": "This lecture dives deeper into supervised learning techniques",
+              "covered": false
+            },
+            {
+              "id": "28.2",
+              "page": 3,
+              "text": "It explains regression methods such as Linear Regression for predicting continuous values and classification methods such as Logistic Regression and Decision Trees for assigning categories",
+              "covered": false
+            },
+            {
+              "id": "28.3",
+              "page": 3,
+              "text": "The concepts of underfitting, overfitting, and the bias–variance tradeoff are introduced, along with visual demonstrations of model learning",
+              "covered": false
+            },
+            {
+              "id": "28.4",
+              "page": 3,
+              "text": "The lecture also covers evaluation metrics, including Mean Squared Error (MSE) and R-squared for regression, and accuracy, confusion matrix, precision, recall, and F1-score for classification",
+              "covered": false
+            },
+            {
+              "id": "28.5",
+              "page": 3,
+              "text": "Emphasis is placed on choosing appropriate metrics and the importance of proper model evaluation",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-01-09",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "29",
+          "title": "Unsupervised Learning",
+          "path": "BITSoM-BA-EN-IV-2609/module-04a-machine-learning-concepts/lecture-29-unsupervised-learning",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "This lecture focuses on unsupervised learning, particularly clustering techniques such as K-Means",
+            "It explains how similar data points are grouped without labeled outputs and discusses when unsupervised learning is preferred over supervised learning",
+            "Common use cases such as customer segmentation and exploratory data analysis are introduced, along with conceptual explanations of how clustering algorithms work"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "29.1",
+              "page": 3,
+              "text": "This lecture focuses on unsupervised learning, particularly clustering techniques such as K-Means",
+              "covered": false
+            },
+            {
+              "id": "29.2",
+              "page": 3,
+              "text": "It explains how similar data points are grouped without labeled outputs and discusses when unsupervised learning is preferred over supervised learning",
+              "covered": false
+            },
+            {
+              "id": "29.3",
+              "page": 3,
+              "text": "Common use cases such as customer segmentation and exploratory data analysis are introduced, along with conceptual explanations of how clustering algorithms work",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-01-13",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "30",
+          "title": "Machine Learning Workflow & Practical Considerations",
+          "path": "BITSoM-BA-EN-IV-2609/module-04a-machine-learning-concepts/lecture-30-machine-learning-workflow-and-practical-considerations",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "This lecture presents the end-to-end machine learning workflow, including data collection, data preprocessing, feature selection and feature engineering, model training, validation, and model selection",
+            "It also highlights practical considerations such as train-test splits, cross- validation, data leakage, and common pitfalls in real-world machine learning projects, helping students understand how individual techniques fit into a complete ML pipeline"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "30.1",
+              "page": 3,
+              "text": "This lecture presents the end-to-end machine learning workflow, including data collection, data preprocessing, feature selection and feature engineering, model training, validation, and model selection",
+              "covered": false
+            },
+            {
+              "id": "30.2",
+              "page": 3,
+              "text": "It also highlights practical considerations such as train-test splits, cross- validation, data leakage, and common pitfalls in real-world machine learning projects, helping students understand how individual techniques fit into a complete ML pipeline",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-01-16",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": "04b",
+      "title": "Machine Learning using Python",
+      "path": "BITSoM-BA-EN-IV-2609/module-04b-machine-learning-using-python",
+      "title_status": "source-aligned",
+      "sessions": [
+        {
+          "source_session": "31",
+          "title": "Data Preparation and Exploratory Analysis",
+          "path": "BITSoM-BA-EN-IV-2609/module-04b-machine-learning-using-python/lecture-31-data-preparation-and-exploratory-analysis",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "This lecture focuses on the foundational aspects of retail data science",
+            "You will cover the structure of store, transaction, and promotion datasets, along with techniques for merging and aggregating disparate data sources",
+            "Key concepts include identifying seasonal trends and temporal patterns, calculating essential retail metrics like Average Transaction Value (ATV) and Units Per Transaction (UPT), and performing impact analysis to see how festivals and promotional events influence sales volume"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "31.1",
+              "page": 3,
+              "text": "This lecture focuses on the foundational aspects of retail data science",
+              "covered": false
+            },
+            {
+              "id": "31.2",
+              "page": 3,
+              "text": "You will cover the structure of store, transaction, and promotion datasets, along with techniques for merging and aggregating disparate data sources",
+              "covered": false
+            },
+            {
+              "id": "31.3",
+              "page": 3,
+              "text": "Key concepts include identifying seasonal trends and temporal patterns, calculating essential retail metrics like Average Transaction Value (ATV) and Units Per Transaction (UPT), and performing impact analysis to see how festivals and promotional events influence sales volume",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-01-20",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "32",
+          "title": "Feature Engineering and Predictive Modeling",
+          "path": "BITSoM-BA-EN-IV-2609/module-04b-machine-learning-using-python/lecture-32-feature-engineering-and-predictive-modeling",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "You will transition into advanced processing and machine learning",
+            "Topics include data preprocessing for missing values and outliers, followed by feature engineering to derive monthly predictors from raw data",
+            "You will implement supervised learning using Linear Regression for baseline forecasting and explore ensemble methods with Random Forest models",
+            "The day concludes with model evaluation and performance testing to compare different regression approaches against actual sales data"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "32.1",
+              "page": 3,
+              "text": "You will transition into advanced processing and machine learning",
+              "covered": false
+            },
+            {
+              "id": "32.2",
+              "page": 3,
+              "text": "Topics include data preprocessing for missing values and outliers, followed by feature engineering to derive monthly predictors from raw data",
+              "covered": false
+            },
+            {
+              "id": "32.3",
+              "page": 3,
+              "text": "You will implement supervised learning using Linear Regression for baseline forecasting and explore ensemble methods with Random Forest models",
+              "covered": false
+            },
+            {
+              "id": "32.4",
+              "page": 3,
+              "text": "The day concludes with model evaluation and performance testing to compare different regression approaches against actual sales data",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-01-23",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": "05",
+      "title": "Neural Networks & Deep Learning",
+      "path": "BITSoM-BA-EN-IV-2609/module-05-neural-networks-and-deep-learning",
+      "title_status": "source-aligned",
+      "sessions": [
+        {
+          "source_session": "33",
+          "title": "Building Blocks of Neural Networks",
+          "path": "BITSoM-BA-EN-IV-2609/module-05-neural-networks-and-deep-learning/lecture-33-building-blocks-of-neural-networks",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Building Blocks of Neural Networks"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "33.1",
+              "page": 4,
+              "text": "Building Blocks of Neural Networks",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-01-27",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              4
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Tracker module wording differs from the calendar module sequence. Folder placement follows the full calendar; see SOURCES.md.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "34",
+          "title": "Neural Networks in Action",
+          "path": "BITSoM-BA-EN-IV-2609/module-05-neural-networks-and-deep-learning/lecture-34-neural-networks-in-action",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Neural Networks in Action"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "34.1",
+              "page": 4,
+              "text": "Neural Networks in Action",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-01-30",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              4
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "35",
+          "title": "Applications of Neural Networks: Computer Vision",
+          "path": "BITSoM-BA-EN-IV-2609/module-05-neural-networks-and-deep-learning/lecture-35-applications-of-neural-networks-computer-vision",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Applications of Neural Networks: Computer Vision"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "35.1",
+              "page": 4,
+              "text": "Applications of Neural Networks: Computer Vision",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-02-03",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              4
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "36",
+          "title": "Applications of Neural Networks: Natural Language Processing",
+          "path": "BITSoM-BA-EN-IV-2609/module-05-neural-networks-and-deep-learning/lecture-36-applications-of-neural-networks-natural-language-processing",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Applications of Neural Networks: Natural Language Processing"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "36.1",
+              "page": 4,
+              "text": "Applications of Neural Networks: Natural Language Processing",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-02-06",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              4
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": "06",
+      "title": "Introduction to LLM & Prompt Engineering",
+      "path": "BITSoM-BA-EN-IV-2609/module-06-introduction-to-llm-and-prompt-engineering",
+      "title_status": "source-aligned",
+      "sessions": [
+        {
+          "source_session": "37",
+          "title": "Overview of modern LLMs",
+          "path": "BITSoM-BA-EN-IV-2609/module-06-introduction-to-llm-and-prompt-engineering/lecture-37-overview-of-modern-llms",
+          "status": "scaffold",
+          "title_note": "Concise descriptive title based on the long source title/description",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Overview of modern LLMs (GPT-4, etc.) and what they can do",
+            "Examples of content generation, Q&A, code writing",
+            "Discussion of how LLMs are trained (at a high level) and considerations when using them (strengths/limitations)"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "37.1",
+              "page": 4,
+              "text": "Overview of modern LLMs (GPT-4, etc.) and what they can do",
+              "covered": false
+            },
+            {
+              "id": "37.2",
+              "page": 4,
+              "text": "Examples of content generation, Q&A, code writing",
+              "covered": false
+            },
+            {
+              "id": "37.3",
+              "page": 4,
+              "text": "Discussion of how LLMs are trained (at a high level) and considerations when using them (strengths/limitations)",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-02-10",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              4
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Tracker module wording differs from the calendar module sequence. Folder placement follows the full calendar; see SOURCES.md.",
+            "This short session title is an organizational label derived from the long source description.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "38",
+          "title": "Fundamentals of crafting prompts",
+          "path": "BITSoM-BA-EN-IV-2609/module-06-introduction-to-llm-and-prompt-engineering/lecture-38-fundamentals-of-crafting-prompts",
+          "status": "scaffold",
+          "title_note": "Concise descriptive title based on the long source title/description",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Fundamentals of crafting prompts",
+            "Using context and roles in prompts",
+            "Adjusting temperature and other parameters",
+            "Live demonstration: iteratively refining a prompt to improve an answer (e. g., getting a better explanation or more concise output)"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "38.1",
+              "page": 4,
+              "text": "Fundamentals of crafting prompts",
+              "covered": false
+            },
+            {
+              "id": "38.2",
+              "page": 4,
+              "text": "Using context and roles in prompts",
+              "covered": false
+            },
+            {
+              "id": "38.3",
+              "page": 4,
+              "text": "Adjusting temperature and other parameters",
+              "covered": false
+            },
+            {
+              "id": "38.4",
+              "page": 4,
+              "text": "Live demonstration: iteratively refining a prompt to improve an answer (e. g., getting a better explanation or more concise output)",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-02-13",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              4
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "This short session title is an organizational label derived from the long source description.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "39",
+          "title": "Advanced prompting techniques",
+          "path": "BITSoM-BA-EN-IV-2609/module-06-introduction-to-llm-and-prompt-engineering/lecture-39-advanced-prompting-techniques",
+          "status": "scaffold",
+          "title_note": "Concise descriptive title based on the long source title/description",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Introduction to advanced prompting techniques: chain-of-thought (getting the model to think step by step)",
+            "Few-shot prompting (providing examples in the prompt)",
+            "Demonstration solving a multi-step problem by instructing the model to reason or showing it examples"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "39.1",
+              "page": 4,
+              "text": "Introduction to advanced prompting techniques: chain-of-thought (getting the model to think step by step)",
+              "covered": false
+            },
+            {
+              "id": "39.2",
+              "page": 4,
+              "text": "Few-shot prompting (providing examples in the prompt)",
+              "covered": false
+            },
+            {
+              "id": "39.3",
+              "page": 4,
+              "text": "Demonstration solving a multi-step problem by instructing the model to reason or showing it examples",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-02-17",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              4
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "This short session title is an organizational label derived from the long source description.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "40",
+          "title": "LLM application integration and responsible use",
+          "path": "BITSoM-BA-EN-IV-2609/module-06-introduction-to-llm-and-prompt-engineering/lecture-40-llm-application-integration-and-responsible-use",
+          "status": "scaffold",
+          "title_note": "Concise descriptive title based on the long source title/description",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Using frameworks and tools like LangChain or API calls for more complex interactions",
+            "How to integrate LLM calls into applications (brief overview)",
+            "Mention of fine-tuning vs prompting",
+            "Class discussion on responsible use of AI outputs"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "40.1",
+              "page": 4,
+              "text": "Using frameworks and tools like LangChain or API calls for more complex interactions",
+              "covered": false
+            },
+            {
+              "id": "40.2",
+              "page": 4,
+              "text": "How to integrate LLM calls into applications (brief overview)",
+              "covered": false
+            },
+            {
+              "id": "40.3",
+              "page": 4,
+              "text": "Mention of fine-tuning vs prompting",
+              "covered": false
+            },
+            {
+              "id": "40.4",
+              "page": 4,
+              "text": "Class discussion on responsible use of AI outputs",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-02-20",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              4
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "This short session title is an organizational label derived from the long source description.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": "07",
+      "title": "Building your own Agents",
+      "path": "BITSoM-BA-EN-IV-2609/module-07-building-your-own-agents",
+      "title_status": "source-aligned",
+      "sessions": [
+        {
+          "source_session": "41",
+          "title": "Definition of agents in AI and Simple Reflex Agents",
+          "path": "BITSoM-BA-EN-IV-2609/module-07-building-your-own-agents/lecture-41-definition-of-agents-in-ai-and-simple-reflex-agents",
+          "status": "scaffold",
+          "title_note": "Concise descriptive title based on the long source title/description",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Definition of agents in AI",
+            "Components (percepts, actions, environment, goals)",
+            "Examples of agents around us (from simple thermostats to complex systems)",
+            "The Simple Reflex Agent explained with a toy example (e.g., vacuum cleaner world)"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "41.1",
+              "page": 4,
+              "text": "Definition of agents in AI",
+              "covered": false
+            },
+            {
+              "id": "41.2",
+              "page": 4,
+              "text": "Components (percepts, actions, environment, goals)",
+              "covered": false
+            },
+            {
+              "id": "41.3",
+              "page": 4,
+              "text": "Examples of agents around us (from simple thermostats to complex systems)",
+              "covered": false
+            },
+            {
+              "id": "41.4",
+              "page": 4,
+              "text": "The Simple Reflex Agent explained with a toy example (e.g., vacuum cleaner world)",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-02-24",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              4
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Tracker module wording differs from the calendar module sequence. Folder placement follows the full calendar; see SOURCES.md.",
+            "This short session title is an organizational label derived from the long source description.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "42",
+          "title": "Building and testing a rule-based agent",
+          "path": "BITSoM-BA-EN-IV-2609/module-07-building-your-own-agents/lecture-42-building-and-testing-a-rule-based-agent",
+          "status": "scaffold",
+          "title_note": "Concise descriptive title based on the long source title/description",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Hands-on exercise designing a rule-based agent: e.g., creating pseudocode or simple Python code for a reflex chatbot or an automated system reacting to sensor input",
+            "Testing the agent on sample inputs",
+            "Discussing limitations of reflex agents"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "42.1",
+              "page": 4,
+              "text": "Hands-on exercise designing a rule-based agent: e.g., creating pseudocode or simple Python code for a reflex chatbot or an automated system reacting to sensor input",
+              "covered": false
+            },
+            {
+              "id": "42.2",
+              "page": 4,
+              "text": "Testing the agent on sample inputs",
+              "covered": false
+            },
+            {
+              "id": "42.3",
+              "page": 4,
+              "text": "Discussing limitations of reflex agents",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-02-27",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              4
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "This short session title is an organizational label derived from the long source description.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "43",
+          "title": "Goal-based agents and planning",
+          "path": "BITSoM-BA-EN-IV-2609/module-07-building-your-own-agents/lecture-43-goal-based-agents-and-planning",
+          "status": "scaffold",
+          "title_note": "Concise descriptive title based on the long source title/description",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Concepts of goal-based agents and planning",
+            "Introducing algorithms or approaches for goal-seeking (basic idea of search/planning algorithms)",
+            "Example: discuss how a navigation system plots a route to a destination (goal)"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "43.1",
+              "page": 4,
+              "text": "Concepts of goal-based agents and planning",
+              "covered": false
+            },
+            {
+              "id": "43.2",
+              "page": 4,
+              "text": "Introducing algorithms or approaches for goal-seeking (basic idea of search/planning algorithms)",
+              "covered": false
+            },
+            {
+              "id": "43.3",
+              "page": 4,
+              "text": "Example: discuss how a navigation system plots a route to a destination (goal)",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-03-03",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              4
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "This short session title is an organizational label derived from the long source description.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "44",
+          "title": "Utility-based agents",
+          "path": "BITSoM-BA-EN-IV-2609/module-07-building-your-own-agents/lecture-44-utility-based-agents",
+          "status": "scaffold",
+          "title_note": "Concise descriptive title based on the long source title/description",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Extending agents with utility",
+            "When goals are multiple or outcomes have preferences",
+            "Example scenario: personal scheduling assistant balancing priorities",
+            "How to assign utility values and make decisions that maximize overall satisfaction"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "44.1",
+              "page": 4,
+              "text": "Extending agents with utility",
+              "covered": false
+            },
+            {
+              "id": "44.2",
+              "page": 4,
+              "text": "When goals are multiple or outcomes have preferences",
+              "covered": false
+            },
+            {
+              "id": "44.3",
+              "page": 4,
+              "text": "Example scenario: personal scheduling assistant balancing priorities",
+              "covered": false
+            },
+            {
+              "id": "44.4",
+              "page": 4,
+              "text": "How to assign utility values and make decisions that maximize overall satisfaction",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-03-06",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              4
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "This short session title is an organizational label derived from the long source description.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "45",
+          "title": "Learning agents and reinforcement learning",
+          "path": "BITSoM-BA-EN-IV-2609/module-07-building-your-own-agents/lecture-45-learning-agents-and-reinforcement-learning",
+          "status": "scaffold",
+          "title_note": "Concise descriptive title based on the long source title/description",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Introduction to learning agents",
+            "Basics of reinforcement learning (states, actions, rewards)",
+            "Example: training a simple agent in a game or simulation (conceptual, e.g., an agent learning to play tic-tac-toe or an overview of how AlphaGo learned)"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "45.1",
+              "page": 4,
+              "text": "Introduction to learning agents",
+              "covered": false
+            },
+            {
+              "id": "45.2",
+              "page": 4,
+              "text": "Basics of reinforcement learning (states, actions, rewards)",
+              "covered": false
+            },
+            {
+              "id": "45.3",
+              "page": 4,
+              "text": "Example: training a simple agent in a game or simulation (conceptual, e.g., an agent learning to play tic-tac-toe or an overview of how AlphaGo learned)",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-03-10",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              4
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "This short session title is an organizational label derived from the long source description.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "46",
+          "title": "Contemporary autonomous agents and real-world challenges",
+          "path": "BITSoM-BA-EN-IV-2609/module-07-building-your-own-agents/lecture-46-contemporary-autonomous-agents-and-real-world-challenges",
+          "status": "scaffold",
+          "title_note": "Concise descriptive title based on the long source title/description",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [
+            "Exploration of contemporary autonomous agents (AutoGPT, conversational agents, self-driving cars)",
+            "Discussion on how these combine perception, reasoning (often with LLMs or ML models), and action",
+            "Considerations such as safety, ethics, and real-world challenges for agentic AI"
+          ],
+          "source_learning_objectives": [
+            {
+              "id": "46.1",
+              "page": 4,
+              "text": "Exploration of contemporary autonomous agents (AutoGPT, conversational agents, self-driving cars)",
+              "covered": false
+            },
+            {
+              "id": "46.2",
+              "page": 5,
+              "text": "Discussion on how these combine perception, reasoning (often with LLMs or ML models), and action",
+              "covered": false
+            },
+            {
+              "id": "46.3",
+              "page": 5,
+              "text": "Considerations such as safety, ethics, and real-world challenges for agentic AI",
+              "covered": false
+            }
+          ],
+          "scheduled_date": "2027-03-13",
+          "source": {
+            "document": "BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf",
+            "pages": [
+              4,
+              5
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "This short session title is an organizational label derived from the long source description.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": "08",
+      "title": "Capstone Project",
+      "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project",
+      "title_status": "source-aligned",
+      "sessions": [
+        {
+          "source_session": "47",
+          "title": "Capstone Project",
+          "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-47-capstone-project",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [],
+          "scheduled_date": "2027-03-17",
+          "source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "48",
+          "title": "Capstone Project",
+          "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-48-capstone-project",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [],
+          "scheduled_date": "2027-03-20",
+          "source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "49",
+          "title": "Capstone Project",
+          "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-49-capstone-project",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [],
+          "scheduled_date": "2027-03-24",
+          "source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "50",
+          "title": "Capstone Project",
+          "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-50-capstone-project",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [],
+          "scheduled_date": "2027-03-27",
+          "source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "51",
+          "title": "Capstone Project",
+          "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-51-capstone-project",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [],
+          "scheduled_date": "2027-03-31",
+          "source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "52",
+          "title": "Capstone Project",
+          "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-52-capstone-project",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [],
+          "scheduled_date": "2027-04-03",
+          "source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "53",
+          "title": "Capstone Project",
+          "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-53-capstone-project",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [],
+          "scheduled_date": "2027-04-07",
+          "source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "54",
+          "title": "Capstone Project",
+          "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-54-capstone-project",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [],
+          "scheduled_date": "2027-04-10",
+          "source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        },
+        {
+          "source_session": "55",
+          "title": "Capstone Project",
+          "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-55-capstone-project",
+          "status": "scaffold",
+          "pre_read_status": "scaffold",
+          "lecture_script_status": "scaffold",
+          "delivery_status": "unknown",
+          "learning_objectives": [],
+          "scheduled_date": "2027-04-14",
+          "source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": [
+              3
+            ]
+          },
+          "topics": [],
+          "duration_minutes": 90,
+          "duration_source": {
+            "document": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf",
+            "pages": []
+          },
+          "authoring_notes": [
+            "Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.",
+            "Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring."
+          ]
+        }
+      ]
+    }
+  ],
+  "additional_sources": [
+    "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf"
+  ]
+}

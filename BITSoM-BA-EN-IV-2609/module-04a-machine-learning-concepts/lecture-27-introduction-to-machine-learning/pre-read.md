@@ -1,17 +1,22 @@
 # Introduction to Machine Learning
 
 - Batch: BITSoM-BA-EN-IV-2609
-- Module: 04A — Machine Learning Concepts
+- Module: 04a — Machine Learning Concepts
 - Source session: 27
 - Status: scaffold — content not yet authored
 
-This file reserves the agreed location for the session pre-read. It is not a completed pre-read.
+This file reserves the agreed location for the session pre-read. It is not completed teaching material.
+
+Source objectives, topics, schedule, and authoring caveats are recorded in [the batch curriculum](../../curriculum.md). Read that reference before authoring.
 
 Use [the shared pre-read template](../../../templates/pre-read-template.md) when preparing this session.
 
 ## Learning objectives
 
-Pending source-aligned authoring.
+- This lecture covers the core concepts of Machine Learning
+- It introduces the main types of learning: supervised learning (regression and classification), unsupervised learning (clustering), and reinforcement learning at a high level
+- Key terminologies such as features, labels, datasets, training and testing sets, and models are discussed
+- The lecture also helps students visualize how a model learns patterns from data and generalizes to unseen examples
 
 ## Learning journey
 

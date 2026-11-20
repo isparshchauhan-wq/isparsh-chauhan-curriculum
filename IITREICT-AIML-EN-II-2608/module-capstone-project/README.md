@@ -1,8 +1,8 @@
 # Capstone Project
 
 - Batch: IITREICT-AIML-EN-II-2608
-- Module: CAPSTONE
-- Source: IITREICT-AIML-EN-II-2608 - Batch 2 - Institute Version - EICT_AIML_6-month_V3_-_Session_wise_detailed_syllabus.pdf
+- Module: capstone
+- Source: IITREICT-AIML-EN-II-2608 - Batch 2 - Institute Version - EICT_AIML_6-month_V3_-_Session_wise_detailed_syllabus(1).pdf
 
 | Session | Lecture |
 | --- | --- |

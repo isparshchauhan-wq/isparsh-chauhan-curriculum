@@ -5,13 +5,18 @@
 - Source session: 17.1
 - Status: scaffold — content not yet authored
 
-This file reserves the agreed location for the lecture script. It is not a completed teaching script.
+This file reserves the agreed location for the session teaching script. It is not completed teaching material.
+
+Source objectives, topics, schedule, and authoring caveats are recorded in [the batch curriculum](../../curriculum.md). Read that reference before authoring.
 
 Use [the shared lecture-script template](../../../templates/lecture-script-template.md) when preparing this session.
 
 ## Learning objectives
 
-Pending source-aligned authoring.
+- Run a full preparation workflow on a raw dataset: clean, engineer, scale, split
+- Make and defend preparation decisions on real, messy data
+- Produce a model-ready dataset with a documented preparation log
+- Review a peer's preparation choices and give structured feedback
 
 ## Teaching sequence and instructor notes
 

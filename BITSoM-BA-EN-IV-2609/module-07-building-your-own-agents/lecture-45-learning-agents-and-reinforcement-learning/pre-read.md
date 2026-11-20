@@ -5,13 +5,17 @@
 - Source session: 45
 - Status: scaffold — content not yet authored
 
-This file reserves the agreed location for the session pre-read. It is not a completed pre-read.
+This file reserves the agreed location for the session pre-read. It is not completed teaching material.
+
+Source objectives, topics, schedule, and authoring caveats are recorded in [the batch curriculum](../../curriculum.md). Read that reference before authoring.
 
 Use [the shared pre-read template](../../../templates/pre-read-template.md) when preparing this session.
 
 ## Learning objectives
 
-Pending source-aligned authoring.
+- Introduction to learning agents
+- Basics of reinforcement learning (states, actions, rewards)
+- Example: training a simple agent in a game or simulation (conceptual, e.g., an agent learning to play tic-tac-toe or an overview of how AlphaGo learned)
 
 ## Learning journey
 

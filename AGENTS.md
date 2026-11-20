@@ -4,7 +4,9 @@
 
 Use `curriculum-index.json` to resolve the batch, module, and source session number.
 Preserve source numbering and the existing batch/module/lecture hierarchy. AIML has two sessions numbered 27.1 in different modules.
-Do not invent missing DSAI coverage; consult `SOURCES.md` for known gaps and module-label decisions.
+The complete DSAI syllabus is indexed. Consult `SOURCES.md` for source coverage, title/objective conflicts, and module-label decisions.
+Use indexed objectives, topics, source duration, and authoring notes before requesting missing inputs. Do not silently resolve flagged title/objective mismatches or 90/120-minute pacing conflicts.
+After changing curriculum-index.json, run `python3 tools/sync_curriculum.py` to refresh batch references and exports.
 Update the existing lesson file instead of creating dated folders at the repository root.
 
 ## Pre-read requests

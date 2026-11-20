@@ -33,7 +33,8 @@ def resolve(root, batch_id, session_id, module_id=None, artifact="pre-read"):
                             "module_name": module["title"], "session_id": session_id,
                             "session_name": session["title"], "output_directory": str(directory),
                             "output_path": str(directory / (artifact + ".md")),
-                            "status": session.get("status", "unknown")})
+                            "status": session.get("status", "unknown"),
+                            **{key: session.get(key) for key in ("learning_objectives", "topics", "scheduled_date", "duration_minutes", "source", "delivery_status", "authoring_notes", "curriculum_review_required", "supplemental_learning_objectives", "supplemental_objectives_source")}})
     if not matches:
         raise ValueError("Session not found in confirmed curriculum; do not infer a new session")
     if len(matches) != 1:

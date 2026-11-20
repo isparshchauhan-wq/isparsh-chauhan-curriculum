@@ -1,17 +1,24 @@
 # Hypothesis Testing Fundamentals — Lecture script
 
 - Batch: BITSoM-BA-EN-IV-2609
-- Module: 01A — Foundations of Business Analytics & Data Science
+- Module: 01a — Foundations of Business Analytics & Data Science
 - Source session: 3
 - Status: scaffold — content not yet authored
 
-This file reserves the agreed location for the lecture script. It is not a completed teaching script.
+This file reserves the agreed location for the session teaching script. It is not completed teaching material.
+
+Source objectives, topics, schedule, and authoring caveats are recorded in [the batch curriculum](../../curriculum.md). Read that reference before authoring.
 
 Use [the shared lecture-script template](../../../templates/lecture-script-template.md) when preparing this session.
 
 ## Learning objectives
 
-Pending source-aligned authoring.
+Source title/objective alignment requires review before these objectives are used in teaching content.
+
+- Excel basics for analytics (formulas, references)
+- Building a simple financial or sales model
+- What-if analysis
+- Scenario planning using Excel
 
 ## Teaching sequence and instructor notes
 

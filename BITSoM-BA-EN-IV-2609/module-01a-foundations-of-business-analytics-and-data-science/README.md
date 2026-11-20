@@ -1,8 +1,8 @@
 # Foundations of Business Analytics & Data Science
 
 - Batch: BITSoM-BA-EN-IV-2609
-- Module: 01A
-- Source: Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf; BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker.pdf
+- Module: 01a
+- Source: BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker(1).pdf
 
 | Session | Lecture |
 | --- | --- |

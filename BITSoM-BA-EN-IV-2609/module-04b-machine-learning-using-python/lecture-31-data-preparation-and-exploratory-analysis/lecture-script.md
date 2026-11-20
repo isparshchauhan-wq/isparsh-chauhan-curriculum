@@ -1,17 +1,21 @@
 # Data Preparation and Exploratory Analysis — Lecture script
 
 - Batch: BITSoM-BA-EN-IV-2609
-- Module: 04B — Machine Learning using Python
+- Module: 04b — Machine Learning using Python
 - Source session: 31
 - Status: scaffold — content not yet authored
 
-This file reserves the agreed location for the lecture script. It is not a completed teaching script.
+This file reserves the agreed location for the session teaching script. It is not completed teaching material.
+
+Source objectives, topics, schedule, and authoring caveats are recorded in [the batch curriculum](../../curriculum.md). Read that reference before authoring.
 
 Use [the shared lecture-script template](../../../templates/lecture-script-template.md) when preparing this session.
 
 ## Learning objectives
 
-Pending source-aligned authoring.
+- This lecture focuses on the foundational aspects of retail data science
+- You will cover the structure of store, transaction, and promotion datasets, along with techniques for merging and aggregating disparate data sources
+- Key concepts include identifying seasonal trends and temporal patterns, calculating essential retail metrics like Average Transaction Value (ATV) and Units Per Transaction (UPT), and performing impact analysis to see how festivals and promotional events influence sales volume
 
 ## Teaching sequence and instructor notes
 

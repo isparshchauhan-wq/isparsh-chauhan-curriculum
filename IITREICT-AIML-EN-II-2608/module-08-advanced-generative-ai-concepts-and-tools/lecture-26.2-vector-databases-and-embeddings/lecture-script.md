@@ -5,13 +5,18 @@
 - Source session: 26.2
 - Status: scaffold — content not yet authored
 
-This file reserves the agreed location for the lecture script. It is not a completed teaching script.
+This file reserves the agreed location for the session teaching script. It is not completed teaching material.
+
+Source objectives, topics, schedule, and authoring caveats are recorded in [the batch curriculum](../../curriculum.md). Read that reference before authoring.
 
 Use [the shared lecture-script template](../../../templates/lecture-script-template.md) when preparing this session.
 
 ## Learning objectives
 
-Pending source-aligned authoring.
+- Explain what an embedding is: meaning represented as numbers
+- Describe how a vector database finds similar content fast
+- Connect embeddings and vector search to the RAG retrieval step
+- Survey the vector database landscape at an awareness level
 
 ## Teaching sequence and instructor notes
 

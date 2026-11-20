@@ -5,13 +5,19 @@
 - Source session: 14.2
 - Status: scaffold — content not yet authored
 
-This file reserves the agreed location for the lecture script. It is not a completed teaching script.
+This file reserves the agreed location for the session teaching script. It is not completed teaching material.
+
+Source objectives, topics, schedule, and authoring caveats are recorded in [the batch curriculum](../../curriculum.md). Read that reference before authoring.
 
 Use [the shared lecture-script template](../../../templates/lecture-script-template.md) when preparing this session.
 
 ## Learning objectives
 
-Pending source-aligned authoring.
+- Define sample space, event, and probability as a ratio
+- Compute P(A∪B) and P(A|B) manually from a small table or Venn diagram
+- Derive Bayes' Theorem from the definition of conditional probability — no shortcuts
+- Work through a complete Bayes' example numerically (e.g., if 1% of population has disease, test is 90% accurate — what is P(disease | positive test)?)
+- Explain in plain language why conditional probability is different from joint probability
 
 ## Teaching sequence and instructor notes
 

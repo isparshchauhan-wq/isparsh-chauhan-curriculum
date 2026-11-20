@@ -5,13 +5,18 @@
 - Source session: 13.2
 - Status: scaffold — content not yet authored
 
-This file reserves the agreed location for the session pre-read. It is not a completed pre-read.
+This file reserves the agreed location for the session pre-read. It is not completed teaching material.
+
+Source objectives, topics, schedule, and authoring caveats are recorded in [the batch curriculum](../../curriculum.md). Read that reference before authoring.
 
 Use [the shared pre-read template](../../../templates/pre-read-template.md) when preparing this session.
 
 ## Learning objectives
 
-Pending source-aligned authoring.
+- Turn a chart into a clear business insight
+- Structure a short visual narrative for a stakeholder
+- Avoid misleading or cluttered visuals
+- Present a finding with a recommendation
 
 ## Learning journey
 

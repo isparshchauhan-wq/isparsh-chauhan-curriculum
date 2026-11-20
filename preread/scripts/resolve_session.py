@@ -12,7 +12,9 @@ def repo_root():
     raise ValueError("Run from a curriculum checkout containing curriculum-index.json")
 
 
-def resolve(root, batch_id, session_id, module_id=None):
+def resolve(root, batch_id, session_id, module_id=None, artifact="pre-read"):
+    if artifact not in ("pre-read", "lecture-script"):
+        raise ValueError("Unsupported artifact")
     data = json.loads((root / "curriculum-index.json").read_text())
     batches = [b for b in data["batches"] if b["batch"] == batch_id]
     if not batches:
@@ -30,7 +32,7 @@ def resolve(root, batch_id, session_id, module_id=None):
             matches.append({"batch_id": batch_id, "module_id": module["module_id"],
                             "module_name": module["title"], "session_id": session_id,
                             "session_name": session["title"], "output_directory": str(directory),
-                            "output_path": str(directory / "pre-read.md"),
+                            "output_path": str(directory / (artifact + ".md")),
                             "status": session.get("status", "unknown")})
     if not matches:
         raise ValueError("Session not found in confirmed curriculum; do not infer a new session")
@@ -45,9 +47,10 @@ def main():
     parser.add_argument("--batch", required=True)
     parser.add_argument("--session", required=True)
     parser.add_argument("--module")
+    parser.add_argument("--artifact", choices=["pre-read", "lecture-script"], default="pre-read")
     args = parser.parse_args()
     try:
-        result = resolve(repo_root(), args.batch, args.session, args.module)
+        result = resolve(repo_root(), args.batch, args.session, args.module, args.artifact)
     except (ValueError, OSError, KeyError, json.JSONDecodeError) as error:
         print(json.dumps({"ok": False, "error": str(error)}))
         return 1

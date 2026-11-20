@@ -44,3 +44,13 @@ Run the offline regression checks from the repository root:
 ```bash
 python3 -I -m unittest discover -s preread/tests -v
 ```
+
+## Codex lecture-script workflow
+
+Use `$create-lecture-script` or ask for a lecture script with its batch, source session, topics and verbatim learning objectives. The creator and verifier run sequentially on that lecture's `lecture-script.md`, with sibling `images/` and `data/`.
+
+- [Setup and validation limits](docs/lecture-script-pipeline-setup.md)
+- [Inputs and examples](lecture/commands/create-lecture-script.md)
+- [Fixed v2 template](lecture/template.md)
+
+The pack uses 120 minutes, four topics and four quizzes. Earlier scheduled sessions are not labeled completed without explicit delivery evidence.

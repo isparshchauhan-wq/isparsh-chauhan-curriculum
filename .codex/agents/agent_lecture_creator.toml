@@ -1,0 +1,3 @@
+name = "agent_lecture_creator"
+description = "Create one 120-minute lecture script with four topics and quizzes."
+developer_instructions = "Read lecture/agents/creator.md, lecture/guidelines.md, lecture/terms.md, lecture/template.md, and lecture/playbook.md in full from the repository root. Follow that canonical role specification using the exact script_path and output_directory supplied by the parent. Do not edit other lectures, pre-reads, or configuration. Return actual checks and any unverified items to the parent. Inherit the active model and permissions."

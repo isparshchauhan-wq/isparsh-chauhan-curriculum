@@ -19,7 +19,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 2 — Understanding Data Distributions
 
@@ -37,7 +37,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 3 — Hypothesis Testing Fundamentals
 
@@ -55,7 +55,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 4 — Designing A/B Tests and Experiments
 
@@ -73,7 +73,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 5 — Single Variable Regressions 1
 
@@ -90,7 +90,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 6 — Single Variable Regressions 2
 
@@ -107,7 +107,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 7 — Multivariable Regressions 1
 
@@ -125,7 +125,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 8 — Multivariable Regressions 2
 
@@ -142,7 +142,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ## Module 01B — Data Visualization & Case Studies
 
@@ -162,7 +162,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 - The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.
 - Tracker module wording differs from the calendar module sequence. Folder placement follows the full calendar; see SOURCES.md.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 10 — Principles of effective data visualization, Design Principles and Heuristics
 
@@ -182,7 +182,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 11 — Charting with Tableau
 
@@ -202,7 +202,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 12 — Charting with Tableau Contd. – Advanced Charts
 
@@ -220,7 +220,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - The supplied tracker title and objective block may be misaligned. Objectives are transcribed under their printed LO IDs; reconcile the title/objective mapping before authoring.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 13 — Creating dashboards for real-time business monitoring
 
@@ -240,7 +240,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 14 — Storytelling with data
 
@@ -254,7 +254,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ## Module 02 — Data Warehouse for AI
 
@@ -274,7 +274,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - Tracker module wording differs from the calendar module sequence. Folder placement follows the full calendar; see SOURCES.md.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 16 — Relational Database Management Systems
 
@@ -293,7 +293,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 17 — NoSQL Databases
 
@@ -311,7 +311,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 18 — Data Warehouses
 
@@ -330,7 +330,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 19 — Vector Databases and Embedding Storage
 
@@ -348,7 +348,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 20 — Data Lakes
 
@@ -366,7 +366,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ## Module 03 — Python Crash Course for GenAI
 
@@ -387,7 +387,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - Tracker module wording differs from the calendar module sequence. Folder placement follows the full calendar; see SOURCES.md.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 22 — Control Flow and Data Structures
 
@@ -404,7 +404,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 23 — Advanced Data Structures and Error Handling
 
@@ -420,7 +420,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 24 — Modular Programming, File I/O, and API Integration
 
@@ -436,7 +436,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 25 — Introduction to Data Science: NumPy and Pandas
 
@@ -451,7 +451,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 26 — Machine Learning with Scikit-Learn and Visualization
 
@@ -466,7 +466,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ## Module 04A — Machine Learning Concepts
 
@@ -485,7 +485,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 28 — Supervised Learning & Algorithms
 
@@ -503,7 +503,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 29 — Unsupervised Learning
 
@@ -519,7 +519,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 30 — Machine Learning Workflow & Practical Considerations
 
@@ -534,7 +534,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ## Module 04B — Machine Learning using Python
 
@@ -552,7 +552,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 32 — Feature Engineering and Predictive Modeling
 
@@ -569,7 +569,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ## Module 05 — Neural Networks & Deep Learning
 
@@ -586,7 +586,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - Tracker module wording differs from the calendar module sequence. Folder placement follows the full calendar; see SOURCES.md.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 34 — Neural Networks in Action
 
@@ -600,7 +600,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 35 — Applications of Neural Networks: Computer Vision
 
@@ -614,7 +614,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 36 — Applications of Neural Networks: Natural Language Processing
 
@@ -628,7 +628,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ## Module 06 — Introduction to LLM & Prompt Engineering
 
@@ -648,7 +648,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 - Tracker module wording differs from the calendar module sequence. Folder placement follows the full calendar; see SOURCES.md.
 - This short session title is an organizational label derived from the long source description.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 38 — Fundamentals of crafting prompts
 
@@ -666,7 +666,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - This short session title is an organizational label derived from the long source description.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 39 — Advanced prompting techniques
 
@@ -683,7 +683,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - This short session title is an organizational label derived from the long source description.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 40 — LLM application integration and responsible use
 
@@ -701,7 +701,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - This short session title is an organizational label derived from the long source description.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ## Module 07 — Building your own Agents
 
@@ -722,7 +722,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 - Tracker module wording differs from the calendar module sequence. Folder placement follows the full calendar; see SOURCES.md.
 - This short session title is an organizational label derived from the long source description.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 42 — Building and testing a rule-based agent
 
@@ -739,7 +739,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - This short session title is an organizational label derived from the long source description.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 43 — Goal-based agents and planning
 
@@ -756,7 +756,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - This short session title is an organizational label derived from the long source description.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 44 — Utility-based agents
 
@@ -774,7 +774,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - This short session title is an organizational label derived from the long source description.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 45 — Learning agents and reinforcement learning
 
@@ -791,7 +791,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - This short session title is an organizational label derived from the long source description.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 46 — Contemporary autonomous agents and real-world challenges
 
@@ -808,7 +808,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 **Authoring notes**
 
 - This short session title is an organizational label derived from the long source description.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ## Module 08 — Capstone Project
 
@@ -825,7 +825,7 @@ Unspecified in source.
 **Authoring notes**
 
 - Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 48 — Capstone Project
 
@@ -840,7 +840,7 @@ Unspecified in source.
 **Authoring notes**
 
 - Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 49 — Capstone Project
 
@@ -855,7 +855,7 @@ Unspecified in source.
 **Authoring notes**
 
 - Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 50 — Capstone Project
 
@@ -870,7 +870,7 @@ Unspecified in source.
 **Authoring notes**
 
 - Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 51 — Capstone Project
 
@@ -885,7 +885,7 @@ Unspecified in source.
 **Authoring notes**
 
 - Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 52 — Capstone Project
 
@@ -900,7 +900,7 @@ Unspecified in source.
 **Authoring notes**
 
 - Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 53 — Capstone Project
 
@@ -915,7 +915,7 @@ Unspecified in source.
 **Authoring notes**
 
 - Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 54 — Capstone Project
 
@@ -930,7 +930,7 @@ Unspecified in source.
 **Authoring notes**
 
 - Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 
 ### 55 — Capstone Project
 
@@ -945,5 +945,5 @@ Unspecified in source.
 **Authoring notes**
 
 - Capstone slot retained from the full calendar. The new LO tracker stops at session 46 and supplies no capstone objectives.
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 

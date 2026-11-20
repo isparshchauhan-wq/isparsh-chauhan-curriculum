@@ -3,7 +3,7 @@
 > **Rules for this template (delete this box before use):**
 > - **Format v2 (frozen).** Change the content, never the structure, the colours or the order. See `playbook.md` for how to fill it for a new topic.
 > - **One Why, one What, one How per lecture.** Why = Scenario + Problem Statement. What = "What We Will Use". How = "How: Walking Through …" and the four topics. There is no Why/What/How heading inside a topic.
-> - **Four topics, named "Topic 1" to "Topic 4"** (never "Step", "Block" or "Part"). Group the LOs 1–2 per topic, in teaching order. Minutes (with the Closing) add up to 120. Depth is shown by minutes and by the number of "Extending it" variations, never by a label.
+> - **Four topics, named "Topic 1" to "Topic 4"** (never "Step", "Block" or "Part"). Group the LOs 1–2 per topic, in teaching order. Minutes (with the Closing) add up to {{DURATION_MINUTES}} (90 or 120, from the indexed source). Depth is shown by minutes and by the number of "Extending it" variations, never by a label.
 > - **Four quizzes**, one at the end of each topic, aimed at the topic's main LO (about one per 30 minutes). Light LOs are checked in a quick "Extending it" and in the Closing.
 > - **Inside a topic (fixed):** bridge question → Example → Extending it (one or more) → Quiz. Never label stages "I Do" or "We Do". There is no Recap.
 > - **One flow.** Each topic opens from the previous result, uses the same scenario and data, and ends with a result in words.
@@ -31,7 +31,7 @@ The lecture runs as four topics. Each topic ends with a quiz.
 | 3 | {{short action title}} | {{LO text, verbatim}} | {{MIN}} |
 | 4 | {{short action title}} | {{LO text, verbatim}} | {{MIN}} |
 | — | Closing: Outcome & Summary | | {{MIN}} |
-| | **Total** | | **120** |
+| | **Total** | | **{{DURATION_MINUTES}}** |
 
 > <font color="red">**🎯 Instructor Note**</font> Pace: {{which LO to keep quick, which to spend time on}}.
 > {{One more pacing line, optional.}}

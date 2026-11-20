@@ -43,4 +43,4 @@ PDF line-wrap whitespace is normalized; source wording and numbered LO identifie
 
 Scheduled dates are source-plan dates and may change. All delivery states remain unknown unless supported by separate delivery evidence. Material readiness is independent: scaffolds are not completed pre-reads or lecture scripts.
 
-The lecture workflow uses a standard 120-minute template. BITSoM sessions and AIML masterclasses require an explicit pacing decision before authoring. Some rows have fewer objectives than the template's four-topic format; define coverage without inventing or duplicating source objectives.
+On 20 November 2026, the user approved source-duration lectures: 90-minute BITSoM sessions and AIML masterclasses retain their duration, while 120-minute sessions remain 120 minutes. The four-topic template uses a duration placeholder and its checker accepts `--duration 90|120`. Some rows have fewer objectives than the template's four-topic format; define coverage without inventing or duplicating source objectives.

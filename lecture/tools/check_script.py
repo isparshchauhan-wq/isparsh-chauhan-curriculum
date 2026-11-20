@@ -3,7 +3,7 @@
 
 Usage:
     python3 check_script.py <lecture_script.md> [--los "LO 1;LO 2;..."] [--announcements yes|no]
-                            [--module "Module name"] [--session "Session name"]
+                            [--module "Module name"] [--session "Session name"] [--duration 90|120]
 
 Exit code 0 = no FAIL. Prints one line per finding: FAIL (must fix) or WARN (look at it).
 It checks structure, numbers and wording rules only. It cannot judge accuracy; the verifier does that.
@@ -51,6 +51,13 @@ def main(argv):
             i += 2
         else:
             i += 1
+    try:
+        duration = int(opt.get("duration", "120"))
+        if duration not in (90, 120):
+            raise ValueError()
+    except ValueError:
+        print("FAIL --duration must be 90 or 120")
+        return 1
     with open(path, encoding="utf-8") as handle:
         text = handle.read()
     lines = text.split("\n")
@@ -123,10 +130,10 @@ def main(argv):
             minutes.append(int(m.group(3)))
     if len(minutes) != 5:
         fail(f"Agenda should have 4 topic rows and a Closing row with minutes; found {len(minutes)}")
-    elif sum(minutes) != 120:
-        fail(f"Agenda minutes add up to {sum(minutes)}, not 120")
-    if not any("**120**" in ln for _, ln in agenda_rows):
-        fail("Agenda needs a Total row with **120**")
+    elif sum(minutes) != duration:
+        fail(f"Agenda minutes add up to {sum(minutes)}, not {duration}")
+    if not any(f"**{duration}**" in ln for _, ln in agenda_rows):
+        fail(f"Agenda needs a Total row with **{duration}**")
     head_min = []
     for n, ln in prose:
         if re.match(r"^##\s.*(Topic \d|Closing: Outcome)", ln):

@@ -39,7 +39,7 @@ python3 tools/sync_curriculum.py --check
 python3 -I -m unittest discover -s tests -v
 ```
 
-Source schedules and LO checkboxes do not establish whether a class was delivered. Resolve 90/120-minute pacing conflicts and flagged objective mappings before creating a lecture script.
+Source schedules and LO checkboxes do not establish whether a class was delivered. Use the approved source duration (90 or 120 minutes), and resolve flagged objective mappings before creating a lecture script.
 
 
 ## Codex pre-read workflow
@@ -67,4 +67,8 @@ Use `$create-lecture-script` or ask for a lecture script with its batch, source 
 - [Inputs and examples](lecture/commands/create-lecture-script.md)
 - [Fixed v2 template](lecture/template.md)
 
-The pack uses 120 minutes, four topics and four quizzes. Earlier scheduled sessions are not labeled completed without explicit delivery evidence.
+The pack supports the indexed 90- or 120-minute source duration, four topics and four quizzes. Earlier scheduled sessions are not labeled completed without explicit delivery evidence.
+
+## Daily generation
+
+The [daily curriculum workflow](.github/workflows/daily-curriculum.yml) is scheduled for 06:00 IST, creating up to one upcoming session pair per batch in one draft pull request. Activation requires an OpenAI API secret and GitHub Actions PR permission. See [setup and operating guide](docs/daily-curriculum-automation.md).

@@ -1,0 +1,115 @@
+name: Daily curriculum drafts
+
+on:
+  schedule:
+    - cron: '30 0 * * *' # 06:00 Asia/Kolkata; GitHub may delay scheduled starts.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-curriculum
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+      pull-requests: read
+    env:
+      HAS_OPENAI_KEY: ${{ secrets.OPENAI_API_KEY != '' }}
+      MPLBACKEND: Agg
+      TMPDIR: ${{ runner.temp }}
+      DAILY_REVIEW_PATH: ${{ runner.temp }}/daily-curriculum/review.json
+    outputs:
+      has_work: ${{ steps.plan.outputs.has_work }}
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: classroom
+          MYSQL_DATABASE: classroom
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -pclassroom"
+          --health-interval=10s --health-timeout=5s --health-retries=10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Report missing activation key
+        if: env.HAS_OPENAI_KEY != 'true'
+        run: echo 'Waiting for repository secret OPENAI_API_KEY. No model calls were made.' >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/setup-python@v5
+        if: env.HAS_OPENAI_KEY == 'true'
+        with:
+          python-version: '3.12'
+      - name: Plan up to one session per batch
+        id: plan
+        if: env.HAS_OPENAI_KEY == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 automation/pipeline.py plan --out "$RUNNER_TEMP/daily-curriculum"
+      - uses: actions/setup-node@v4
+        if: steps.plan.outputs.has_work == 'true'
+        with:
+          node-version: '24'
+      - name: Install classroom verification dependencies
+        if: steps.plan.outputs.has_work == 'true'
+        run: |
+          python3 -m pip install numpy pandas scipy matplotlib seaborn scikit-learn statsmodels requests pillow pymysql
+          npm install -g @mermaid-js/mermaid-cli
+          printf '%s\n' '{"args":["--no-sandbox"]}' > "$RUNNER_TEMP/puppeteer.json"
+      - name: Generate and review lesson pairs
+        if: steps.plan.outputs.has_work == 'true'
+        uses: openai/codex-action@v1
+        env:
+          PUPPETEER_CONFIG: ${{ runner.temp }}/puppeteer.json
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          permission-profile: ':workspace'
+          prompt-file: ${{ runner.temp }}/daily-curriculum/prompt.md
+      - name: Validate scope and collect the patch
+        if: steps.plan.outputs.has_work == 'true'
+        run: |
+          git diff --exit-code -- automation/ preread/ lecture/ .github/ tools/ tests/ curriculum-index.json AGENTS.md
+          python3 automation/pipeline.py collect --out "$RUNNER_TEMP/daily-curriculum"
+      - uses: actions/upload-artifact@v4
+        if: steps.plan.outputs.has_work == 'true'
+        with:
+          name: daily-curriculum-patch
+          path: |
+            ${{ runner.temp }}/daily-curriculum/changes.patch
+            ${{ runner.temp }}/daily-curriculum/plan.json
+            ${{ runner.temp }}/daily-curriculum/review.json
+          retention-days: 14
+          if-no-files-found: error
+
+  publish:
+    needs: generate
+    if: needs.generate.outputs.has_work == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: daily-curriculum-patch
+          path: ${{ runner.temp }}/daily-curriculum
+      - name: Open one draft pull request
+        run: python3 automation/pipeline.py publish --out "$RUNNER_TEMP/daily-curriculum"

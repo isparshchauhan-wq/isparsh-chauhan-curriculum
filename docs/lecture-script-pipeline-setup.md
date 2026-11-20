@@ -55,7 +55,7 @@ Their recorded outputs are not evidence of a fresh code run.
 
 The index and context helper now include source objectives, source durations, schedules, and authoring caveats for all three batches. BITSoM tracker checkbox values are recorded separately and do not establish delivery.
 
-The supplied format is fixed at 120 minutes. The BITSoM calendar includes 90-minute sessions and AIML contains shorter masterclasses. Do not silently stretch those sessions; agree on pacing before creating their scripts.
+The user approved source-duration lectures on 20 November 2026. Preserve the four-topic format and use the indexed 90- or 120-minute duration. The template now has a DURATION_MINUTES placeholder and the checker accepts `--duration 90|120` (default 120 for existing examples). This policy in AGENTS.md overrides older fixed-120 text in the supplied pack. Missing durations still need a decision.
 The source says four topics, normally one or two LOs per topic, and each verbatim Agenda LO once. Its fewer-than-four-LO advice is ambiguous. Obtain an explicit coverage plan in that case rather than inventing or duplicating objectives.
 Treat the source's numerical confidence/accuracy language as a quality requirement, not a measurable guarantee from the checker.
 

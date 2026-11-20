@@ -33,5 +33,6 @@ For lecture-script creation or updates, read `.agents/skills/create-lecture-scri
 Use `lecture/guidelines.md`, `terms.md`, `template.md`, and `playbook.md` as canonical rules.
 Delegate to `agent_lecture_creator`, wait, then delegate to `agent_lecture_verifier` on the same indexed `lecture-script.md` and sibling assets. Use canonical Markdown role specs when named roles are unavailable.
 Do not claim earlier scheduled sessions were taught without delivery-status evidence. Do not treat artifact readiness as course completion.
-Respect the 120-minute format; resolve known pacing or LO-grouping conflicts before authoring.
+Use the indexed source duration: the user approved 90- or 120-minute lectures on 20 November 2026. This duration policy overrides older fixed-120 wording in the format pack. Preserve four topics and four quizzes, adapt pacing and Agenda total, and pass `--duration 90|120` to the lecture checker. Missing duration or unresolved LO-grouping conflicts still require clarification.
+For scheduled runs, follow `automation/config.json` and `automation/prompt.md`; keep human review through draft pull requests.
 Track pre-read and lecture-script readiness separately. Full session readiness requires both artifacts.

@@ -81,6 +81,29 @@ class CheckerTests(unittest.TestCase):
    p.write_text(source.read_text().replace('| 15 |','| 16 |',1))
    _,output=self.check(p,['--announcements','no']);self.assertIn('Agenda minutes',output);self.assertIn('Announcements = No',output)
   finally: p.unlink(missing_ok=True)
+ def test_explicit_source_duration_90_is_supported(self):
+  source=ROOT/'lecture/examples/Example_1_Probability_Distributions/lecture_script.md';p=source.parent/'test-script-temporary.md'
+  try:
+   text=source.read_text();text=text.replace('**120**','**90**')
+   # Reduce a single agenda allocation; test the duration logic without changing source examples.
+   import re
+   before,after=text.split('## <font color=\'blue\'>Scenario',1)
+   matches=list(re.finditer(r'\| (\d+) \|',before))
+   remaining=30
+   for match in reversed(matches):
+    value=int(match[1]);take=min(remaining,max(0,value-1))
+    if take:
+     before=before[:match.start(1)]+str(value-take)+before[match.end(1):];remaining-=take
+    if not remaining:break
+   self.assertEqual(remaining,0)
+   new_minutes=[int(m[1]) for m in re.finditer(r'(?m)^\|\s*(?:[1-4]|—)\s*\|.*\|\s*(\d+)\s*\|\s*$',before)]
+   minute_iter=iter(new_minutes)
+   after=re.sub(r'`\d+ min`',lambda m:'`'+str(next(minute_iter))+' min`',after)
+   p.write_text(before+'## <font color=\'blue\'>Scenario'+after)
+   code,output=self.check(p,['--duration','90']);self.assertEqual(code,0,output)
+   _,output=self.check(p);self.assertIn('not 120',output)
+  finally:p.unlink(missing_ok=True)
+
 class RegistrationTests(unittest.TestCase):
  def test_codex_roles_have_required_string_fields(self):
   for name in ['agent_lecture_creator','agent_lecture_verifier']:

@@ -145,7 +145,7 @@ Relational Databases; Tables; SQL; SELECT; DISTINCT
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 - The source does not separately enumerate topics for this row; derive an explicit teaching plan from the objectives before authoring.
 
 ### 4.3 — Filtering: WHERE and Operators
@@ -390,7 +390,7 @@ Data Cleaning; Missing Values; Duplicates
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 - The source does not separately enumerate topics for this row; derive an explicit teaching plan from the objectives before authoring.
 
 ### 11.3 — Cleaning Data II: Type Conversions and Tidying
@@ -515,7 +515,7 @@ Exploratory Data Analysis; End-to-End Workflow
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 - The source does not separately enumerate topics for this row; derive an explicit teaching plan from the objectives before authoring.
 
 ### 14.3 — Descriptive Statistical Analysis
@@ -604,7 +604,7 @@ ML Workflow; scikit-learn workflow; Supervised vs Unsupervised
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 - The source does not separately enumerate topics for this row; derive an explicit teaching plan from the objectives before authoring.
 
 ### 16.3 — Data Splitting and Validation Protocols
@@ -863,7 +863,7 @@ Hyperparameters; Grid Search; Randomized Search; Tuning Strategy
 
 **Authoring notes**
 
-- Source duration is 90 minutes; the standard lecture template uses 120. Resolve pacing before authoring.
+- Use the approved source duration of 90 minutes, retaining four topics and four quizzes.
 - The source does not separately enumerate topics for this row; derive an explicit teaching plan from the objectives before authoring.
 
 ### 23.3 — Unsupervised Learning and K-Means Clustering

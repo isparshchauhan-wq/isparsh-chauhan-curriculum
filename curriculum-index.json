@@ -1,0 +1,968 @@
+{
+  "version": 1,
+  "created_on": "2026-11-20",
+  "purpose": "Curriculum folder scaffold; learning material remains to be authored",
+  "batches": [
+    {
+      "batch": "IITREICT-AIML-EN-II-2608",
+      "coverage": "Complete session scaffold from the available syllabus, including masterclasses and four capstone slots.",
+      "source": "IITREICT-AIML-EN-II-2608 - Batch 2 - Institute Version - EICT_AIML_6-month_V3_-_Session_wise_detailed_syllabus.pdf",
+      "modules": [
+        {
+          "module_id": "01",
+          "title": "Python Programming Fundamentals and Flow Control",
+          "path": "IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "1.1",
+              "title": "Python and Colab: Variables, Data Types, and Expressions",
+              "path": "IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-01.1-python-and-colab-variables-data-types-and-expressions",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "1.2",
+              "title": "Making Decisions: Conditionals and Boolean Logic",
+              "path": "IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-01.2-making-decisions-conditionals-and-boolean-logic",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "2.1",
+              "title": "Repeating Work: Loops and Control Flow",
+              "path": "IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-02.1-repeating-work-loops-and-control-flow",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "2.2",
+              "title": "Functions: Reusable Building Blocks",
+              "path": "IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-02.2-functions-reusable-building-blocks",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "3.1",
+              "title": "Lists, Dictionaries, Tuples and Sets: Core Data Structures",
+              "path": "IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-03.1-lists-dictionaries-tuples-and-sets-core-data-structures",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "3.2",
+              "title": "Strings and String Methods",
+              "path": "IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-03.2-strings-and-string-methods",
+              "status": "scaffold"
+            }
+          ]
+        },
+        {
+          "module_id": "02",
+          "title": "SQL for Data Analysis",
+          "path": "IITREICT-AIML-EN-II-2608/module-02-sql-for-data-analysis",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "4.1",
+              "title": "Databases and the SQL Landscape: SELECT Basics",
+              "path": "IITREICT-AIML-EN-II-2608/module-02-sql-for-data-analysis/lecture-04.1-databases-and-the-sql-landscape-select-basics",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "4.2",
+              "title": "MasterClass: The Data and Intelligence Landscape",
+              "path": "IITREICT-AIML-EN-II-2608/module-02-sql-for-data-analysis/lecture-04.2-masterclass-the-data-and-intelligence-landscape",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "4.3",
+              "title": "Filtering: WHERE and Operators",
+              "path": "IITREICT-AIML-EN-II-2608/module-02-sql-for-data-analysis/lecture-04.3-filtering-where-and-operators",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "5.1",
+              "title": "Sorting, Limiting, Aliases, and String and Date Functions",
+              "path": "IITREICT-AIML-EN-II-2608/module-02-sql-for-data-analysis/lecture-05.1-sorting-limiting-aliases-and-string-and-date-functions",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "5.2",
+              "title": "Aggregations, GROUP BY and HAVING",
+              "path": "IITREICT-AIML-EN-II-2608/module-02-sql-for-data-analysis/lecture-05.2-aggregations-group-by-and-having",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "6.1",
+              "title": "Joins I: INNER and LEFT, by Intuition",
+              "path": "IITREICT-AIML-EN-II-2608/module-02-sql-for-data-analysis/lecture-06.1-joins-i-inner-and-left-by-intuition",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "6.2",
+              "title": "Subqueries",
+              "path": "IITREICT-AIML-EN-II-2608/module-02-sql-for-data-analysis/lecture-06.2-subqueries",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "7.1",
+              "title": "Common Table Expressions (CTEs)",
+              "path": "IITREICT-AIML-EN-II-2608/module-02-sql-for-data-analysis/lecture-07.1-common-table-expressions-ctes",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "7.2",
+              "title": "Window Functions",
+              "path": "IITREICT-AIML-EN-II-2608/module-02-sql-for-data-analysis/lecture-07.2-window-functions",
+              "status": "scaffold"
+            }
+          ]
+        },
+        {
+          "module_id": "03",
+          "title": "The Data Handling Toolkit: NumPy and Pandas",
+          "path": "IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "8.1",
+              "title": "NumPy Foundations: Arrays and Vectorised Operations",
+              "path": "IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-08.1-numpy-foundations-arrays-and-vectorised-operations",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "8.2",
+              "title": "From NumPy to Pandas: Series and DataFrames",
+              "path": "IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-08.2-from-numpy-to-pandas-series-and-dataframes",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "9.1",
+              "title": "Loading and Inspecting Data with Pandas",
+              "path": "IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-09.1-loading-and-inspecting-data-with-pandas",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "9.2",
+              "title": "Selecting Data: loc and iloc",
+              "path": "IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-09.2-selecting-data-loc-and-iloc",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "10.1",
+              "title": "Filtering, Sorting, and Deriving Columns",
+              "path": "IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-10.1-filtering-sorting-and-deriving-columns",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "11.1",
+              "title": "Cleaning Data I: Missing Values and Duplicates",
+              "path": "IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.1-cleaning-data-i-missing-values-and-duplicates",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "11.2",
+              "title": "MasterClass: AI as a Co-Pilot for Analysis",
+              "path": "IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.2-masterclass-ai-as-a-co-pilot-for-analysis",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "11.3",
+              "title": "Cleaning Data II: Type Conversions and Tidying",
+              "path": "IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.3-cleaning-data-ii-type-conversions-and-tidying",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "12.1",
+              "title": "Aggregating and Combining: groupby, merge, and reshape",
+              "path": "IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-12.1-aggregating-and-combining-groupby-merge-and-reshape",
+              "status": "scaffold"
+            }
+          ]
+        },
+        {
+          "module_id": "04",
+          "title": "Data Visualization and Exploratory Data Analysis",
+          "path": "IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "12.2",
+              "title": "Visualising Data I: Matplotlib and Distributions",
+              "path": "IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-12.2-visualising-data-i-matplotlib-and-distributions",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "13.1",
+              "title": "Visualising Data II: Seaborn for Relationships and Categories",
+              "path": "IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-13.1-visualising-data-ii-seaborn-for-relationships-and-categories",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "13.2",
+              "title": "Data Storytelling: Turning Charts into Business Insights",
+              "path": "IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-13.2-data-storytelling-turning-charts-into-business-insights",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "14.1",
+              "title": "Exploratory Data Analysis: An End-to-End Practice",
+              "path": "IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-14.1-exploratory-data-analysis-an-end-to-end-practice",
+              "status": "scaffold"
+            }
+          ]
+        },
+        {
+          "module_id": "05",
+          "title": "Statistical Thinking; Data Preparation; and ML Workflow",
+          "path": "IITREICT-AIML-EN-II-2608/module-05-statistical-thinking-data-preparation-and-ml-workflow",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "14.2",
+              "title": "Master Class Probability & Counting: The Mathematics of Uncertainty",
+              "path": "IITREICT-AIML-EN-II-2608/module-05-statistical-thinking-data-preparation-and-ml-workflow/lecture-14.2-master-class-probability-and-counting-the-mathematics-of-uncertainty",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "14.3",
+              "title": "Descriptive Statistical Analysis",
+              "path": "IITREICT-AIML-EN-II-2608/module-05-statistical-thinking-data-preparation-and-ml-workflow/lecture-14.3-descriptive-statistical-analysis",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "15.1",
+              "title": "Feature Engineering Strategies",
+              "path": "IITREICT-AIML-EN-II-2608/module-05-statistical-thinking-data-preparation-and-ml-workflow/lecture-15.1-feature-engineering-strategies",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "15.2",
+              "title": "Feature Scaling and Normalization",
+              "path": "IITREICT-AIML-EN-II-2608/module-05-statistical-thinking-data-preparation-and-ml-workflow/lecture-15.2-feature-scaling-and-normalization",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "16.1",
+              "title": "The Machine Learning Workflow",
+              "path": "IITREICT-AIML-EN-II-2608/module-05-statistical-thinking-data-preparation-and-ml-workflow/lecture-16.1-the-machine-learning-workflow",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "16.2",
+              "title": "Master Class: Vectors & Linear Algebra — The Mathematics of Space and Direction",
+              "path": "IITREICT-AIML-EN-II-2608/module-05-statistical-thinking-data-preparation-and-ml-workflow/lecture-16.2-master-class-vectors-and-linear-algebra-the-mathematics-of-space-and-direction",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "16.3",
+              "title": "Data Splitting and Validation Protocols",
+              "path": "IITREICT-AIML-EN-II-2608/module-05-statistical-thinking-data-preparation-and-ml-workflow/lecture-16.3-data-splitting-and-validation-protocols",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "17.1",
+              "title": "Integrated Data Preparation Workshop",
+              "path": "IITREICT-AIML-EN-II-2608/module-05-statistical-thinking-data-preparation-and-ml-workflow/lecture-17.1-integrated-data-preparation-workshop",
+              "status": "scaffold"
+            }
+          ]
+        },
+        {
+          "module_id": "06",
+          "title": "Core Supervised Learning: Regression and Classification",
+          "path": "IITREICT-AIML-EN-II-2608/module-06-core-supervised-learning-regression-and-classification",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "17.2",
+              "title": "Simple Linear Regression",
+              "path": "IITREICT-AIML-EN-II-2608/module-06-core-supervised-learning-regression-and-classification/lecture-17.2-simple-linear-regression",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "18.1",
+              "title": "Multiple Linear Regression",
+              "path": "IITREICT-AIML-EN-II-2608/module-06-core-supervised-learning-regression-and-classification/lecture-18.1-multiple-linear-regression",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "18.2",
+              "title": "Evaluating Regression Performance",
+              "path": "IITREICT-AIML-EN-II-2608/module-06-core-supervised-learning-regression-and-classification/lecture-18.2-evaluating-regression-performance",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "19.1",
+              "title": "Introduction to Classification",
+              "path": "IITREICT-AIML-EN-II-2608/module-06-core-supervised-learning-regression-and-classification/lecture-19.1-introduction-to-classification",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "19.2",
+              "title": "Decision Tree Implementation",
+              "path": "IITREICT-AIML-EN-II-2608/module-06-core-supervised-learning-regression-and-classification/lecture-19.2-decision-tree-implementation",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "20.1",
+              "title": "Classification Evaluation I: Confusion Matrix, Accuracy and Precision",
+              "path": "IITREICT-AIML-EN-II-2608/module-06-core-supervised-learning-regression-and-classification/lecture-20.1-classification-evaluation-i-confusion-matrix-accuracy-and-precision",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "20.2",
+              "title": "Classification Evaluation II: Recall, F1-Score and Metric Selection",
+              "path": "IITREICT-AIML-EN-II-2608/module-06-core-supervised-learning-regression-and-classification/lecture-20.2-classification-evaluation-ii-recall-f1-score-and-metric-selection",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "21.1",
+              "title": "Model Selection and Supervised Learning Workshop",
+              "path": "IITREICT-AIML-EN-II-2608/module-06-core-supervised-learning-regression-and-classification/lecture-21.1-model-selection-and-supervised-learning-workshop",
+              "status": "scaffold"
+            }
+          ]
+        },
+        {
+          "module_id": "07",
+          "title": "Advanced ML Concepts and Unsupervised Learning",
+          "path": "IITREICT-AIML-EN-II-2608/module-07-advanced-ml-concepts-and-unsupervised-learning",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "21.2",
+              "title": "Generalisation: The Bias-Variance Trade-off and Cross-Validation",
+              "path": "IITREICT-AIML-EN-II-2608/module-07-advanced-ml-concepts-and-unsupervised-learning/lecture-21.2-generalisation-the-bias-variance-trade-off-and-cross-validation",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "22.1",
+              "title": "Ensemble Learning: Random Forests",
+              "path": "IITREICT-AIML-EN-II-2608/module-07-advanced-ml-concepts-and-unsupervised-learning/lecture-22.1-ensemble-learning-random-forests",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "22.2",
+              "title": "Boosting Intuition and Methods",
+              "path": "IITREICT-AIML-EN-II-2608/module-07-advanced-ml-concepts-and-unsupervised-learning/lecture-22.2-boosting-intuition-and-methods",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "23.1",
+              "title": "Hyperparameter Tuning: Grid and Randomized Search",
+              "path": "IITREICT-AIML-EN-II-2608/module-07-advanced-ml-concepts-and-unsupervised-learning/lecture-23.1-hyperparameter-tuning-grid-and-randomized-search",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "23.2",
+              "title": "Masterclass — Gradient Descent: The Math of Walking Downhill",
+              "path": "IITREICT-AIML-EN-II-2608/module-07-advanced-ml-concepts-and-unsupervised-learning/lecture-23.2-masterclass-gradient-descent-the-math-of-walking-downhill",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "23.3",
+              "title": "Unsupervised Learning and K-Means Clustering",
+              "path": "IITREICT-AIML-EN-II-2608/module-07-advanced-ml-concepts-and-unsupervised-learning/lecture-23.3-unsupervised-learning-and-k-means-clustering",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "24.1",
+              "title": "Production-Ready Pipelines and Advanced Model Selection Workshop",
+              "path": "IITREICT-AIML-EN-II-2608/module-07-advanced-ml-concepts-and-unsupervised-learning/lecture-24.1-production-ready-pipelines-and-advanced-model-selection-workshop",
+              "status": "scaffold"
+            }
+          ]
+        },
+        {
+          "module_id": "08",
+          "title": "Advanced Generative AI Concepts and Tools",
+          "path": "IITREICT-AIML-EN-II-2608/module-08-advanced-generative-ai-concepts-and-tools",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "24.2",
+              "title": "The Generative Model Landscape",
+              "path": "IITREICT-AIML-EN-II-2608/module-08-advanced-generative-ai-concepts-and-tools/lecture-24.2-the-generative-model-landscape",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "25.1",
+              "title": "Structured Prompting: Instructions, Roles, Constraints, Iteration",
+              "path": "IITREICT-AIML-EN-II-2608/module-08-advanced-generative-ai-concepts-and-tools/lecture-25.1-structured-prompting-instructions-roles-constraints-iteration",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "25.2",
+              "title": "Advanced Prompting: Chain-of-Thought, Few-Shot and Context Injection",
+              "path": "IITREICT-AIML-EN-II-2608/module-08-advanced-generative-ai-concepts-and-tools/lecture-25.2-advanced-prompting-chain-of-thought-few-shot-and-context-injection",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "26.1",
+              "title": "Retrieval-Augmented Generation (RAG) Architecture",
+              "path": "IITREICT-AIML-EN-II-2608/module-08-advanced-generative-ai-concepts-and-tools/lecture-26.1-retrieval-augmented-generation-rag-architecture",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "26.2",
+              "title": "Vector Databases and Embeddings",
+              "path": "IITREICT-AIML-EN-II-2608/module-08-advanced-generative-ai-concepts-and-tools/lecture-26.2-vector-databases-and-embeddings",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "27.1",
+              "title": "Agentic AI Concepts and Frameworks: LangChain and CrewAI",
+              "path": "IITREICT-AIML-EN-II-2608/module-08-advanced-generative-ai-concepts-and-tools/lecture-27.1-agentic-ai-concepts-and-frameworks-langchain-and-crewai",
+              "status": "scaffold"
+            }
+          ]
+        },
+        {
+          "module_id": "capstone",
+          "title": "Capstone Project",
+          "path": "IITREICT-AIML-EN-II-2608/module-capstone-project",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "27.1",
+              "title": "Capstone Project",
+              "path": "IITREICT-AIML-EN-II-2608/module-capstone-project/lecture-27.1-capstone-project",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "27.2",
+              "title": "Capstone Project",
+              "path": "IITREICT-AIML-EN-II-2608/module-capstone-project/lecture-27.2-capstone-project",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "28.1",
+              "title": "Capstone Project",
+              "path": "IITREICT-AIML-EN-II-2608/module-capstone-project/lecture-28.1-capstone-project",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "28.2",
+              "title": "Capstone Project",
+              "path": "IITREICT-AIML-EN-II-2608/module-capstone-project/lecture-28.2-capstone-project",
+              "status": "scaffold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "IITREICT-DSAI-EN-III-2609",
+      "coverage": "Partial scaffold: 11 confirmed sessions only. Full syllabus unavailable. Module 02 uses the descriptive label NumPy and Pandas; its official full title remains unverified.",
+      "source": "Prior batch/session instructions and available DSAI pre-reads; full syllabus not available",
+      "modules": [
+        {
+          "module_id": "02",
+          "title": "NumPy and Pandas",
+          "path": "IITREICT-DSAI-EN-III-2609/module-02-numpy-and-pandas",
+          "title_status": "descriptive-label-official-title-unverified",
+          "sessions": [
+            {
+              "source_session": "5.1",
+              "title": "NumPy Foundations: Arrays and Vectorised Operations",
+              "path": "IITREICT-DSAI-EN-III-2609/module-02-numpy-and-pandas/lecture-05.1-numpy-foundations-arrays-and-vectorised-operations",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "5.2",
+              "title": "From NumPy to Pandas: Series and DataFrames",
+              "path": "IITREICT-DSAI-EN-III-2609/module-02-numpy-and-pandas/lecture-05.2-from-numpy-to-pandas-series-and-dataframes",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "6.1",
+              "title": "Loading and Inspecting Data with Pandas",
+              "path": "IITREICT-DSAI-EN-III-2609/module-02-numpy-and-pandas/lecture-06.1-loading-and-inspecting-data-with-pandas",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "6.2",
+              "title": "Selecting Data: loc and iloc",
+              "path": "IITREICT-DSAI-EN-III-2609/module-02-numpy-and-pandas/lecture-06.2-selecting-data-loc-and-iloc",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "7.1",
+              "title": "Filtering, Sorting, and Deriving Columns",
+              "path": "IITREICT-DSAI-EN-III-2609/module-02-numpy-and-pandas/lecture-07.1-filtering-sorting-and-deriving-columns",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "7.2",
+              "title": "Cleaning Data I: Missing Values and Duplicates",
+              "path": "IITREICT-DSAI-EN-III-2609/module-02-numpy-and-pandas/lecture-07.2-cleaning-data-i-missing-values-and-duplicates",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "8.1",
+              "title": "Cleaning Data II: Type Conversions and Tidying",
+              "path": "IITREICT-DSAI-EN-III-2609/module-02-numpy-and-pandas/lecture-08.1-cleaning-data-ii-type-conversions-and-tidying",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "8.2",
+              "title": "Aggregating and Combining: groupby, merge, and reshape",
+              "path": "IITREICT-DSAI-EN-III-2609/module-02-numpy-and-pandas/lecture-08.2-aggregating-and-combining-groupby-merge-and-reshape",
+              "status": "scaffold"
+            }
+          ]
+        },
+        {
+          "module_id": "03a",
+          "title": "SQL",
+          "path": "IITREICT-DSAI-EN-III-2609/module-03a-sql",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "9.1",
+              "title": "Databases and the SQL Landscape: SELECT Basics",
+              "path": "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-09.1-databases-and-the-sql-landscape-select-basics",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "9.2",
+              "title": "Filtering: WHERE and Operators",
+              "path": "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-09.2-filtering-where-and-operators",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "10.1",
+              "title": "Sorting, Limiting, Aliases, and String and Date Functions",
+              "path": "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-10.1-sorting-limiting-aliases-and-string-and-date-functions",
+              "status": "scaffold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "BITSoM-BA-EN-IV-2609",
+      "coverage": "Complete 55-session scaffold using the calendar for module placement and the LO tracker for cross-checking. Descriptive short titles are used for sessions 37–46, whose source titles contain long descriptions.",
+      "source": "Business Analytics_BATCH 4_Calendar_Sept2026.xlsx - Calendar.pdf; BITSoM-BA-EN-IV-2609_LO_Tracker.xlsx - LO Tracker.pdf",
+      "modules": [
+        {
+          "module_id": "01a",
+          "title": "Foundations of Business Analytics & Data Science",
+          "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "1",
+              "title": "Introduction to Business Analytics & Problem Framing",
+              "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science/lecture-01-introduction-to-business-analytics-and-problem-framing",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "2",
+              "title": "Understanding Data Distributions",
+              "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science/lecture-02-understanding-data-distributions",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "3",
+              "title": "Hypothesis Testing Fundamentals",
+              "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science/lecture-03-hypothesis-testing-fundamentals",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "4",
+              "title": "Designing A/B Tests and Experiments",
+              "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science/lecture-04-designing-a-b-tests-and-experiments",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "5",
+              "title": "Single Variable Regressions 1",
+              "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science/lecture-05-single-variable-regressions-1",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "6",
+              "title": "Single Variable Regressions 2",
+              "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science/lecture-06-single-variable-regressions-2",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "7",
+              "title": "Multivariable Regressions 1",
+              "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science/lecture-07-multivariable-regressions-1",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "8",
+              "title": "Multivariable Regressions 2",
+              "path": "BITSoM-BA-EN-IV-2609/module-01a-foundations-of-business-analytics-and-data-science/lecture-08-multivariable-regressions-2",
+              "status": "scaffold"
+            }
+          ]
+        },
+        {
+          "module_id": "01b",
+          "title": "Data Visualization & Case Studies",
+          "path": "BITSoM-BA-EN-IV-2609/module-01b-data-visualization-and-case-studies",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "9",
+              "title": "Introduction to visualization as a tool for business decision making, Visual Elements and Hierarchy",
+              "path": "BITSoM-BA-EN-IV-2609/module-01b-data-visualization-and-case-studies/lecture-09-introduction-to-visualization-as-a-tool-for-business-decision-making-visual-elements-and-hierarchy",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "10",
+              "title": "Principles of effective data visualization, Design Principles and Heuristics",
+              "path": "BITSoM-BA-EN-IV-2609/module-01b-data-visualization-and-case-studies/lecture-10-principles-of-effective-data-visualization-design-principles-and-heuristics",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "11",
+              "title": "Charting with Tableau",
+              "path": "BITSoM-BA-EN-IV-2609/module-01b-data-visualization-and-case-studies/lecture-11-charting-with-tableau",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "12",
+              "title": "Charting with Tableau Contd. – Advanced Charts",
+              "path": "BITSoM-BA-EN-IV-2609/module-01b-data-visualization-and-case-studies/lecture-12-charting-with-tableau-contd-advanced-charts",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "13",
+              "title": "Creating dashboards for real-time business monitoring",
+              "path": "BITSoM-BA-EN-IV-2609/module-01b-data-visualization-and-case-studies/lecture-13-creating-dashboards-for-real-time-business-monitoring",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "14",
+              "title": "Storytelling with data",
+              "path": "BITSoM-BA-EN-IV-2609/module-01b-data-visualization-and-case-studies/lecture-14-storytelling-with-data",
+              "status": "scaffold"
+            }
+          ]
+        },
+        {
+          "module_id": "02",
+          "title": "Data Warehouse for AI",
+          "path": "BITSoM-BA-EN-IV-2609/module-02-data-warehouse-for-ai",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "15",
+              "title": "Foundation of AI Data Architecture",
+              "path": "BITSoM-BA-EN-IV-2609/module-02-data-warehouse-for-ai/lecture-15-foundation-of-ai-data-architecture",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "16",
+              "title": "Relational Database Management Systems",
+              "path": "BITSoM-BA-EN-IV-2609/module-02-data-warehouse-for-ai/lecture-16-relational-database-management-systems",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "17",
+              "title": "NoSQL Databases",
+              "path": "BITSoM-BA-EN-IV-2609/module-02-data-warehouse-for-ai/lecture-17-nosql-databases",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "18",
+              "title": "Data Warehouses",
+              "path": "BITSoM-BA-EN-IV-2609/module-02-data-warehouse-for-ai/lecture-18-data-warehouses",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "19",
+              "title": "Vector Databases and Embedding Storage",
+              "path": "BITSoM-BA-EN-IV-2609/module-02-data-warehouse-for-ai/lecture-19-vector-databases-and-embedding-storage",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "20",
+              "title": "Data Lakes",
+              "path": "BITSoM-BA-EN-IV-2609/module-02-data-warehouse-for-ai/lecture-20-data-lakes",
+              "status": "scaffold"
+            }
+          ]
+        },
+        {
+          "module_id": "03",
+          "title": "Python Crash Course for GenAI",
+          "path": "BITSoM-BA-EN-IV-2609/module-03-python-crash-course-for-genai",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "21",
+              "title": "Introduction to Python: Syntax, Strings, and Control Flow",
+              "path": "BITSoM-BA-EN-IV-2609/module-03-python-crash-course-for-genai/lecture-21-introduction-to-python-syntax-strings-and-control-flow",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "22",
+              "title": "Control Flow and Data Structures",
+              "path": "BITSoM-BA-EN-IV-2609/module-03-python-crash-course-for-genai/lecture-22-control-flow-and-data-structures",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "23",
+              "title": "Advanced Data Structures and Error Handling",
+              "path": "BITSoM-BA-EN-IV-2609/module-03-python-crash-course-for-genai/lecture-23-advanced-data-structures-and-error-handling",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "24",
+              "title": "Modular Programming, File I/O, and API Integration",
+              "path": "BITSoM-BA-EN-IV-2609/module-03-python-crash-course-for-genai/lecture-24-modular-programming-file-i-o-and-api-integration",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "25",
+              "title": "Introduction to Data Science: NumPy and Pandas",
+              "path": "BITSoM-BA-EN-IV-2609/module-03-python-crash-course-for-genai/lecture-25-introduction-to-data-science-numpy-and-pandas",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "26",
+              "title": "Machine Learning with Scikit-Learn and Visualization",
+              "path": "BITSoM-BA-EN-IV-2609/module-03-python-crash-course-for-genai/lecture-26-machine-learning-with-scikit-learn-and-visualization",
+              "status": "scaffold"
+            }
+          ]
+        },
+        {
+          "module_id": "04a",
+          "title": "Machine Learning Concepts",
+          "path": "BITSoM-BA-EN-IV-2609/module-04a-machine-learning-concepts",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "27",
+              "title": "Introduction to Machine Learning",
+              "path": "BITSoM-BA-EN-IV-2609/module-04a-machine-learning-concepts/lecture-27-introduction-to-machine-learning",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "28",
+              "title": "Supervised Learning & Algorithms",
+              "path": "BITSoM-BA-EN-IV-2609/module-04a-machine-learning-concepts/lecture-28-supervised-learning-and-algorithms",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "29",
+              "title": "Unsupervised Learning",
+              "path": "BITSoM-BA-EN-IV-2609/module-04a-machine-learning-concepts/lecture-29-unsupervised-learning",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "30",
+              "title": "Machine Learning Workflow & Practical Considerations",
+              "path": "BITSoM-BA-EN-IV-2609/module-04a-machine-learning-concepts/lecture-30-machine-learning-workflow-and-practical-considerations",
+              "status": "scaffold"
+            }
+          ]
+        },
+        {
+          "module_id": "04b",
+          "title": "Machine Learning using Python",
+          "path": "BITSoM-BA-EN-IV-2609/module-04b-machine-learning-using-python",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "31",
+              "title": "Data Preparation and Exploratory Analysis",
+              "path": "BITSoM-BA-EN-IV-2609/module-04b-machine-learning-using-python/lecture-31-data-preparation-and-exploratory-analysis",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "32",
+              "title": "Feature Engineering and Predictive Modeling",
+              "path": "BITSoM-BA-EN-IV-2609/module-04b-machine-learning-using-python/lecture-32-feature-engineering-and-predictive-modeling",
+              "status": "scaffold"
+            }
+          ]
+        },
+        {
+          "module_id": "05",
+          "title": "Neural Networks & Deep Learning",
+          "path": "BITSoM-BA-EN-IV-2609/module-05-neural-networks-and-deep-learning",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "33",
+              "title": "Building Blocks of Neural Networks",
+              "path": "BITSoM-BA-EN-IV-2609/module-05-neural-networks-and-deep-learning/lecture-33-building-blocks-of-neural-networks",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "34",
+              "title": "Neural Networks in Action",
+              "path": "BITSoM-BA-EN-IV-2609/module-05-neural-networks-and-deep-learning/lecture-34-neural-networks-in-action",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "35",
+              "title": "Applications of Neural Networks: Computer Vision",
+              "path": "BITSoM-BA-EN-IV-2609/module-05-neural-networks-and-deep-learning/lecture-35-applications-of-neural-networks-computer-vision",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "36",
+              "title": "Applications of Neural Networks: Natural Language Processing",
+              "path": "BITSoM-BA-EN-IV-2609/module-05-neural-networks-and-deep-learning/lecture-36-applications-of-neural-networks-natural-language-processing",
+              "status": "scaffold"
+            }
+          ]
+        },
+        {
+          "module_id": "06",
+          "title": "Introduction to LLM & Prompt Engineering",
+          "path": "BITSoM-BA-EN-IV-2609/module-06-introduction-to-llm-and-prompt-engineering",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "37",
+              "title": "Overview of modern LLMs",
+              "path": "BITSoM-BA-EN-IV-2609/module-06-introduction-to-llm-and-prompt-engineering/lecture-37-overview-of-modern-llms",
+              "status": "scaffold",
+              "title_note": "Concise descriptive title based on the long source title/description"
+            },
+            {
+              "source_session": "38",
+              "title": "Fundamentals of crafting prompts",
+              "path": "BITSoM-BA-EN-IV-2609/module-06-introduction-to-llm-and-prompt-engineering/lecture-38-fundamentals-of-crafting-prompts",
+              "status": "scaffold",
+              "title_note": "Concise descriptive title based on the long source title/description"
+            },
+            {
+              "source_session": "39",
+              "title": "Advanced prompting techniques",
+              "path": "BITSoM-BA-EN-IV-2609/module-06-introduction-to-llm-and-prompt-engineering/lecture-39-advanced-prompting-techniques",
+              "status": "scaffold",
+              "title_note": "Concise descriptive title based on the long source title/description"
+            },
+            {
+              "source_session": "40",
+              "title": "LLM application integration and responsible use",
+              "path": "BITSoM-BA-EN-IV-2609/module-06-introduction-to-llm-and-prompt-engineering/lecture-40-llm-application-integration-and-responsible-use",
+              "status": "scaffold",
+              "title_note": "Concise descriptive title based on the long source title/description"
+            }
+          ]
+        },
+        {
+          "module_id": "07",
+          "title": "Building your own Agents",
+          "path": "BITSoM-BA-EN-IV-2609/module-07-building-your-own-agents",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "41",
+              "title": "Definition of agents in AI and Simple Reflex Agents",
+              "path": "BITSoM-BA-EN-IV-2609/module-07-building-your-own-agents/lecture-41-definition-of-agents-in-ai-and-simple-reflex-agents",
+              "status": "scaffold",
+              "title_note": "Concise descriptive title based on the long source title/description"
+            },
+            {
+              "source_session": "42",
+              "title": "Building and testing a rule-based agent",
+              "path": "BITSoM-BA-EN-IV-2609/module-07-building-your-own-agents/lecture-42-building-and-testing-a-rule-based-agent",
+              "status": "scaffold",
+              "title_note": "Concise descriptive title based on the long source title/description"
+            },
+            {
+              "source_session": "43",
+              "title": "Goal-based agents and planning",
+              "path": "BITSoM-BA-EN-IV-2609/module-07-building-your-own-agents/lecture-43-goal-based-agents-and-planning",
+              "status": "scaffold",
+              "title_note": "Concise descriptive title based on the long source title/description"
+            },
+            {
+              "source_session": "44",
+              "title": "Utility-based agents",
+              "path": "BITSoM-BA-EN-IV-2609/module-07-building-your-own-agents/lecture-44-utility-based-agents",
+              "status": "scaffold",
+              "title_note": "Concise descriptive title based on the long source title/description"
+            },
+            {
+              "source_session": "45",
+              "title": "Learning agents and reinforcement learning",
+              "path": "BITSoM-BA-EN-IV-2609/module-07-building-your-own-agents/lecture-45-learning-agents-and-reinforcement-learning",
+              "status": "scaffold",
+              "title_note": "Concise descriptive title based on the long source title/description"
+            },
+            {
+              "source_session": "46",
+              "title": "Contemporary autonomous agents and real-world challenges",
+              "path": "BITSoM-BA-EN-IV-2609/module-07-building-your-own-agents/lecture-46-contemporary-autonomous-agents-and-real-world-challenges",
+              "status": "scaffold",
+              "title_note": "Concise descriptive title based on the long source title/description"
+            }
+          ]
+        },
+        {
+          "module_id": "08",
+          "title": "Capstone Project",
+          "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project",
+          "title_status": "source-aligned",
+          "sessions": [
+            {
+              "source_session": "47",
+              "title": "Capstone Project",
+              "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-47-capstone-project",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "48",
+              "title": "Capstone Project",
+              "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-48-capstone-project",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "49",
+              "title": "Capstone Project",
+              "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-49-capstone-project",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "50",
+              "title": "Capstone Project",
+              "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-50-capstone-project",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "51",
+              "title": "Capstone Project",
+              "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-51-capstone-project",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "52",
+              "title": "Capstone Project",
+              "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-52-capstone-project",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "53",
+              "title": "Capstone Project",
+              "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-53-capstone-project",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "54",
+              "title": "Capstone Project",
+              "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-54-capstone-project",
+              "status": "scaffold"
+            },
+            {
+              "source_session": "55",
+              "title": "Capstone Project",
+              "path": "BITSoM-BA-EN-IV-2609/module-08-capstone-project/lecture-55-capstone-project",
+              "status": "scaffold"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

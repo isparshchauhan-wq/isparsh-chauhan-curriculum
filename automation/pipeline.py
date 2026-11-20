@@ -16,42 +16,52 @@ def pending_paths(prs):
   match=re.search(re.escape(MARKER)+r'(.*?) -->',pr.get('body') or '')
   if match:result.update(json.loads(match[1]))
  return result
-def plan(index,config,today,pending=()):
+def next_week(today):
+ d=datetime.date.fromisoformat(today)
+ start=d+datetime.timedelta(days=7-d.weekday())
+ return start.isoformat(),(start+datetime.timedelta(days=6)).isoformat()
+def artifact_key(target):return target['path']+'#'+target.get('artifact','pre-read')
+def plan(index,config,today,pending=(),mode='pre-read',session_date=None):
+ if mode not in ('pre-read','lecture-script'):raise ValueError('Unsupported generation mode')
  targets=[];skipped=[]
- if not config['enabled']:return dict(date=today,targets=[],skipped=['Automation disabled'])
+ if not config['enabled']:return dict(date=today,mode=mode,targets=[],skipped=['Automation disabled'])
+ if session_date:datetime.date.fromisoformat(session_date)
+ if mode=='pre-read':
+  start=end=session_date or (datetime.date.fromisoformat(today)+datetime.timedelta(days=config['pre_read']['generation_lead_days'])).isoformat()
+ else:start,end=next_week(today)
  for b in index['batches']:
   if b['batch'] not in config['batches']:continue
-  chosen=0
   for m in b['modules']:
-   for s in m['sessions']:
-    if chosen>=config['sessions_per_batch']:continue
+   for row in m['sessions']:
+    if not row.get('scheduled_date') or not start<=row['scheduled_date']<=end:continue
+    target=dict(batch=b['batch'],module_id=m['module_id'],module=m['title'],artifact=mode,**row)
+    if row.get('pre_read_status' if mode=='pre-read' else 'lecture_script_status')=='ready':continue
+    if artifact_key(target) in pending or row['path'] in pending:continue
     reason=None
-    if s.get('status')=='ready' or (s.get('pre_read_status')=='ready' and s.get('lecture_script_status')=='ready'):continue
-    if not s.get('scheduled_date') or s['scheduled_date']<today:continue
-    if s['path'] in pending:continue
-    if s.get('curriculum_review_required'):reason='Unresolved source title/objective alignment'
-    elif s.get('duration_minutes') not in (90,120):reason='Missing or unsupported source duration'
-    elif not 4<=len(s.get('learning_objectives',[]))<=8:reason='Four-topic LO grouping needs an explicit coverage plan'
+    if row.get('curriculum_review_required'):reason='Unresolved source title/objective alignment'
+    elif not row.get('learning_objectives'):reason='Source objectives missing'
+    elif mode=='lecture-script' and row.get('duration_minutes') not in (90,120):reason='Missing or unsupported source duration'
+    elif mode=='lecture-script' and not 4<=len(row['learning_objectives'])<=8:reason='Four-topic LO grouping needs an explicit coverage plan'
     if reason:
-     skipped.append(dict(batch=b['batch'],session=s['source_session'],reason=reason));continue
-    if chosen>=config['sessions_per_batch']:continue
-    # Source order is preserved; dates decide eligibility, not delivery.
-    targets.append(dict(batch=b['batch'],module_id=m['module_id'],module=m['title'],**s))
-    chosen+=1
- return dict(date=today,targets=targets,skipped=skipped)
+     skipped.append(dict(batch=b['batch'],session=row['source_session'],reason=reason));continue
+    target['pre_read_release_date']=(datetime.date.fromisoformat(row['scheduled_date'])-datetime.timedelta(days=config['pre_read']['release_lead_days'])).isoformat()
+    targets.append(target)
+ return dict(date=today,mode=mode,window_start=start,window_end=end,targets=targets,skipped=skipped)
 def assert_scoped(paths,targets):
  for name in paths:
   p=Path(name)
   if p.is_absolute() or '..' in p.parts:raise ValueError('Unsafe changed path: '+name)
-  if not any(name in (t['path']+'/pre-read.md',t['path']+'/lecture-script.md') or name.startswith(t['path']+'/images/') or name.startswith(t['path']+'/data/') for t in targets):
-   raise ValueError('Unexpected change outside selected lesson assets: '+name)
+  def allowed(t):
+   artifact=t.get('artifact','pre-read')
+   return name==t['path']+'/'+artifact+'.md' or (artifact=='lecture-script' and (name.startswith(t['path']+'/images/') or name.startswith(t['path']+'/data/')))
+  if not any(allowed(t) for t in targets):raise ValueError('Unexpected change outside the selected artifact: '+name)
 def changed_paths():
  tracked=command('git','diff','--name-only','HEAD','-z').stdout.split('\0')
  untracked=command('git','ls-files','--others','--exclude-standard','-z').stdout.split('\0')
  return [p for p in tracked+untracked if p]
 def check_target(t):
  problems=[]
- for filename in ['pre-read.md','lecture-script.md']:
+ for filename in [t.get('artifact','pre-read')+'.md']:
   p=ROOT/t['path']/filename
   if not p.is_file() or 'Status: scaffold' in p.read_text():problems.append(filename+' remains a scaffold');continue
   if filename=='pre-read.md':args=[sys.executable,'-I',str(ROOT/'preread/scripts/check_preread.py'),'--file',str(p),'--setup','No','--root',str(ROOT)]
@@ -63,11 +73,13 @@ def prepare(args):
  config=read(ROOT/'automation/config.json');index=read(ROOT/'curriculum-index.json')
  today=args.date or datetime.datetime.now(ZoneInfo(config['timezone'])).date().isoformat()
  prs=json.loads(command('gh','pr','list','--state','open','--limit','1000','--json','body,headRefName').stdout)
- branch='content/daily-'+today
+ branch='content/'+args.mode+'-'+today
  existing_branch=command('git','ls-remote','--heads','origin',branch).stdout.strip()
  if any(p['headRefName']==branch for p in prs) or existing_branch:
-  p=dict(date=today,targets=[],skipped=['A daily pull request or remote branch already exists; inspect it before retrying'])
- else:p=plan(index,config,today,pending_paths(prs))
+  p=dict(date=today,mode=args.mode,targets=[],skipped=['A run pull request or remote branch already exists; inspect it before retrying'])
+ elif args.mode=='lecture-script' and os.environ.get('REQUESTED_MODE','auto')=='auto' and datetime.date.fromisoformat(today).weekday()!=4:
+  p=dict(date=today,mode=args.mode,targets=[],skipped=['Weekly lecture generation runs on Friday; use manual lecture-script mode to override'])
+ else:p=plan(index,config,today,pending_paths(prs),args.mode,args.session_date)
  p['branch']=branch;p['base_sha']=command('git','rev-parse','HEAD').stdout.strip()
  out=Path(args.out);out.mkdir(parents=True,exist_ok=True);save(out/'plan.json',p)
  instructions=(ROOT/'automation/prompt.md').read_text()
@@ -115,26 +127,26 @@ def publish(args):
   item=report[t['path']];accepted=item['status']=='accepted' and not item.get('unverified_checks') and bool(item.get('evidence'))
   problems=check_target(t)
   if problems:accepted=False;item['status']='needs_verification';item.setdefault('unverified_checks',[]).extend(problems)
-  for key in ['pre_read_status','lecture_script_status']:
-   if s.get(key)!='ready':s[key]='ready' if accepted else 'needs_verification'
+  key='pre_read_status' if t['artifact']=='pre-read' else 'lecture_script_status'
+  s[key]='ready' if accepted else 'needs_verification'
   s['status']='ready' if s.get('pre_read_status')==s.get('lecture_script_status')=='ready' else 'partial'
  save(ROOT/'curriculum-index.json',index)
  command(sys.executable,'tools/sync_curriculum.py')
  command('git','add','curriculum-index.json',*[b['batch'] for b in index['batches']])
  command('git','config','user.name','github-actions[bot]');command('git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com')
  command('git','checkout','-b',p['branch'])
- command('git','commit','-m','Prepare daily curriculum drafts for '+p['date'])
+ command('git','commit','-m','Prepare '+p['mode']+' drafts for '+p['date'])
  existing=command('git','ls-remote','--heads','origin',p['branch']).stdout
  if existing:raise ValueError('Daily branch already exists; inspect it before retrying')
  command('git','push','origin',p['branch'])
- body=['Daily pre-read and lecture-script drafts. Human review is required; no automatic merge.','',MARKER+json.dumps([t['path'] for t in p['targets']])+' -->','']
+ body=['Scheduled '+p['mode']+' drafts. Human review and merge are required before release.','',MARKER+json.dumps([artifact_key(t) for t in p['targets']])+' -->','']
  for t in p['targets']:
   item=report[t['path']];body.extend(['### '+t['batch']+' — '+t['source_session']+' — '+t['title'],f"Source duration: {t['duration_minutes']} minutes. Verification: {item['status']}.",'',json.dumps(item,ensure_ascii=False,indent=2),''])
  if p['skipped']:body.extend(['Skipped curriculum conflicts:','```json',json.dumps(p['skipped'],indent=2),'```'])
  bodyfile=out/'pr-body.md';bodyfile.write_text('\n'.join(body))
- r=command('gh','pr','create','--base',os.environ.get('DEFAULT_BRANCH','main'),'--head',p['branch'],'--draft','--title','Daily curriculum drafts — '+p['date'],'--body-file',str(bodyfile.resolve()))
+ r=command('gh','pr','create','--base',os.environ.get('DEFAULT_BRANCH','main'),'--head',p['branch'],'--draft','--title',p['mode']+' drafts — '+p['date'],'--body-file',str(bodyfile.resolve()))
  print(r.stdout)
 def main():
- ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('stage',choices=['plan','collect','publish']);ap.add_argument('--out',required=True);ap.add_argument('--date');args=ap.parse_args()
+ ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('stage',choices=['plan','collect','publish']);ap.add_argument('--out',required=True);ap.add_argument('--date');ap.add_argument('--mode',choices=['pre-read','lecture-script'],default='pre-read');ap.add_argument('--session-date');args=ap.parse_args()
  {'plan':prepare,'collect':collect,'publish':publish}[args.stage](args)
 if __name__=='__main__':main()

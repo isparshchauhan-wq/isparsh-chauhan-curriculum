@@ -69,6 +69,8 @@ Use `$create-lecture-script` or ask for a lecture script with its batch, source 
 
 The pack supports the indexed 90- or 120-minute source duration, four topics and four quizzes. Earlier scheduled sessions are not labeled completed without explicit delivery evidence.
 
-## Daily generation
+## Generation and release schedule
 
-The [daily curriculum workflow](.github/workflows/daily-curriculum.yml) is scheduled for 06:00 IST, creating up to one upcoming session pair per batch in one draft pull request. Activation requires an OpenAI API secret and GitHub Actions PR permission. See [setup and operating guide](docs/daily-curriculum-automation.md).
+Pre-reads are generated two days before class and formally released at 15:00 IST the preceding day after approval and merge. Lecture scripts are drafted Friday 06:00 IST for the following Monday–Sunday, then packaged by batch when approved. Session counts come from the calendar. GitHub cannot guarantee exact wall-clock release, and public draft content is visible before formal publication.
+
+See the [automation guide](docs/daily-curriculum-automation.md) and [Git/GitHub learning guide](docs/git-github-curriculum-guide.md). Activation still requires the API secret and workflow permissions.

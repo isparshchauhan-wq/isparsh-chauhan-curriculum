@@ -1,9 +1,19 @@
-name: Daily curriculum drafts
+name: Prepare scheduled curriculum
 
 on:
   schedule:
     - cron: '30 0 * * *' # 06:00 Asia/Kolkata; GitHub may delay scheduled starts.
   workflow_dispatch:
+    inputs:
+      mode:
+        description: Artifact to generate (auto follows the weekday schedule)
+        type: choice
+        options: [auto, pre-read, lecture-script]
+        default: auto
+      session_date:
+        description: Optional YYYY-MM-DD class date for a manual pre-read catch-up
+        type: string
+        required: false
 
 permissions:
   contents: read
@@ -14,6 +24,10 @@ concurrency:
 
 jobs:
   generate:
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [pre-read, lecture-script]
     runs-on: ubuntu-latest
     timeout-minutes: 120
     permissions:
@@ -24,8 +38,9 @@ jobs:
       MPLBACKEND: Agg
       TMPDIR: ${{ runner.temp }}
       DAILY_REVIEW_PATH: ${{ runner.temp }}/daily-curriculum/review.json
-    outputs:
-      has_work: ${{ steps.plan.outputs.has_work }}
+      REQUESTED_MODE: ${{ inputs.mode || 'auto' }}
+      WORK_MODE: ${{ matrix.mode }}
+      SESSION_DATE: ${{ inputs.session_date || '' }}
     services:
       mysql:
         image: mysql:8.0
@@ -48,12 +63,15 @@ jobs:
         if: env.HAS_OPENAI_KEY == 'true'
         with:
           python-version: '3.12'
-      - name: Plan up to one session per batch
+      - name: Plan the selected artifact and schedule window
         id: plan
-        if: env.HAS_OPENAI_KEY == 'true'
+        if: env.HAS_OPENAI_KEY == 'true' && (env.REQUESTED_MODE == 'auto' || env.REQUESTED_MODE == matrix.mode)
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python3 automation/pipeline.py plan --out "$RUNNER_TEMP/daily-curriculum"
+        run: |
+          args=(plan --out "$RUNNER_TEMP/daily-curriculum" --mode "$WORK_MODE")
+          if [ -n "$SESSION_DATE" ]; then args+=(--session-date "$SESSION_DATE"); fi
+          python3 automation/pipeline.py "${args[@]}"
       - uses: actions/setup-node@v4
         if: steps.plan.outputs.has_work == 'true'
         with:
@@ -64,7 +82,7 @@ jobs:
           python3 -m pip install numpy pandas scipy matplotlib seaborn scikit-learn statsmodels requests pillow pymysql
           npm install -g @mermaid-js/mermaid-cli
           printf '%s\n' '{"args":["--no-sandbox"]}' > "$RUNNER_TEMP/puppeteer.json"
-      - name: Generate and review lesson pairs
+      - name: Generate and review the selected artifact
         if: steps.plan.outputs.has_work == 'true'
         uses: openai/codex-action@v1
         env:
@@ -81,7 +99,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: steps.plan.outputs.has_work == 'true'
         with:
-          name: daily-curriculum-patch
+          name: curriculum-${{ matrix.mode }}-patch
           path: |
             ${{ runner.temp }}/daily-curriculum/changes.patch
             ${{ runner.temp }}/daily-curriculum/plan.json
@@ -90,8 +108,12 @@ jobs:
           if-no-files-found: error
 
   publish:
+    if: ${{ !cancelled() }}
     needs: generate
-    if: needs.generate.outputs.has_work == 'true'
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [pre-read, lecture-script]
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -108,8 +130,11 @@ jobs:
         with:
           python-version: '3.12'
       - uses: actions/download-artifact@v4
+        id: download
+        continue-on-error: true
         with:
-          name: daily-curriculum-patch
+          name: curriculum-${{ matrix.mode }}-patch
           path: ${{ runner.temp }}/daily-curriculum
       - name: Open one draft pull request
+        if: steps.download.outcome == 'success'
         run: python3 automation/pipeline.py publish --out "$RUNNER_TEMP/daily-curriculum"

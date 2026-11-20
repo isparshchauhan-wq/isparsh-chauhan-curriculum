@@ -1,0 +1,37 @@
+name: Release pre-reads at 3 PM IST
+on:
+  schedule:
+    - cron: '10 9 * * *' # Start 14:40 IST, then wait until 15:00 IST.
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Check eligibility without publishing
+        type: boolean
+        default: true
+permissions:
+  contents: write
+concurrency:
+  group: pre-read-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    env:
+      GH_TOKEN: ${{ github.token }}
+      DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Publish approved pre-reads for tomorrow
+        run: |
+          if [ "$DRY_RUN" = true ]; then
+            python3 automation/releases.py pre-read --dry-run
+          else
+            python3 automation/releases.py pre-read --wait
+          fi

@@ -26,3 +26,21 @@ For example, [AIML session 11.1](IITREICT-AIML-EN-II-2608/module-03-the-data-han
 Use the batch README to locate the correct module and session. Replace the scaffold in the existing lesson file with the finished content, update its status, and commit the change. Use [the pre-read template](templates/pre-read-template.md) and [the lecture-script template](templates/lecture-script-template.md) for future material. Do not reuse a session number across batches without checking the batch-specific source.
 
 See [source coverage and unresolved gaps](SOURCES.md).
+
+
+## Codex pre-read workflow
+
+The supplied pre-read pipeline is installed as a repository-scoped Codex workflow. Use `$create-pre-read` where supported, or ask Codex to create a pre-read for a batch and source session. It runs the creator then the verifier on that lecture's existing `pre-read.md`.
+
+- [Setup and compatibility notes](docs/preread-pipeline-setup.md)
+- [Inputs and example prompt](preread/commands/create-pre_read.md)
+- [Canonical pre-read rules](preread/guidelines.md)
+- [Student document template](preread/template.md)
+
+Existing lesson files remain scaffolds until authored. This installation does not mark any session as completed.
+
+Run the offline regression checks from the repository root:
+
+```bash
+python3 -I -m unittest discover -s preread/tests -v
+```

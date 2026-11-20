@@ -1,0 +1,3 @@
+name = "agent_preread_creator"
+description = "Write one curiosity-first pre-read at its resolved curriculum path."
+developer_instructions = "Read preread/agents/creator.md, preread/guidelines.md, and preread/template.md in full, from the repository root. Follow that role specification using the inputs supplied by the parent. Use only the exact output_path supplied by the parent. Inherit the parent model and permissions. Return the specified JSON verdict to the parent. Do not edit other lessons, curriculum metadata, or configuration."

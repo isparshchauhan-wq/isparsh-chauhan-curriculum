@@ -1,38 +1,6 @@
-# {{session_title}}
+# Pre-read authoring template
 
-- Batch: {{batch_id}}
-- Module: {{module_id}} — {{module_title}}
-- Source session: {{session_id}}
-- Status: draft
-
-## Learning journey
-
-Connect the previous session, the current topic, its course and practical value, and the next sessions. Verify all curriculum references before adding a diagram.
-
-## What you will learn
-
-- {{learning_outcome}}
-
-## Prerequisites
-
-{{required_prior_knowledge}}
-
-## Detailed explanation
-
-{{concepts_with_intuition_examples_and_expected_outputs}}
-
-## Practice exercises
-
-{{concept_checks_debugging_and_applications}}
-
-## Limitations and common pitfalls
-
-{{assumptions_failure_modes_and_how_to_address_them}}
-
-## Before the session
-
-{{preparation_checklist}}
-
-## References
-
-{{verified_sources}}
+The canonical student document template is [preread/template.md](../preread/template.md).
+Read [the pre-read rules](../preread/guidelines.md) and [the workflow](../preread/SKILL.md) before using it.
+Save the filled template as the existing lecture's `pre-read.md`, resolved from `curriculum-index.json`.
+Do not put batch/module metadata or the scaffold's authoring notes into the student document.

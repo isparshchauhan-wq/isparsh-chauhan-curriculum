@@ -1,65 +1,67 @@
-# Curriculum automation and release schedule
+# Manual weekly curriculum workflow
 
-## Three separate workflows
+Run this in a Git clone of the repository on macOS or Linux. It uses local Codex with your ChatGPT sign-in and GitHub CLI with your GitHub sign-in. The two accounts can use different email addresses. Model access and remaining Codex usage depend on your active ChatGPT account. GitHub Actions runs deterministic checks on PRs and can run the same checks on demand.
 
-| Workflow | Schedule/trigger | Purpose |
-| --- | --- | --- |
-| Prepare scheduled curriculum | Daily 06:00 IST; lecture mode only Friday in auto mode | Pre-read drafts two days before class; lecture drafts for the following Monday–Sunday |
-| Release pre-reads at 3 PM IST | Starts 14:40 IST and waits until 15:00 IST | Formal downloadable release for the following day's classes, only from approved ready content merged into main |
-| Share approved weekly instructor packs | Relevant changes merged into main, or manual run | ZIP per batch for the following teaching week, once every calendar-listed script for that batch/week is ready |
+## Before the first run
 
-**Generation, review, merge, and release are different events.** A generated draft is not approved or formally released. The pre-read and lecture-script schedules and readiness states are independent.
+1. Install Git, Python 3.9 or later, [Codex CLI](https://learn.chatgpt.com/docs/cli) and [GitHub CLI](https://cli.github.com/). The runner can find the CLI bundled with ChatGPT on macOS if codex is absent from your PATH.
+2. Run `codex login` and select **Sign in with ChatGPT**, then confirm with `codex login status`. Keep API-key authentication out of this workflow. The runner requires a ChatGPT login, removes API-key overrides, and uses the built-in OpenAI provider.
+3. Run `gh auth login --hostname github.com` and `gh auth setup-git` to connect the GitHub account that can push to this repository. Configure Git commit authorship as described in the [Git and GitHub guide](git-github-curriculum-guide.md).
+4. For your first live pilot, start from a clean checkout of the setup branch. Use `--local-only` so pilot content stays in local branches until the setup branch is reviewed and merged. For regular runs, start from an up-to-date main that contains the reviewed setup. Install the dependencies required by the sessions you choose, including a Mermaid renderer and a disposable SQL database for SQL examples. Unavailable checks are recorded as unverified.
 
-The 3 PM target uses Asia/Kolkata. GitHub schedules and API requests can be delayed; this workflow prevents early publication, starts early, refreshes main after waiting, and records the actual release attempt time. It cannot guarantee an exact 15:00:00 release. If an exact-time service commitment is mandatory, use an external reliable scheduler/distribution service and monitor its acknowledgements. A public repository also exposes draft branches and approved files before the formal release; GitHub release timing is not an access embargo.
+## Each teaching week
 
-## Pre-reads
+```bash
+python3 tools/weekly_curriculum.py plan
+python3 tools/weekly_curriculum.py generate
+python3 tools/weekly_curriculum.py status
+```
 
-For a Sunday class, generation runs Friday 06:00 IST. Review and merge before Saturday 15:00 IST; formal release targets Saturday 15:00 IST. This uses one preceding calendar day, not a fixed 24-hour interval from class start.
+In a Codex session opened in this clone, you can also ask **“Generate next week’s curriculum materials.”** AGENTS.md directs Codex to the same runner. The default is the next Saturday in Asia/Kolkata, strictly after today, through the following Friday. To select a specific week, pass `--week-start YYYY-MM-DD` with its Saturday. The plan shows the batch, source session, class date, title, duration, required artifacts, model and effort for each pass, and existing state. The plan and status use local files and do not make model calls.
 
-All actual sessions on the target class date are selected across configured batches. There is no artificial one-session-per-batch cap. Conflicted titles/objectives and missing objectives are reported; no later class is substituted. Pre-reads with fewer than four source LOs are allowed when all source objectives can be covered within the student template; the lecture's four-topic grouping constraint does not block the pre-read.
+To pilot one session that has both artifacts eligible:
 
-The release job requires `pre_read_status: ready` in main, a non-scaffold file, and passing structural checks. Team review/merge is the human approval gate. Unready/missing material fails visibly in Actions rather than publishing a scaffold. Other ready pre-reads can still release; inspect the failure log for omitted sessions.
+```bash
+python3 tools/weekly_curriculum.py generate --week-start 2026-11-21 \
+  --batch IITREICT-AIML-EN-II-2608 --session 11.3 --limit 1 --local-only
+python3 tools/weekly_curriculum.py status --week-start 2026-11-21
+```
 
-Formal releases are per batch/module/session/class date, with a Markdown download and source commit/hash. Re-running does not overwrite an already published release. There is no LMS upload, email, or WhatsApp sending configured.
+Use a different indexed Saturday/session if you are piloting another week. Processing runs one artifact at a time. Creator and verifier are separate CLI executions, each with a selected model/effort, and the verifier examines the saved draft. The runner applies the structural checker itself. It preserves indexed objectives and 90/120-minute pacing. Missing source facts or unresolved learning-objective grouping are listed as blocked. Already-ready artifacts are preserved.
 
-## Weekly lecture scripts
+## Models, usage and checkpoints
 
-Friday 06:00 IST prepares all calendar-listed sessions dated the following Monday through Sunday. A batch may have one, two, or more sessions; the actual dates determine the count. Missing dates, source durations, unresolved objective alignment, and four-topic coverage conflicts must be corrected explicitly. Do not change curriculum merely to force two sessions into a week.
+`automation/model-policy.json` selects GPT-6.2 Sol for daily work. Pre-read stages use medium effort and lecture stages use high. These are configured requests. Availability, reasoning support, and actual model execution must be confirmed against your signed-in CLI. A failed model or usage-limit response pauses processing. Automatic escalation is off. To request Astra, use `--astra` with exactly one batch, session and artifact (and module ID for an ambiguous session). An unavailable configured model requires your explicit choice before the policy changes.
 
-Review and merge the weekly lecture PR before Monday. On merge, each complete approved batch/week becomes a GitHub instructor-pack release containing the scripts, sibling images/data, and a sessions manifest. Incomplete batch packs are reported rather than silently sent as a partial week. A batch with no scheduled class needs no pack. The release link is what the team can share with instructors; no external recipient messaging is configured.
+Progress is saved under `.weekly-curriculum/<Saturday>/manifest.json`, with per-stage logs in its tasks directory. Keep this folder and the Git worktrees until review is complete. Each creator and verifier pass checkpoints its changes. This leaves enough version history to resume at the next unfinished stage and retain the exact checklist results. Separate worktrees keep in-progress or blocked drafts out of the branch the team reviews.
 
-The default pack covers the following week. For late approval during the teaching week, use the manual pack action with that week's explicit Monday date. Published packs are snapshots; corrections after publication need a deliberately versioned replacement release.
+```bash
+python3 tools/weekly_curriculum.py resume --week-start 2026-11-21
+python3 tools/weekly_curriculum.py status --week-start 2026-11-21
+```
 
-## Activation
+After checking a transient failure or allowing a usage limit to reset, add `--retry-blocked` to resume. The default permits one explicit retry of a failed stage for the same model/effort and revision. A model change must be authorized by you. Failed and blocked content findings require input or a revision. If an interruption left uncommitted changes in a batch worktree, inspect its `git status` and preserve the files before continuing. Logs report which command and stage stopped.
 
-1. Add `OPENAI_API_KEY` under Settings → Secrets and variables → Actions. API usage is billed separately from ChatGPT. Never commit the key.
-2. Under Settings → Actions → General, enable the referenced actions and Allow GitHub Actions to create and approve pull requests. These workflows only create draft PRs, not approvals.
-3. Open Actions → Prepare scheduled curriculum → Run workflow. Choose pre-read or lecture-script for a targeted test. Auto follows the weekday schedule. An optional class date supports a missed/manual pre-read run.
-4. Review the generated PR and merge accepted material into main. Resolve any Needs verification items first.
-5. Run release/pack actions with dry_run enabled for the first verification. Scheduled/publication runs do not require an API key, only correctly approved ready files and GitHub's workflow token.
+## Review, approve and publish
 
-The integration cannot add the API key or change repository administration settings through the current connected tools. If no key exists, generation reports Waiting for secret and makes no model calls. Release jobs can still distribute previously approved content.
+After generation the runner pushes one curriculum branch per batch/week and opens or updates its draft PR. If you used `--local-only`, run `python3 tools/weekly_curriculum.py submit --week-start YYYY-MM-DD` when GitHub is ready. This step uses no model calls. If the setup branch is still unmerged, its changes may appear in the pilot PR diff. Keep the pilot local while reviewing setup if you want a lesson-only diff.
 
-## Review and readiness
+A PR shows the material links, changed files, model and effort requests, verification states and LMS/instructor handoff notes. Completed unverified drafts can be reviewed with their gaps visible. Failed or blocked drafts remain in local checkpoints. The manifest distinguishes `passed`, `failed`, `blocked` and `unverified`. Model reports describe their evidence, while structural checks run directly. Review the evidence before approving.
 
-The creator and verifier follow canonical repository instructions. Missing execution or rendering evidence remains Needs verification. Structural checks supplement review; they do not prove factual accuracy. The publisher updates only the generated artifact's readiness and regenerates exports. Overall session ready still requires both artifacts, independently of delivery status.
+1. Open **Files changed** and check the rendered artifact and its evidence. A draft PR is a review proposal. As owner you can mark it ready and merge after review without requesting your own formal approval, subject to your repository rules.
+2. To request a correction, use `revise --week-start YYYY-MM-DD --batch BATCH --session ID --artifact pre-read --note "Your correction"`. Add `--module-id ID` when necessary. The runner edits that artifact and re-verifies it. It updates the open PR or creates a correction branch for previously merged material.
+3. Record your manual approval with `record --event approve --note "Reviewed the verified version"` plus the same week and artifact selectors. This writes a local record for the checkpoint. Merge explicitly through GitHub when ready.
+4. Open the approved Markdown. Preview Mermaid diagrams and upload rendered images or attachments as your LMS requires. Verify code blocks and any links in the LMS preview. Publish the approved student pre-read manually at **3 PM IST, one calendar day before class**. Share the script and required data/images with the instructor for the teaching week.
+5. After LMS publication, use `record --event published-to-lms --note "LMS URL or publication timestamp"` with the same selectors. This records the event you report. A merge does not create this record. The workflow does not send materials or create GitHub releases.
 
-Each generation run uses a separate artifact/date branch. Open PR reservations include the artifact, so a pre-read PR does not block that session's weekly lecture draft. Existing branches are checked before model calls to avoid paid regeneration on retries. The publisher never force-pushes or merges. Temporary plans/reports/patches remain Actions artifacts for 14 days; student content stays in its indexed folder.
+The repository is public. A draft branch on GitHub is readable before LMS publication. If your class requires an embargo, keep drafts local or use a private review repository.
 
-## Operations and failure recovery
+## Troubleshooting
 
-- All deadlines depend on `scheduled_date` in `curriculum-index.json`. Update class reschedules there and run `python3 tools/sync_curriculum.py`.
-- Correct objectives or explicitly supply a coverage plan for blocked lessons. A red workflow run is a signal to inspect logs, not proof that every batch failed.
-- Review timing is operational: unmerged or unverified content will miss release. Check the pre-read queue before 3 PM and weekly packs before Monday.
-- For a pushed branch whose PR creation failed, inspect/create the PR manually; do not blindly regenerate or delete work.
-- For stale/conflicting PRs, resolve/rebase through review; no force pushes are automated.
-- To pause generation and publication, disable each workflow in Actions, or set config.enabled false. A pause never retracts already published releases.
-- GitHub can delay/drop scheduled events or disable public-repository schedules after prolonged inactivity. Exact-time release remains a service limitation, even with the early-start wait.
-- Hosted generation, API credentials, temporary permissions, code/SQL/diagram execution, and release uploads need a successful live test. Offline tests cannot establish deployment success.
+- **Codex starts but refuses the model or effort.** Check the model selector or the exact error in the stage log. Resume the original model after access returns, or explicitly approve a model policy change. The runner never falls back to API billing.
+- **Nested Codex is unavailable in the current app.** Run the same command in Terminal from your clone, with a ChatGPT-authenticated Codex CLI. Preserve the existing manifest when resuming.
+- **GitHub push or PR creation fails.** Confirm the authorized GitHub account and write access. Run `submit` again after correcting authentication. It uses the checkpointed branch and checks for an existing PR.
+- **A session is absent or blocked.** Confirm the indexed date, module, source objectives and duration. For a corrected schedule or source conflict, update through a curriculum PR. A previously started manifest represents its original plan. Inspect it against the updated index before resuming.
+- **Actions is red.** Open the failed step. Run `python3 tools/sync_curriculum.py --check` and `python3 tools/weekly_curriculum.py validate` locally. Deterministic checks do not replace code execution, diagram rendering or human review.
 
-## Sources
-
-- https://github.com/openai/codex-action
-- https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule
-- https://cli.github.com/manual/gh_release_create
-- https://cli.github.com/manual/gh_release_edit
+Official references: [Codex authentication](https://learn.chatgpt.com/docs/auth), [model selection](https://learn.chatgpt.com/docs/models), and [non-interactive mode](https://learn.chatgpt.com/docs/non-interactive-mode).

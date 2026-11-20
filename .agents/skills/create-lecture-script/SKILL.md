@@ -1,6 +1,6 @@
 ---
 name: create-lecture-script
-description: Create or update a 120-minute curriculum lecture script with four topics, quizzes, tested outputs, charts, and verified curriculum bridges. Use for lecture-script authoring in this repository; do not use for pre-reads or workflow installation.
+description: Create or update a source-duration curriculum lecture script with four topics, quizzes, tested outputs, charts, and verified curriculum bridges. Use for lecture-script authoring in this repository; do not use for pre-reads or workflow installation.
 ---
 
 Find the repository root containing `curriculum-index.json` and `lecture/`.

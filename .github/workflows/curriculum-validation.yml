@@ -1,0 +1,25 @@
+name: Validate curriculum
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check index and run deterministic tests
+        run: |
+          python3 tools/sync_curriculum.py --check
+          python3 -I -m unittest discover -s tests -v
+          python3 -I -m unittest discover -s preread/tests -v
+          python3 -I -m unittest discover -s lecture/tests -v
+          python3 tools/weekly_curriculum.py validate

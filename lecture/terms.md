@@ -46,5 +46,5 @@ Resolve the destination from `curriculum-index.json`, using the exact batch, mod
 Save `lecture-script.md` in that existing lecture directory, with `images/` and `data/` beside it. Never create a dated root folder.
 Use `lecture/tools/curriculum_context.py` with the repository index or a supplied CSV. Only explicit delivery/coverage status can establish completed material; `ready` describes an artifact and does not mean taught.
 When status is missing, report earlier sessions as scheduled/unconfirmed and do not claim learners completed them.
-This pack's pacing is 120 minutes. If an authoritative session duration differs, resolve the pacing decision with the user before authoring.
+Use the indexed 90- or 120-minute duration. If the source duration is unknown or unsupported, confirm the duration before authoring.
 The source specifies four topics and normally one or two LOs per topic. For fewer than four LOs, or conflicting grouping rules, resolve an explicit coverage plan rather than inventing or duplicating verbatim Agenda LOs.

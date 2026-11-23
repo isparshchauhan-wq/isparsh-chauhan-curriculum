@@ -1,0 +1,14 @@
+{
+  "default": {"model": "gpt-6.2-sol", "effort": "medium"},
+  "tasks": {
+    "pre-read.create": {"effort": "medium"},
+    "pre-read.verify": {"effort": "medium"},
+    "lecture-script.create": {"effort": "high"},
+    "lecture-script.verify": {"effort": "high"}
+  },
+  "exception": {"model": "gpt-6.2-astra", "effort": "high"},
+  "automatic_escalation": false,
+  "maximum_retries": 1,
+  "usage_limit_recovery": "pause_and_resume_manually",
+  "availability": "stop_on_unavailable_model_no_fallback"
+}

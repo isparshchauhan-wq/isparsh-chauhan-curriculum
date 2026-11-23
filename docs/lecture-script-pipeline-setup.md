@@ -34,7 +34,7 @@ AIML source session 27.1 occurs twice; supply its module to disambiguate.
 
 ## Rules preserved
 
-One Why, What and How; four Topic sections; four quizzes; verbatim Agenda LOs; 120 total minutes; one company-framed teaching scenario; code blocks of at most ten lines; actual outputs; chart/data consistency; optional Announcements; final Feedback Poll.
+One Why, What and How; four Topic sections; four quizzes; verbatim Agenda LOs; the indexed duration total; one company-framed teaching scenario; code blocks of at most ten lines; actual outputs; chart/data consistency; optional Announcements; final Feedback Poll.
 Creator and verifier run sequentially on the same script and assets. A script is not Accepted until every applicable check has evidence.
 Reference examples retain their original `lecture_script.md` filename and are teaching references, not authored batch sessions.
 Their recorded outputs are not evidence of a fresh code run.
@@ -55,7 +55,7 @@ Their recorded outputs are not evidence of a fresh code run.
 
 The index and context helper now include source objectives, source durations, schedules, and authoring caveats for all three batches. BITSoM tracker checkbox values are recorded separately and do not establish delivery.
 
-The user approved source-duration lectures on 20 November 2026. Preserve the four-topic format and use the indexed 90- or 120-minute duration. The template now has a DURATION_MINUTES placeholder and the checker accepts `--duration 90|120` (default 120 for existing examples). This policy in AGENTS.md overrides older fixed-120 text in the supplied pack. Missing durations still need a decision.
+The user approved source-duration lectures on 20 November 2026. Preserve the four-topic format and use the indexed 90- or 120-minute duration. The template now has a DURATION_MINUTES placeholder and the checker accepts `--duration 90|120` (default 120 for existing examples). Missing durations still need a decision.
 The source says four topics, normally one or two LOs per topic, and each verbatim Agenda LO once. Its fewer-than-four-LO advice is ambiguous. Obtain an explicit coverage plan in that case rather than inventing or duplicating objectives.
 Treat the source's numerical confidence/accuracy language as a quality requirement, not a measurable guarantee from the checker.
 

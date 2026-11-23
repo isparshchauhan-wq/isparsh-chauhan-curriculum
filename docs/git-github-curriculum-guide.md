@@ -19,14 +19,14 @@ We are using version control because a lesson changes over time. You need to kno
 | Diff | The exact additions/deletions between versions | Compare the previous and revised puzzle |
 | Pull request/PR | A proposal to merge branch changes | An agent asks the team to review a new pre-read |
 | Review | Comments and decisions on a proposal | Instructor checks explanations and expected outputs |
-| Merge | Bring accepted branch changes into main | The approved pre-read becomes available to the release workflow |
-| Actions | Workflow runs executed on GitHub runners | Prepare drafts or publish at the scheduled time |
-| Release | A named published snapshot with downloads | The pre-read released the day before class |
+| Merge | Bring accepted branch changes into main | The approved pre-read becomes available for manual LMS publication |
+| Actions | Workflow runs executed on GitHub runners | Run deterministic checks on curriculum pull requests |
+| Release | A named published snapshot with downloads | A tagged download if the team creates one separately |
 | Clone | Create a local Git working copy | Work from your computer rather than only the browser |
 | Push | Send local commits to GitHub | Share your edited branch with the team |
 | Pull | Fetch and integrate remote changes locally | Update your local main after the team merges a PR |
 
-A commit saves history; it does not automatically publish a student release. A push uploads commits; it does not automatically approve them. A merged PR changes main; the release workflow controls formal distribution.
+A commit saves history; it does not automatically publish a student release. A push uploads commits; it does not automatically approve them. A merged PR changes main; you publish student material manually in the LMS.
 
 ## 3. Learn the website first
 
@@ -34,11 +34,11 @@ Open the repository while signed into the intended GitHub account.
 
 - **Code:** browse batches, modules, lectures and documentation. Open README.md for navigation.
 - **Pull requests:** review proposed content. Each PR shows a discussion, commits, checks and Files changed.
-- **Actions:** inspect automated jobs. Green indicates job success, not proof that content was created: a no-work or missing-key run can legitimately finish without generating anything. Read the step logs and plan.
-- **Releases:** download formally published pre-reads or instructor ZIPs. A public file on main is already readable even before its formal release.
-- **Settings:** configure collaborators, workflow permission and API secrets. Reading a public repository does not grant editing rights; invite curriculum teammates as collaborators when they need write access. People without write permission can propose contributions through forks/PRs.
+- **Actions:** inspect automated jobs. Green indicates job success, not proof that content was created: the Actions checks are deterministic. Read your weekly runner manifest for generation progress.
+- **Releases:** browse any historical GitHub releases. Your weekly workflow distributes content manually through the LMS or instructor handoff.
+- **Settings:** configure collaborators, repository access and Actions settings. Reading a public repository does not grant editing rights; invite curriculum teammates as collaborators when they need write access. People without write permission can propose contributions through forks/PRs.
 
-## 4. Your routine for reviewing an automated pre-read
+## 4. Your routine for reviewing a generated pre-read
 
 1. Open Pull requests and choose a pre-read proposal. Read its class date, batch, verification report and unverified items. Confirm it targets the correct session.
 2. Open Files changed. Green lines were added; red lines were removed. Read the whole rendered lesson as well as the diff. Check the scenario, objectives, exercises, setup and diagram.
@@ -46,10 +46,10 @@ Open the repository while signed into the intended GitHub account.
 4. Add a specific comment on the relevant line or in the conversation, for example: “This date is ambiguous: use an explicit dd/mm/yyyy example and show the expected conversion.”
 5. Ask Codex to revise that same PR/branch, or edit the branch yourself. More commits update the same PR; another proposal is unnecessary.
 6. Once the review and actual checks are complete, mark the draft Ready for review if needed, then use the available Merge/Squash and merge button and confirm. Squashing combines a set of draft-fix commits into one main-branch commit; normal merge preserves the branch commits. Either can fit this project; pick a team convention.
-7. Confirm the PR is merged. The pre-read release workflow will publish only if main records pre_read_status ready and the file passes its structural check.
-8. At/after the release deadline, inspect Actions and Releases. Missing readiness, unavailable content, or a scheduler delay needs attention. There is no external LMS or messaging delivery acknowledgement here.
+7. Confirm the PR is merged. Use the approved version and record approval for its checkpoint.
+8. Use the LMS preview to check formatting, manually publish at 3 PM IST the day before class, then record the LMS publication.
 
-For weekly scripts, the same review process applies. The weekly pack requires every class listed for that batch/week, including its images/data. Download the ZIP from Releases and check its sessions.json manifest before sharing the link with the instructor.
+For weekly scripts, review the Saturday–Friday plan and share the approved Markdown and its sibling images/data manually with the instructor. Use the PR manifest to check which sessions are included.
 
 ## 5. A safe first practice exercise in the browser
 
@@ -123,7 +123,7 @@ python3 tools/sync_curriculum.py --check
 python3 -I -m unittest discover -s tests -v
 ```
 
-Inspect the diff, stage the intended index/export changes, commit, push and open a PR. This keeps navigation and authoring tools consistent. A reschedule changes which pre-read is due and which instructor week contains the lecture, so dates are operational inputs rather than decorative notes.
+Inspect the diff, stage the intended index/export changes, commit, push and open a PR. This keeps navigation and authoring tools consistent. A reschedule changes the manual LMS deadline and which Saturday–Friday week contains the lecture.
 
 ## 9. Mistakes and recovery
 
@@ -137,7 +137,7 @@ Avoid destructive reset, force-push and file-discard commands while learning unl
 
 ## 10. A practical learning progression
 
-First, browse one lesson and its history. Next, complete the documentation practice PR. Then review one generated pre-read with me. After that, make one local documentation commit and push. Finally, perform a curriculum reschedule and inspect how it changes both schedule plans. Each exercise introduces one new responsibility while retaining review and recoverable history.
+First, browse one lesson and its history. Next, complete the documentation practice PR. Then review one generated pre-read with me. After that, make one local documentation commit and push. Finally, perform a curriculum reschedule and inspect how it changes the weekly plan. Each exercise introduces one new responsibility while retaining review and recoverable history.
 
 ## Official references
 

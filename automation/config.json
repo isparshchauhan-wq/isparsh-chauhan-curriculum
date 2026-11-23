@@ -1,21 +1,8 @@
 {
-  "enabled": true,
   "timezone": "Asia/Kolkata",
-  "duration_policy": "source",
+  "base_branch": "main",
+  "batches": ["IITREICT-AIML-EN-II-2608", "IITREICT-DSAI-EN-III-2609", "BITSoM-BA-EN-IV-2609"],
   "setup": "No",
   "announcements": "No",
-  "publication": "draft_pull_request",
-  "pre_read": {
-    "generation_time_ist": "06:00",
-    "generation_lead_days": 2,
-    "release_lead_days": 1,
-    "release_time_ist": "15:00"
-  },
-  "lecture_script": {
-    "generation_day": "Friday",
-    "generation_time_ist": "06:00",
-    "coverage": "following_monday_through_sunday",
-    "distribution": "github_release_after_all_batch_week_scripts_are_approved_and_merged"
-  },
-  "batches": ["IITREICT-AIML-EN-II-2608", "IITREICT-DSAI-EN-III-2609", "BITSoM-BA-EN-IV-2609"]
+  "pre_read_lms_time_ist": "15:00"
 }

@@ -69,8 +69,8 @@ Use `$create-lecture-script` or ask for a lecture script with its batch, source 
 
 The pack supports the indexed 90- or 120-minute source duration, four topics and four quizzes. Earlier scheduled sessions are not labeled completed without explicit delivery evidence.
 
-## Generation and release schedule
+## Manual weekly preparation
 
-Pre-reads are generated two days before class and formally released at 15:00 IST the preceding day after approval and merge. Lecture scripts are drafted Friday 06:00 IST for the following Monday–Sunday, then packaged by batch when approved. Session counts come from the calendar. GitHub cannot guarantee exact wall-clock release, and public draft content is visible before formal publication.
+From a Git checkout signed into Codex with ChatGPT, ask “Generate next week’s curriculum materials” or run `python3 tools/weekly_curriculum.py generate`. The runner selects the following Saturday–Friday in IST, uses separate creator and verifier calls and saves progress before submitting draft PRs. Review and merge explicitly, then distribute instructor materials and publish student pre-reads manually through the LMS.
 
-See the [automation guide](docs/daily-curriculum-automation.md) and [Git/GitHub learning guide](docs/git-github-curriculum-guide.md). Activation still requires the API secret and workflow permissions.
+See the [weekly operations guide](docs/daily-curriculum-automation.md) and [Git and GitHub learning guide](docs/git-github-curriculum-guide.md).

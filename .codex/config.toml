@@ -1,0 +1,4 @@
+# Interactive default. The weekly runner passes an explicit model and effort.
+model = "gpt-6.2-sol"
+model_reasoning_effort = "medium"
+force_login_method = "chatgpt"

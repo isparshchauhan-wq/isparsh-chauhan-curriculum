@@ -14,7 +14,7 @@ How to turn **any** session (module, session name, topics, learning objectives, 
 | Learning Objectives (verbatim) | Apply string functions to clean and combine text columns; ... |
 | Announcements | Yes or No (with text, optional) |
 | Batch curriculum CSV | the batch's curriculum file |
-| Duration | 120 minutes |
+| Duration | 90 or 120 minutes from the source index |
 
 The Learning Objectives appear **verbatim** in the Agenda, in teaching order. They are grouped, not repeated as headings.
 
@@ -44,7 +44,7 @@ Example (7 LOs, MySQL): Topic 1 text (1 LO), Topic 2 dates (parts light, interva
 | 1 | **Read the curriculum context.** Run `lecture/tools/curriculum_context.py`. Note the sessions completed before this one and the tools and ideas they covered. | Bridge only to what explicit delivery status confirms as completed. |
 | 2 | **Pick one scenario**, a famous Indian company as framing only, not used in earlier scripts, whose single decision needs every LO. | Each LO answers part of one question. |
 | 3 | **Write the question** the whole lecture answers, and the poll. | It can be answered in the Closing in one sentence. |
-| 4 | **Frame the LOs** into four topics (section 2) and set minutes. | Agenda adds up to 120. |
+| 4 | **Frame the LOs** into four topics (section 2) and set minutes. | Agenda adds up to the indexed duration. |
 | 5 | **Design the data** (100 to 150 rows when code is used) with edge cases. Save in `data/`. | Row count, planned nulls, edge cases present. |
 | 6 | **Write the lecture-level What** (short, section 4). | A learner can see every tool or idea before the Topics. |
 | 7 | **Write Topics 1 to 4:** bridge question, Example, Extending it, Quiz. | The bridge opens from the previous result. No Why/What/How headings. |
@@ -133,7 +133,7 @@ Generate once with a fixed seed, check with a second tool, then freeze the file.
 
 ## <font color='blue'>10. Final checklist</font>
 
-1. Agenda minutes = 120; LOs verbatim; every LO appears once.
+1. Agenda minutes match the source duration; LOs verbatim; every LO appears once.
 2. Four Topic sections and four quizzes.
 3. Every output matches a fresh run of the code; key numbers match a second method.
 4. Every quiz answer is recomputed; each wrong option is wrong for a stated reason.
@@ -149,5 +149,5 @@ Resolve the destination from `curriculum-index.json`, using the exact batch, mod
 Save `lecture-script.md` in that existing lecture directory, with `images/` and `data/` beside it. Never create a dated root folder.
 Use `lecture/tools/curriculum_context.py` with the repository index or a supplied CSV. Only explicit delivery/coverage status can establish completed material; `ready` describes an artifact and does not mean taught.
 When status is missing, report earlier sessions as scheduled/unconfirmed and do not claim learners completed them.
-This pack's pacing is 120 minutes. If an authoritative session duration differs, resolve the pacing decision with the user before authoring.
+Use the indexed 90- or 120-minute duration. If the source duration is unknown or unsupported, confirm the duration before authoring.
 The source specifies four topics and normally one or two LOs per topic. For fewer than four LOs, or conflicting grouping rules, resolve an explicit coverage plan rather than inventing or duplicating verbatim Agenda LOs.

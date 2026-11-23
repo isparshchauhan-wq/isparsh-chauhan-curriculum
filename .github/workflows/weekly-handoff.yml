@@ -1,0 +1,65 @@
+name: Merge and package weekly resources
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: read
+
+jobs:
+  handoff:
+    if: >-
+      github.event.issue.pull_request &&
+      github.actor == github.repository_owner &&
+      startsWith(github.event.comment.body, 'Review done ')
+    concurrency:
+      group: weekly-handoff-${{ github.event.issue.number }}
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: workflow
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          path: workflow
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check owner approval and curriculum validation
+        id: review
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/weekly_handoff.py prepare
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ steps.review.outputs.commit }}
+          path: reviewed
+          persist-credentials: false
+      - name: Confirm resources and merge the approved commit
+        id: merge
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/weekly_handoff.py merge --checkout ../reviewed
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ steps.merge.outputs.commit }}
+          path: merged
+          persist-credentials: false
+      - name: Build ZIP from the merged commit
+        env:
+          BATCH: ${{ steps.merge.outputs.batch }}
+          WEEK: ${{ steps.merge.outputs.week }}
+          ARCHIVE: ${{ steps.merge.outputs.archive }}
+        run: |
+          python3 tools/weekly_handoff.py package --checkout ../merged \
+            --batch "$BATCH" --week-start "$WEEK" --output "../handoff/$ARCHIVE.zip"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.merge.outputs.archive }}
+          path: handoff/${{ steps.merge.outputs.archive }}.zip
+          if-no-files-found: error

@@ -445,7 +445,10 @@ def submit_batches(state, manifest, config):
         lines += [f"- `{name}`" for name in changed_files]
         lines += ["", "## Owner review", "", "- [ ] Check curriculum, timing, exercises and handoff assets.",
                   "- [ ] Resolve failed or unverified checks before approving the affected artifact.",
-                  "- [ ] Merge manually after review. Publish student pre-reads in the LMS manually."]
+                  "- [ ] Wait for **Validate curriculum** to pass, then post this as a new PR comment:",
+                  "", f"```text\nReview done {head}\n```", "",
+                  "The owner comment approves this exact commit and starts the merge and batch ZIP export.",
+                  "Publish student pre-reads in the LMS manually."]
         with tempfile.NamedTemporaryFile("w", encoding="utf-8") as body:
             body.write("\n".join(lines))
             body.flush()

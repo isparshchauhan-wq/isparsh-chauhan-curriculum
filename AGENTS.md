@@ -2,7 +2,7 @@
 
 ## Manual weekly generation
 
-For “Generate next week’s curriculum materials”, run `python3 tools/weekly_curriculum.py generate` from a Git checkout. Use `plan`, `resume` and `status` as documented in [the weekly guide](docs/daily-curriculum-automation.md). The runner selects models and effort from `automation/model-policy.json` before launching separate ChatGPT-authenticated Codex CLI tasks. If it cannot run, report the blocker. Preserve its manifest, validation and draft PR workflow. Merge only with explicit owner authorization. Student pre-reads are published manually in the LMS at 15:00 IST the calendar day before class. Instructors receive scripts manually for their teaching week.
+For “Generate next week’s curriculum materials”, run `python3 tools/weekly_curriculum.py generate` from a Git checkout. Use `plan`, `resume` and `status` as documented in [the weekly guide](docs/daily-curriculum-automation.md). The runner selects models and effort from `automation/model-policy.json` before launching separate ChatGPT-authenticated Codex CLI tasks. If it cannot run, report the blocker. Preserve its manifest, validation and draft PR workflow. On a weekly PR the owner's `Review done <commit SHA>` comment authorizes merging that exact revision after validation. Use the ZIP from the merge workflow for the batch handoff and provide it in the requesting conversation. Student pre-reads are published manually in the LMS at 15:00 IST the calendar day before class. Instructors receive their weekly resources manually.
 
 ## Curriculum and artifact rules
 

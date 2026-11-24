@@ -1,0 +1,341 @@
+{
+  "week_start": "2026-11-21",
+  "week_end": "2026-11-27",
+  "batch": "IITREICT-AIML-EN-II-2608",
+  "branch": "curriculum/2026-11-21/iitreict-aiml-en-ii-2608",
+  "provenance": "The local Codex CLI failed to initialize. Session 11.3 reuses the saved pilot. Ad hoc creator and separate reviewer roles prepared and checked session 12.1. The final edits preserve all code, output and diagram blocks.",
+  "tasks": [
+    {
+      "id": "IITREICT-AIML-EN-II-2608/03/11.3/pre-read",
+      "batch": "IITREICT-AIML-EN-II-2608",
+      "module": "The Data Handling Toolkit: NumPy and Pandas",
+      "module_id": "03",
+      "session": "11.3",
+      "title": "Cleaning Data II: Type Conversions and Tidying",
+      "date": "2026-11-21",
+      "minutes": 120,
+      "path": "IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.3-cleaning-data-ii-type-conversions-and-tidying",
+      "objectives": [
+        "Convert columns to the correct data types",
+        "Fix inconsistent formatting and text issues",
+        "Rename and reorganise columns for clarity",
+        "Prepare a messy real dataset for analysis"
+      ],
+      "topics": [
+        "Type Conversions",
+        "Tidy Data",
+        "Cleaning Workflows"
+      ],
+      "authoring_notes": [],
+      "artifact": "pre-read",
+      "existing_status": "scaffold",
+      "create_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "medium"
+      },
+      "verify_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "medium"
+      },
+      "generation": "reused",
+      "verification": "passed",
+      "checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "The separate reviewer matched all four objectives to the exact curriculum-index session."
+        },
+        {
+          "name": "student_suitability",
+          "state": "passed",
+          "evidence": "The separate reviewer accepted the beginner scenario, outcomes and open practice questions."
+        },
+        {
+          "name": "code_examples",
+          "state": "passed",
+          "evidence": "The separate reviewer executed the Python preview and confirmed its exact output."
+        },
+        {
+          "name": "mermaid",
+          "state": "passed",
+          "evidence": "The exact block rendered in Chrome with 4 labelled nodes and 3 arrows."
+        },
+        {
+          "name": "dependencies",
+          "state": "passed",
+          "evidence": "The separate reviewer verified the preview and its runtime dependencies."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "{\n  \"ok\": true,\n  \"findings\": [],\n  \"body_words\": 473,\n  \"outcome_verbs\": [\n    \"use\",\n    \"apply\",\n    \"demonstrate\",\n    \"build\"\n  ],\n  \"think_questions\": 3,\n  \"scenario\": \"Sort out a school coat check log to see who waited longest.\",\n  \"prior_scenarios\": [\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-12.1-aggregating-and-combining-groupby-merge-and-reshape/pre-read.md\",\n      \"scenario\": \"Find out which seeds were most popular at a seed swap.\"\n    }\n  ],\n  \"code_preview_syntax\": [\n    \"parsed-not-executed\"\n  ],\n  \"mermaid_render\": \"not-rendered\",\n  \"setup_input_exact_match\": null,\n  \"manual_checks_required\": [\n    \"Topic and objective coverage\",\n    \"Scenario originality beyond exact text\",\n    \"Beginner readability\",\n    \"No answers leaked\",\n    \"Snippet execution\",\n    \"Mermaid rendering\"\n  ]\n}"
+        }
+      ],
+      "handoff": [],
+      "attempts": [],
+      "blocked_reason": null,
+      "checkpoint": null,
+      "branch": "curriculum/2026-11-21/iitreict-aiml-en-ii-2608",
+      "revision": 0,
+      "finished": true,
+      "included": true
+    },
+    {
+      "id": "IITREICT-AIML-EN-II-2608/03/11.3/lecture-script",
+      "batch": "IITREICT-AIML-EN-II-2608",
+      "module": "The Data Handling Toolkit: NumPy and Pandas",
+      "module_id": "03",
+      "session": "11.3",
+      "title": "Cleaning Data II: Type Conversions and Tidying",
+      "date": "2026-11-21",
+      "minutes": 120,
+      "path": "IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.3-cleaning-data-ii-type-conversions-and-tidying",
+      "objectives": [
+        "Convert columns to the correct data types",
+        "Fix inconsistent formatting and text issues",
+        "Rename and reorganise columns for clarity",
+        "Prepare a messy real dataset for analysis"
+      ],
+      "topics": [
+        "Type Conversions",
+        "Tidy Data",
+        "Cleaning Workflows"
+      ],
+      "authoring_notes": [],
+      "artifact": "lecture-script",
+      "existing_status": "scaffold",
+      "create_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "high"
+      },
+      "verify_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "high"
+      },
+      "generation": "reused",
+      "verification": "passed",
+      "checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "The separate reviewer matched all four objectives to the exact curriculum-index session."
+        },
+        {
+          "name": "pedagogy",
+          "state": "passed",
+          "evidence": "The separate review verified the four topics, 120-minute pacing and closing. The final prose pass aligned titles and clarified expected responses."
+        },
+        {
+          "name": "math",
+          "state": "passed",
+          "evidence": "The separate reviewer recalculated the report totals and comparisons from the lesson data."
+        },
+        {
+          "name": "code_examples",
+          "state": "passed",
+          "evidence": "The separate reviewer reproduced all 11 Python output blocks exactly."
+        },
+        {
+          "name": "quizzes",
+          "state": "passed",
+          "evidence": "The separate reviewer recalculated all four quiz keys and checked the option explanations."
+        },
+        {
+          "name": "mermaid",
+          "state": "passed",
+          "evidence": "The exact block rendered in Chrome with 5 labelled nodes and 4 arrows."
+        },
+        {
+          "name": "dependencies",
+          "state": "passed",
+          "evidence": "The separate reviewer checked the two committed input CSVs and five output PNGs."
+        },
+        {
+          "name": "instructor_suitability",
+          "state": "passed",
+          "evidence": "The separate reviewer checked flow, pacing and examples. Final instructor notes include the expected results and required chat prompt."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "PASS: 0 fail, 0 warn  (IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.3-cleaning-data-ii-type-conversions-and-tidying/lecture-script.md)"
+        }
+      ],
+      "handoff": [],
+      "attempts": [],
+      "blocked_reason": null,
+      "checkpoint": null,
+      "branch": "curriculum/2026-11-21/iitreict-aiml-en-ii-2608",
+      "revision": 0,
+      "finished": true,
+      "included": true
+    },
+    {
+      "id": "IITREICT-AIML-EN-II-2608/03/12.1/pre-read",
+      "batch": "IITREICT-AIML-EN-II-2608",
+      "module": "The Data Handling Toolkit: NumPy and Pandas",
+      "module_id": "03",
+      "session": "12.1",
+      "title": "Aggregating and Combining: groupby, merge, and reshape",
+      "date": "2026-11-22",
+      "minutes": 120,
+      "path": "IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-12.1-aggregating-and-combining-groupby-merge-and-reshape",
+      "objectives": [
+        "Group and aggregate data with groupby",
+        "Combine DataFrames with merge, mirroring SQL joins",
+        "Reshape data with pivot_table or melt",
+        "Summarise a dataset by category for reporting"
+      ],
+      "topics": [
+        "groupby",
+        "merge",
+        "reshape",
+        "Combining DataFrames"
+      ],
+      "authoring_notes": [],
+      "artifact": "pre-read",
+      "existing_status": "scaffold",
+      "create_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "medium"
+      },
+      "verify_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "medium"
+      },
+      "generation": "generated",
+      "verification": "passed",
+      "checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "The separate reviewer matched all four objectives to the exact curriculum-index session."
+        },
+        {
+          "name": "student_suitability",
+          "state": "passed",
+          "evidence": "The separate reviewer accepted the beginner scenario, outcomes and open practice questions."
+        },
+        {
+          "name": "code_examples",
+          "state": "passed",
+          "evidence": "The separate reviewer executed the Python preview and confirmed its exact output."
+        },
+        {
+          "name": "mermaid",
+          "state": "passed",
+          "evidence": "The exact block rendered in Chrome with 4 labelled nodes and 3 arrows."
+        },
+        {
+          "name": "dependencies",
+          "state": "passed",
+          "evidence": "The separate reviewer verified the preview and its runtime dependencies."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "{\n  \"ok\": true,\n  \"findings\": [],\n  \"body_words\": 479,\n  \"outcome_verbs\": [\n    \"calculate\",\n    \"use\",\n    \"demonstrate\",\n    \"build\"\n  ],\n  \"think_questions\": 3,\n  \"scenario\": \"Find out which seeds were most popular at a seed swap.\",\n  \"prior_scenarios\": [\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.3-cleaning-data-ii-type-conversions-and-tidying/pre-read.md\",\n      \"scenario\": \"Sort out a school coat check log to see who waited longest.\"\n    }\n  ],\n  \"code_preview_syntax\": [\n    \"parsed-not-executed\"\n  ],\n  \"mermaid_render\": \"not-rendered\",\n  \"setup_input_exact_match\": null,\n  \"manual_checks_required\": [\n    \"Topic and objective coverage\",\n    \"Scenario originality beyond exact text\",\n    \"Beginner readability\",\n    \"No answers leaked\",\n    \"Snippet execution\",\n    \"Mermaid rendering\"\n  ]\n}"
+        }
+      ],
+      "handoff": [],
+      "attempts": [],
+      "blocked_reason": null,
+      "checkpoint": null,
+      "branch": "curriculum/2026-11-21/iitreict-aiml-en-ii-2608",
+      "revision": 0,
+      "finished": true,
+      "included": true
+    },
+    {
+      "id": "IITREICT-AIML-EN-II-2608/03/12.1/lecture-script",
+      "batch": "IITREICT-AIML-EN-II-2608",
+      "module": "The Data Handling Toolkit: NumPy and Pandas",
+      "module_id": "03",
+      "session": "12.1",
+      "title": "Aggregating and Combining: groupby, merge, and reshape",
+      "date": "2026-11-22",
+      "minutes": 120,
+      "path": "IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-12.1-aggregating-and-combining-groupby-merge-and-reshape",
+      "objectives": [
+        "Group and aggregate data with groupby",
+        "Combine DataFrames with merge, mirroring SQL joins",
+        "Reshape data with pivot_table or melt",
+        "Summarise a dataset by category for reporting"
+      ],
+      "topics": [
+        "groupby",
+        "merge",
+        "reshape",
+        "Combining DataFrames"
+      ],
+      "authoring_notes": [],
+      "artifact": "lecture-script",
+      "existing_status": "scaffold",
+      "create_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "high"
+      },
+      "verify_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "high"
+      },
+      "generation": "generated",
+      "verification": "passed",
+      "checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "The separate reviewer matched all four objectives to the exact curriculum-index session."
+        },
+        {
+          "name": "pedagogy",
+          "state": "passed",
+          "evidence": "The separate review verified the four topics, 120-minute pacing and closing. The final prose pass aligned titles and clarified expected responses."
+        },
+        {
+          "name": "math",
+          "state": "passed",
+          "evidence": "The separate reviewer recalculated the report totals and comparisons from the lesson data."
+        },
+        {
+          "name": "code_examples",
+          "state": "passed",
+          "evidence": "The separate reviewer reproduced all 10 Python output blocks exactly."
+        },
+        {
+          "name": "quizzes",
+          "state": "passed",
+          "evidence": "The separate reviewer recalculated all four quiz keys and checked the option explanations."
+        },
+        {
+          "name": "mermaid",
+          "state": "passed",
+          "evidence": "The exact block rendered in Chrome with 5 labelled nodes and 4 arrows."
+        },
+        {
+          "name": "dependencies",
+          "state": "passed",
+          "evidence": "The separate reviewer checked the two committed input CSVs and five output PNGs."
+        },
+        {
+          "name": "instructor_suitability",
+          "state": "passed",
+          "evidence": "The separate reviewer checked flow, pacing and examples. Final instructor notes include the expected results and required chat prompt."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "PASS: 0 fail, 0 warn  (IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-12.1-aggregating-and-combining-groupby-merge-and-reshape/lecture-script.md)"
+        }
+      ],
+      "handoff": [],
+      "attempts": [],
+      "blocked_reason": null,
+      "checkpoint": null,
+      "branch": "curriculum/2026-11-21/iitreict-aiml-en-ii-2608",
+      "revision": 0,
+      "finished": true,
+      "included": true
+    }
+  ]
+}

@@ -725,7 +725,7 @@
               "source_session": "11.3",
               "title": "Cleaning Data II: Type Conversions and Tidying",
               "path": "IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.3-cleaning-data-ii-type-conversions-and-tidying",
-              "status": "scaffold",
+              "status": "ready",
               "source_title": "Cleaning Data II: Type Conversions and Tidying",
               "learning_objectives": [
                 "Convert columns to the correct data types",
@@ -747,15 +747,15 @@
                 ]
               },
               "delivery_status": "unknown",
-              "pre_read_status": "scaffold",
-              "lecture_script_status": "scaffold",
+              "pre_read_status": "ready",
+              "lecture_script_status": "ready",
               "authoring_notes": []
             },
             {
               "source_session": "12.1",
               "title": "Aggregating and Combining: groupby, merge, and reshape",
               "path": "IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-12.1-aggregating-and-combining-groupby-merge-and-reshape",
-              "status": "scaffold",
+              "status": "ready",
               "source_title": "Aggregating and Combining: groupby, merge, and reshape",
               "learning_objectives": [
                 "Group and aggregate data with groupby",
@@ -778,8 +778,8 @@
                 ]
               },
               "delivery_status": "unknown",
-              "pre_read_status": "scaffold",
-              "lecture_script_status": "scaffold",
+              "pre_read_status": "ready",
+              "lecture_script_status": "ready",
               "authoring_notes": []
             }
           ]

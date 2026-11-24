@@ -8,7 +8,7 @@ Source-aligned objectives and schedule metadata. This is an authoring reference;
 
 - Source: `IITREICT-AIML-EN-II-2608 - Batch 2 - Institute Version - EICT_AIML_6-month_V3_-_Session_wise_detailed_syllabus(1).pdf`, page(s) 1
 - Scheduled date: 2026-09-06; duration: 120 minutes
-- Delivery: unknown; material: scaffold
+- Delivery: unknown; material: ready
 
 **Source learning objectives**
 

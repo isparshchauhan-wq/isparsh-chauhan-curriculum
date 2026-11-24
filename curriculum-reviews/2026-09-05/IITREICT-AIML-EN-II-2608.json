@@ -1,0 +1,260 @@
+{
+  "week_start": "2026-09-05",
+  "week_end": "2026-09-11",
+  "batch": "IITREICT-AIML-EN-II-2608",
+  "branch": "curriculum/2026-09-05/iitreict-aiml-en-ii-2608",
+  "base_commit": "99dec4f9920e0ed4e645b77435ced7ca8939d3d8",
+  "verification_note": "The CLI verdicts are preserved. A separate browser render closed the pre-read visual check.",
+  "tasks": [
+    {
+      "id": "IITREICT-AIML-EN-II-2608/01/1.1/pre-read",
+      "batch": "IITREICT-AIML-EN-II-2608",
+      "module": "Python Programming Fundamentals and Flow Control",
+      "module_id": "01",
+      "session": "1.1",
+      "title": "Python and Colab: Variables, Data Types, and Expressions",
+      "date": "2026-09-06",
+      "minutes": 120,
+      "path": "IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-01.1-python-and-colab-variables-data-types-and-expressions",
+      "objectives": [
+        "Work in a Google Colab notebook and run Python code",
+        "Use variables and the core data types: int, float, string, and boolean",
+        "Build expressions with arithmetic and comparison operators",
+        "Convert between types and avoid common beginner errors",
+        "Print and inspect results to check your work"
+      ],
+      "topics": [
+        "Python",
+        "Google Colab",
+        "Variables",
+        "Data Types",
+        "Expressions"
+      ],
+      "authoring_notes": [],
+      "artifact": "pre-read",
+      "existing_status": "scaffold",
+      "create_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "medium"
+      },
+      "verify_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "medium"
+      },
+      "generation": "generated",
+      "verification": "unverified",
+      "checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "The session resolver and curriculum-index.json confirmed the requested path, exact title, five topics, five objectives, scheduled date of 2026-09-06, and 120-minute source duration. SOURCES.md lists no conflict for session 1.1. The five student outcomes cover all five objectives, and delivery remains recorded as unknown."
+        },
+        {
+          "name": "student_suitability",
+          "state": "passed",
+          "evidence": "Ran python3 -I preread/scripts/check_preread.py with the selected file, --setup No, and --root . It exited 0 with zero findings and 496 words. Manual review confirmed one distinct kite scenario across the repository's completed pre-reads, three unanswered prompts with hints, and no setup or announcements."
+        },
+        {
+          "name": "code_examples",
+          "state": "passed",
+          "evidence": "Ran the extracted three-line preview with python3 -I preview.py in a disposable directory. It printed Cedar 15.5. Recalculated the margins against 12.5 metres: Cedar +3.0, Comet 0.0, Mango -3.5. Cedar and Comet meet the minimum. Also confirmed that subtracting from the unconverted text raises TypeError."
+        },
+        {
+          "name": "mermaid",
+          "state": "unverified",
+          "evidence": "The installed Mermaid flowchart parser confirmed four labeled boxes and three expected arrows. The init directive and styles match the template. Headless Chrome exited with SIGABRT and the WebKit fallback timed out, so no rendered diagram was available for visual inspection."
+        },
+        {
+          "name": "dependencies",
+          "state": "passed",
+          "evidence": "Inspected the Markdown and parsed the Python preview. The artifact has no imports, external URLs, embedded file references, or separate assets. The table and code are inline, and the diagram requires Mermaid support in the publication viewer."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "{\n  \"ok\": true,\n  \"findings\": [],\n  \"body_words\": 496,\n  \"outcome_verbs\": [\n    \"use\",\n    \"demonstrate\",\n    \"determine\",\n    \"calculate\",\n    \"check\"\n  ],\n  \"think_questions\": 3,\n  \"scenario\": \"Check which kites have enough line for a turn at the park.\",\n  \"prior_scenarios\": [\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.3-cleaning-data-ii-type-conversions-and-tidying/pre-read.md\",\n      \"scenario\": \"Sort out a school coat check log to see who waited longest.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-12.1-aggregating-and-combining-groupby-merge-and-reshape/pre-read.md\",\n      \"scenario\": \"Find out which seeds were most popular at a seed swap.\"\n    }\n  ],\n  \"code_preview_syntax\": [\n    \"parsed-not-executed\"\n  ],\n  \"mermaid_render\": \"not-rendered\",\n  \"setup_input_exact_match\": null,\n  \"manual_checks_required\": [\n    \"Topic and objective coverage\",\n    \"Scenario originality beyond exact text\",\n    \"Beginner readability\",\n    \"No answers leaked\",\n    \"Snippet execution\",\n    \"Mermaid rendering\"\n  ]\n}"
+        }
+      ],
+      "handoff": [
+        "For manual LMS publication, keep the kite table and three-line Python preview inline. The preview uses Python built-ins and requires no packages, notebook file, or data upload.",
+        "Render and visually inspect the Mental Map before publication. If the LMS lacks Mermaid support, render it to an image for the LMS. There are no other images or external assets to transfer."
+      ],
+      "attempts": [
+        {
+          "stage": "create",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "medium"
+          },
+          "revision": 0,
+          "start": "2026-11-24T18:30:01.851562+00:00",
+          "state": "execution_error"
+        },
+        {
+          "stage": "create",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "medium"
+          },
+          "revision": 0,
+          "start": "2026-11-24T19:06:03.408759+00:00",
+          "state": "completed"
+        },
+        {
+          "stage": "verify",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "medium"
+          },
+          "revision": 0,
+          "start": "2026-11-24T19:10:48.667087+00:00",
+          "state": "completed"
+        }
+      ],
+      "blocked_reason": null,
+      "checkpoint": "06d2807e03ce263e1795298235168f3ffad79a65",
+      "branch": "curriculum/2026-09-05/iitreict-aiml-en-ii-2608",
+      "revision": 0,
+      "base": "99dec4f9920e0ed4e645b77435ced7ca8939d3d8",
+      "create_checkpoint": "fb7b16af6b8fb4455d6fc2f31db8acfdef711706",
+      "verify_checkpoint": "9135b6de9c2c4fcd7fc4e8e9572e0900c7d36be7",
+      "verification_notes": "Only the selected pre-read was edited. Two outcomes now explicitly cover converting text before subtraction and printing results to compare with the original notes. git diff --check passed. Visual verification of the Mermaid diagram remains open.",
+      "finished": true,
+      "included": true,
+      "verification_route": "Python runner with a separate Codex CLI create and verify call",
+      "supplemental_checks": [
+        {
+          "name": "mermaid_browser_render",
+          "state": "passed",
+          "diagram_sha256": "b0cae9ab2755643732dc8351a3f7543cfb57432baa36ef6386e1f2b0f5e8aa0c",
+          "evidence": "The exact committed Mermaid source rendered in the app browser as SVG with four labelled nodes and three arrows."
+        }
+      ],
+      "review_verification": "passed"
+    },
+    {
+      "id": "IITREICT-AIML-EN-II-2608/01/1.1/lecture-script",
+      "batch": "IITREICT-AIML-EN-II-2608",
+      "module": "Python Programming Fundamentals and Flow Control",
+      "module_id": "01",
+      "session": "1.1",
+      "title": "Python and Colab: Variables, Data Types, and Expressions",
+      "date": "2026-09-06",
+      "minutes": 120,
+      "path": "IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-01.1-python-and-colab-variables-data-types-and-expressions",
+      "objectives": [
+        "Work in a Google Colab notebook and run Python code",
+        "Use variables and the core data types: int, float, string, and boolean",
+        "Build expressions with arithmetic and comparison operators",
+        "Convert between types and avoid common beginner errors",
+        "Print and inspect results to check your work"
+      ],
+      "topics": [
+        "Python",
+        "Google Colab",
+        "Variables",
+        "Data Types",
+        "Expressions"
+      ],
+      "authoring_notes": [],
+      "artifact": "lecture-script",
+      "existing_status": "scaffold",
+      "create_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "high"
+      },
+      "verify_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "high"
+      },
+      "generation": "generated",
+      "verification": "passed",
+      "checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "resolve_session.py and curriculum_context.py confirmed the exact path, session 1.1, title, five indexed topics, 2026-09-06 date, and 120-minute duration. All five objectives appear verbatim in the Agenda. SOURCES.md lists no conflict for this session."
+        },
+        {
+          "name": "pedagogy",
+          "state": "passed",
+          "evidence": "check_script.py with the exact objectives, module, title, --announcements no, and --duration 120 returned 0 failures and 0 warnings. The four topics and Closing take 24, 25, 31, 28, and 12 minutes. All 11 cells have prediction prompts. The Closing answers the opening poll."
+        },
+        {
+          "name": "math",
+          "state": "passed",
+          "evidence": "Independent Decimal calculations confirmed the ₹50 subtotal, ₹5 fee, ₹55 total, and ₹0 balance. Three and five packs cost ₹42.50 and ₹67.50. Truncating the price gives ₹53, and the optional B09 basket costs ₹56."
+        },
+        {
+          "name": "code_examples",
+          "state": "passed",
+          "evidence": "Python 3.9.6 with -I -S -B ran all 11 cells in order in a disposable directory. Every printed output matched byte for byte. The B09 exercise printed 56.0 and preserved the B07 values used in the Closing."
+        },
+        {
+          "name": "quizzes",
+          "state": "passed",
+          "evidence": "Verified answer keys A, B, C, and D. Quiz 1 matches Colab’s cell execution behavior. Python reproduced all options for quizzes 2–4, including the ₹48 and ₹50 subtotals and the TypeError and ValueError results. Each option has an explanation. [Google Colab overview](https://colab.research.google.com/notebooks/basic_features_overview.ipynb)"
+        },
+        {
+          "name": "mermaid",
+          "state": "passed",
+          "evidence": "Mermaid parsed the exact Markdown fence and rendered it to SVG in local WebKit. The SVG contained five nodes in teaching order, four edges, and a 936 × 103 viewBox."
+        },
+        {
+          "name": "dependencies",
+          "state": "passed",
+          "evidence": "Visually checked all four PNGs against the code outputs. sips confirmed 200 dpi, and each image has alt text and a display width of 900. Python’s csv reader validated 120 unique baskets, including 57 under budget, 5 at budget, and 58 over budget. The code uses Python built-ins only."
+        },
+        {
+          "name": "instructor_suitability",
+          "state": "passed",
+          "evidence": "Reviewed pacing, cell order, runtime recovery guidance, poll cues, and beginner error explanations. Setup and Announcements sections are absent. Curriculum context confirmed zero prior completed sessions, and the script makes no delivery claims. Verified notebook instructions against Google’s public documentation. [Google Colab introduction](https://colab.research.google.com/notebooks/intro.ipynb)"
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "PASS: 0 fail, 0 warn  (IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-01.1-python-and-colab-variables-data-types-and-expressions/lecture-script.md)"
+        }
+      ],
+      "handoff": [
+        "Share the lecture Markdown with the instructor alongside the four PNGs in images/ and the optional practice file data/pickup_baskets.csv. Preserve their relative paths.",
+        "Use one connected Google Colab notebook and run the cells in order. The examples require no package installation or CSV upload. Verification used local CPython and Google’s public Colab documentation.",
+        "In the instructor’s viewer, check that the Mermaid flowchart and boxed LaTeX formula render. If the viewer lacks Mermaid support, export the flowchart as SVG for display."
+      ],
+      "attempts": [
+        {
+          "stage": "create",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "high"
+          },
+          "revision": 0,
+          "start": "2026-11-24T19:13:28.862549+00:00",
+          "state": "completed"
+        },
+        {
+          "stage": "verify",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "high"
+          },
+          "revision": 0,
+          "start": "2026-11-24T19:23:23.183300+00:00",
+          "state": "completed"
+        }
+      ],
+      "blocked_reason": null,
+      "checkpoint": "5f3de970d6b1d8a2ea3b02d060ca6148e37d3e27",
+      "branch": "curriculum/2026-09-05/iitreict-aiml-en-ii-2608",
+      "revision": 0,
+      "base": "06d2807e03ce263e1795298235168f3ffad79a65",
+      "create_checkpoint": "69c6935c371fb8b1c0d9863598657d8527bd9f8a",
+      "verify_checkpoint": "42755413779b54db97ef9fbbe4ad0679dda4cbf2",
+      "verification_notes": "Updated only lecture-script.md. The optional B09 exercise now preserves B07 notebook state, Topic 3 asks learners to write a budget expression, and the Closing prints both the converted inputs and their types. git diff --check passed.",
+      "finished": true,
+      "included": true,
+      "verification_route": "Python runner with a separate Codex CLI create and verify call",
+      "review_verification": "passed"
+    }
+  ]
+}

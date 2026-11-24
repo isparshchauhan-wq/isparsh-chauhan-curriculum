@@ -13,7 +13,7 @@
           "source_session": "1.1",
           "title": "Python and Colab: Variables, Data Types, and Expressions",
           "path": "IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-01.1-python-and-colab-variables-data-types-and-expressions",
-          "status": "scaffold",
+          "status": "ready",
           "source_title": "Python and Colab: Variables, Data Types, and Expressions",
           "learning_objectives": [
             "Work in a Google Colab notebook and run Python code",
@@ -38,8 +38,8 @@
             ]
           },
           "delivery_status": "unknown",
-          "pre_read_status": "scaffold",
-          "lecture_script_status": "scaffold",
+          "pre_read_status": "ready",
+          "lecture_script_status": "ready",
           "authoring_notes": []
         },
         {

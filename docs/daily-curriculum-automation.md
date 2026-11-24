@@ -1,33 +1,32 @@
 # Manual weekly curriculum workflow
 
-Run this in a Git clone of the repository on macOS or Linux. It uses local Codex with your ChatGPT sign-in and GitHub CLI with your GitHub sign-in. The two accounts can use different email addresses. Model access and remaining Codex usage depend on your active ChatGPT account. GitHub Actions runs deterministic checks on PRs and can run the same checks on demand.
+Run this in a Git clone of the repository on macOS or Linux. It uses local Codex with your ChatGPT sign-in. GitHub CLI submission uses your GitHub sign-in. The two accounts can use different email addresses. Model access and remaining Codex usage depend on your active ChatGPT account. GitHub Actions runs deterministic checks on PRs and can run the same checks on demand.
 
 ## Before the first run
 
 1. Install Git, Python 3.9 or later, [Codex CLI](https://learn.chatgpt.com/docs/cli) and [GitHub CLI](https://cli.github.com/). The runner can find the CLI bundled with ChatGPT on macOS if codex is absent from your PATH.
 2. Run `codex login` and select **Sign in with ChatGPT**, then confirm with `codex login status`. Keep API-key authentication out of this workflow. The runner requires a ChatGPT login, removes API-key overrides, and uses the built-in OpenAI provider.
-3. Run `gh auth login --hostname github.com` and `gh auth setup-git` to connect the GitHub account that can push to this repository. Configure Git commit authorship as described in the [Git and GitHub guide](git-github-curriculum-guide.md).
-4. For your first live pilot, start from a clean checkout of the setup branch. Use `--local-only` so pilot content stays in local branches until the setup branch is reviewed and merged. For regular runs, start from an up-to-date main that contains the reviewed setup. Install the dependencies required by the sessions you choose, including a Mermaid renderer and a disposable SQL database for SQL examples. Unavailable checks are recorded as unverified.
+3. For submission through GitHub CLI, run `gh auth login --hostname github.com` and `gh auth setup-git` to connect the GitHub account that can push to this repository. Configure Git commit authorship as described in the [Git and GitHub guide](git-github-curriculum-guide.md).
+4. Start from a clean, up-to-date checkout of `main`. Use `--local-only` for generation so the runner keeps the checkpointed work local while Codex tracks it. Install the dependencies required by the selected sessions, including a Mermaid renderer and a disposable SQL database for SQL examples. Unavailable checks are recorded as unverified.
 
-## Each teaching week
+## Start from a topic
 
-```bash
-python3 tools/weekly_curriculum.py plan
-python3 tools/weekly_curriculum.py generate
-python3 tools/weekly_curriculum.py status
-```
+1. Tell Codex the starting topic or source session ID. Add the batch or module if the topic or session ID occurs more than once. Codex looks up the scheduled date in `curriculum-index.json` and finds the Saturday–Friday teaching week in Asia/Kolkata that contains it.
+2. Codex lists the starting session and each later session in that batch and week, sorted by scheduled date and then by index order within a date. It checks the existing state and prepares one Terminal block with the exact selectors. Each selected session can produce a pre-read and a lecture script. The runner preserves ready materials and previously saved checkpoints.
+3. Paste the prepared block into Terminal and launch it once. The block runs one session at a time, and `&&` stops it when a command exits with an error. Codex monitors the local manifest and task logs, diagnoses stops, checks the saved materials and assets, and reports verification gaps. If another Terminal launch is required, Codex prepares a scoped resume command and the remaining session commands.
+4. Codex opens or updates the batch draft PR after the selected work finishes and sends you its link for review. The full-week ZIP also uses resources for earlier sessions that are already in the repository. If an earlier session is missing a pre-read or lecture script, Codex flags it in the handoff because the merge workflow requires both resources for every scheduled session that week.
 
-In a Codex session opened in this clone, you can also ask **“Generate next week’s curriculum materials.”** AGENTS.md directs Codex to the same runner. The default is the next Saturday in Asia/Kolkata, strictly after today, through the following Friday. To select a specific week, pass `--week-start YYYY-MM-DD` with its Saturday. The plan shows the batch, source session, class date, title, duration, required artifacts, model and effort for each pass, and existing state. The plan and status use local files and do not make model calls.
-
-To pilot one session that has both artifacts eligible:
+The two-session example below uses placeholders. Codex supplies the checkout path, indexed Saturday, batch, module and session IDs. It adds one command per selected session.
 
 ```bash
-python3 tools/weekly_curriculum.py generate --week-start 2026-11-21 \
-  --batch IITREICT-AIML-EN-II-2608 --session 11.3 --limit 1 --local-only
-python3 tools/weekly_curriculum.py status --week-start 2026-11-21
+cd "/path/to/curriculum-checkout" &&
+python3 tools/weekly_curriculum.py generate --week-start YYYY-MM-DD \
+  --batch BATCH --module-id MODULE_A --session SESSION_A --local-only &&
+python3 tools/weekly_curriculum.py generate --week-start YYYY-MM-DD \
+  --batch BATCH --module-id MODULE_B --session SESSION_B --local-only
 ```
 
-Use a different indexed Saturday/session if you are piloting another week. Processing runs one artifact at a time. Creator and verifier are separate CLI executions, each with a selected model/effort, and the verifier examines the saved draft. The runner applies the structural checker itself. It preserves indexed objectives and 90/120-minute pacing. Missing source facts or unresolved learning-objective grouping are listed as blocked. Already-ready artifacts are preserved.
+The runner launches separate creator and verifier executions for each artifact that needs work. The verifier examines the saved draft, and the runner applies the structural checker. Missing source facts or unresolved learning-objective grouping are recorded as blocked. The `plan` and `status` commands show the selected sessions, dates, required artifacts, model requests and current state without making model calls.
 
 ## Models, usage and checkpoints
 
@@ -36,15 +35,17 @@ Use a different indexed Saturday/session if you are piloting another week. Proce
 Progress is saved under `.weekly-curriculum/<Saturday>/manifest.json`, with per-stage logs in its tasks directory. Keep this folder and the Git worktrees until review is complete. Each creator and verifier pass checkpoints its changes. This leaves enough version history to resume at the next unfinished stage and retain the exact checklist results. Separate worktrees keep in-progress or blocked drafts out of the branch the team reviews.
 
 ```bash
-python3 tools/weekly_curriculum.py resume --week-start 2026-11-21
-python3 tools/weekly_curriculum.py status --week-start 2026-11-21
+python3 tools/weekly_curriculum.py resume --week-start YYYY-MM-DD \
+  --batch BATCH --module-id MODULE --session SESSION --local-only
+python3 tools/weekly_curriculum.py status --week-start YYYY-MM-DD \
+  --batch BATCH --module-id MODULE --session SESSION
 ```
 
 After checking a transient failure or allowing a usage limit to reset, add `--retry-blocked` to resume. The default permits one explicit retry of a failed stage for the same model/effort and revision. A model change must be authorized by you. Failed and blocked content findings require input or a revision. If an interruption left uncommitted changes in a batch worktree, inspect its `git status` and preserve the files before continuing. Logs report which command and stage stopped.
 
 ## Review, approve and publish
 
-After generation the runner pushes one curriculum branch per batch/week and opens or updates its draft PR. If you used `--local-only`, run `python3 tools/weekly_curriculum.py submit --week-start YYYY-MM-DD` when GitHub is ready. This step uses no model calls. If the setup branch is still unmerged, its changes may appear in the pilot PR diff. Keep the pilot local while reviewing setup if you want a lesson-only diff.
+After generation, Codex checks the selected session outputs, referenced assets and verification records. When the local batch branch is ready, Codex prepares or updates its draft PR through `submit --week-start YYYY-MM-DD` when GitHub CLI is available, or through the authorized GitHub connection. Submission uses no model calls. Codex provides the PR link and check results for your review.
 
 A PR shows the material links, changed files, model and effort requests, verification states and LMS/instructor handoff notes. Completed unverified drafts can be reviewed with their gaps visible. Failed or blocked drafts remain in local checkpoints. The manifest distinguishes `passed`, `failed`, `blocked` and `unverified`. Model reports describe their evidence, while structural checks run directly. Review the evidence before approving.
 
@@ -54,14 +55,14 @@ A PR shows the material links, changed files, model and effort requests, verific
 4. Open the **Merge and package weekly resources** run in Actions and download the batch artifact. It contains one ZIP made from the merged commit, with a folder for each session that contains `pre-read.md`, `lecture-script.md`, and any committed `images/` and `data/`. Codex can retrieve the ZIP from that run for the conversation. If Actions stops after merging, rerun that action to package the same merged commit.
 5. Preview the student pre-read in the LMS and publish it manually at **3 PM IST, one calendar day before class**. After publication, use `record --event published-to-lms --note "LMS URL or publication timestamp"` with the same selectors if you want a local publication record. Share the batch ZIP with the instructor manually.
 
-The comment-triggered workflow becomes available after the setup PR is on the default branch. Review and merge that setup PR through GitHub. To recreate an expired batch artifact, check out the merge commit and run `python3 tools/weekly_handoff.py package --checkout . --batch BATCH --week-start YYYY-MM-DD --output BATCH-weekly-resources.zip`.
+To recreate an expired batch artifact, check out the merge commit and run `python3 tools/weekly_handoff.py package --checkout . --batch BATCH --week-start YYYY-MM-DD --output BATCH-weekly-resources.zip`.
 
 The repository is public. A draft branch on GitHub is readable before LMS publication. If your class requires an embargo, keep drafts local or use a private review repository.
 
 ## Troubleshooting
 
 - **Codex starts but refuses the model or effort.** Check the model selector or the exact error in the stage log. Resume the original model after access returns, or explicitly approve a model policy change. The runner never falls back to API billing.
-- **Nested Codex is unavailable in the current app.** Run the same command in Terminal from your clone, with a ChatGPT-authenticated Codex CLI. Preserve the existing manifest when resuming.
+- **Nested Codex is unavailable in the current app.** Launch the block from Terminal with a ChatGPT-authenticated Codex CLI. Codex tracks the saved progress and prepares any needed resume commands with the original session selectors.
 - **GitHub push or PR creation fails.** Confirm the authorized GitHub account and write access. Run `submit` again after correcting authentication. It uses the checkpointed branch and checks for an existing PR.
 - **A session is absent or blocked.** Confirm the indexed date, module, source objectives and duration. For a corrected schedule or source conflict, update through a curriculum PR. A previously started manifest represents its original plan. Inspect it against the updated index before resuming.
 - **Actions is red.** Open the failed step. Run `python3 tools/sync_curriculum.py --check` and `python3 tools/weekly_curriculum.py validate` locally. Deterministic checks do not replace code execution, diagram rendering or human review.

@@ -1,6 +1,28 @@
 # Manual weekly curriculum workflow
 
-Run this in a Git clone of the repository on macOS or Linux. It uses local Codex with your ChatGPT sign-in. GitHub CLI submission uses your GitHub sign-in. The two accounts can use different email addresses. Model access and remaining Codex usage depend on your active ChatGPT account. GitHub Actions runs deterministic checks on PRs and can run the same checks on demand.
+Run this in a Git clone of the repository in the selected connected runtime on macOS or Linux. It uses local Codex with your ChatGPT sign-in. GitHub CLI submission uses your GitHub sign-in. The two accounts can use different email addresses. Model access and remaining Codex usage depend on your active ChatGPT account. GitHub Actions runs deterministic checks on PRs and can run the same checks on demand.
+
+## Choose the execution environment first
+
+Run `python3 tools/curriculum_environment.py` in each available runtime before deciding where to generate. The current assessment on 28 November 2026 has a connected Mac and no accessible cloud execution workspace. The default Mac Python lacks NumPy, pandas, Matplotlib and Seaborn. Node, Mermaid CLI, MySQL and GitHub CLI are also absent from PATH. VS Code is installed with Python and Jupyter support, while a Mermaid preview extension was absent from the extension inventory. Prior stage logs used another prepared Python runtime, so select and activate that runtime explicitly.
+
+A cloud speed comparison remains pending. Confirm actual model execution with the repository policy and required dependencies before benchmarking. Use one complete representative batch, matching inputs, creator/verifier routes and validation. Include local VS Code handoff and checks in total time. Measure cloud and local separately without regenerating an already approved batch. Select cloud if the complete measured workflow is faster. The under-30-minute per-batch objective is a target until a live run demonstrates it. Shared account limits and model latency affect concurrent runs.
+
+## Parallel batches and automatic correction
+
+Use one invocation for all requested batches within a teaching week. Four jobs are a shared concurrency limit across those batches.
+
+```bash
+python3 tools/weekly_curriculum.py generate --week-start YYYY-MM-DD \
+  --target BATCH_A/MODULE_A/SESSION_A --target BATCH_B/MODULE_B/SESSION_B \
+  --jobs 4 --local-only
+```
+
+For different teaching weeks, prepare separate invocations. Each retains its own manifest. The coordinator can overlap weeks using separate checkouts to isolate Git administration and checkpoints. Model calls still share the signed-in account's limits.
+
+Use local VS Code to preview every Mermaid diagram and to inspect code results and images. Execute each example with its required environment in the integrated Terminal or notebook. Record the runtime and output, and verify relative links from the session folder. A preview or syntax check alone leaves code execution unverified.
+
+The verifier repairs findings and rechecks the artifact. If deterministic or reported checks still fail, the runner makes one additional repair pass with the failing evidence and retains the first report. It records `failure_history` and `prevention_pending` for the coordinator. Remaining failures trigger diagnosis and a separate draft workflow PR updating the applicable canonical creator and reviewer files, plus a checker regression check when the checker caused the failure. Missing dependencies need environment repair before re-verification. Source conflicts, model access and usage limits remain explicit blockers. Every correction is rechecked before marking an artifact ready.
 
 ## Before the first run
 
@@ -31,7 +53,7 @@ The runner launches separate creator and verifier executions for each artifact t
 
 `automation/model-policy.json` selects GPT-6.2 Sol for daily work. Pre-read stages use medium effort and lecture stages use high. These are configured requests. Availability, reasoning support, and actual model execution must be confirmed against your signed-in CLI. A failed model or usage-limit response pauses processing. Automatic escalation is off. To request Astra, use `--astra` with exactly one batch, session and artifact (and module ID for an ambiguous session). An unavailable configured model requires your explicit choice before the policy changes.
 
-Progress is saved under `.weekly-curriculum/<Saturday>/manifest.json`, with live per-stage logs in its tasks directory. Terminal shows stage starts, ends and elapsed times. On a model execution error, running calls can finish and save their checkpoints. The runner stops scheduling new stages after the error. Keep this folder and the Git worktrees until review is complete. Each creator and verifier pass checkpoints its changes. This leaves enough version history to resume at the next unfinished stage and retain the exact checklist results. Separate worktrees keep in-progress or blocked drafts out of the branch the team reviews.
+Progress is saved under `.weekly-curriculum/<Saturday>/manifest.json`, with live per-stage logs in its tasks directory. Terminal shows stage starts, ends and elapsed times. On a model execution error, running calls can finish and save their checkpoints. The runner stops scheduling new stages after the error and preserves other completed checkpoints. Keep this folder and the Git worktrees until review is complete. Each creator and verifier pass checkpoints its changes. This leaves enough version history to resume at the next unfinished stage and retain the exact checklist results. Separate worktrees keep in-progress or blocked drafts out of the branch the team reviews.
 
 ```bash
 python3 tools/weekly_curriculum.py resume --week-start YYYY-MM-DD \

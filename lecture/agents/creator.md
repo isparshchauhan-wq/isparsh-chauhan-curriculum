@@ -113,3 +113,12 @@ Return: the saved path, the scenario, the topic grouping with minutes, the bridg
 Return `Needs verification` if execution, chart inspection, Mermaid parsing, or a required curriculum fact cannot be checked. Report the exact blockers and evidence; do not claim Accepted.
 Use Rejected for unresolved content defects after the review limit. Accepted requires every applicable review category and actual output verification.
 For a conceptual session, mark code/data requirements not applicable rather than inventing irrelevant code.
+
+
+## Runtime checks and recurring failures
+
+Use the prepared runtime and run required dependency checks once before authoring or verification. Inspect Mermaid and code results in local VS Code. Mermaid preview requires a working renderer or preview extension. Syntax colouring alone does not verify execution. Execute code against the actual dataset and declared engine in an isolated environment. Re-run affected checks after a correction and preserve the evidence.
+
+Treat the module name as metadata. Valid language fences, file paths, and technical identifiers such as MySQL may contain the same letters. Keep module labels out of prose.
+
+Correct reproducible artifact findings within this task and re-verify. Report missing dependencies and tool failures with the exact failing check. The coordinator diagnoses recurring failures and raises a separate workflow PR updating the applicable creator, reviewer and deterministic checker with a regression check. Record unresolved findings accurately.

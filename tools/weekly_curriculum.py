@@ -214,6 +214,10 @@ def model_task(cli, env, worktree, directory, task, stage, route):
     prompt = (worktree / "automation/prompt.md").read_text()
     prompt += f"\nRole: {stage}. Read {pack}/agents/{role}.md. Artifact: {lesson_file(task)}.\n"
     if stage == "verify":
+        if task.get("structural_precheck"):
+            prompt += "Repair these deterministic findings before final verification: " + json.dumps(task["structural_precheck"]) + "\n"
+        if task.get("repair_findings"):
+            prompt += "Repair the findings from your previous pass and re-run affected checks: " + json.dumps(task["repair_findings"]) + "\n"
         prompt += "Supply one result with evidence for each check named here: " + ", ".join(GATE_CHECKS[task["artifact"]]) + ".\n"
     if task.get("revision_note"):
         prompt += "Requested correction: " + task["revision_note"] + "\n"
@@ -328,6 +332,8 @@ def checkpoint_task(state, task, manifest, folder, cli, env, args,
                 continue
             if halted():
                 return
+            if stage == "verify":
+                task["structural_precheck"] = check_artifact(worktree, task)
             route = model_route(args.policy, task["artifact"], stage, args.astra)
             active = [entry for entry in task["attempts"] if entry["stage"] == stage
                       and entry["route"] == route and entry["revision"] == task["revision"]]
@@ -377,6 +383,28 @@ def checkpoint_task(state, task, manifest, folder, cli, env, args,
                 task["verification"], task["checks"] = verify_report(
                     report, task["artifact"], check_artifact(worktree, task)
                 )
+                if task["verification"] == "failed":
+                    task["failure_history"] = list(task.get("failure_history", [])) + [task["checks"]]
+                    task["prevention_pending"] = True
+                    task["repair_findings"] = [item for item in task["checks"] if item["state"] == "failed"]
+                    write_json(directory / "verify-before-repair.json", report)
+                    task["repair_attempts"] = task.get("repair_attempts", 0) + 1
+                    write_json(manifest, state)
+                    print(f"Repairing verification findings for {task['id']}", flush=True)
+                    if task["repair_attempts"] <= 1 and not halted():
+                        with model_slot():
+                            repaired, repair_error = model_task(cli, env, worktree, directory, task, stage, route)
+                        if repair_error:
+                            task["handoff"] = report["handoff"]
+                            task["verification_notes"] = "Repair execution stopped: " + repair_error
+                            task["finished"] = True
+                            raise StopRun(f"{task['id']} repair stopped with {repair_error}")
+                        validate_delta(worktree, task, changed(worktree))
+                        task["verify_checkpoint"] = commit(worktree, changed(worktree), f"{label}: verify repair")
+                        task["checkpoint"] = task["verify_checkpoint"]
+                        report = repaired
+                        task["verification"], task["checks"] = verify_report(
+                            report, task["artifact"], check_artifact(worktree, task))
                 task["handoff"] = report["handoff"]
                 task["verification_notes"] = report["notes"]
                 task["finished"] = True
@@ -552,6 +580,9 @@ def print_plan(state):
 
 def selected(task, args):
     sessions = args.include_session
+    targets = getattr(args, "target", None)
+    if targets and f"{task['batch']}/{task['module_id']}/{task['session']}" not in targets:
+        return False
     return all(not getattr(args, field) or getattr(args, field) == task[field]
                for field in ("batch", "module_id", "session", "artifact")) and (
                    not sessions or f"{task['module_id']}/{task['session']}" in sessions)
@@ -627,8 +658,10 @@ def parser():
     argp.add_argument("--session")
     argp.add_argument("--include-session", action="append", metavar="MODULE/SESSION",
                       help="Exact session to include in a batch. Repeat to select multiple sessions")
-    argp.add_argument("--jobs", type=int, choices=range(1, 5), default=1,
-                      help="Maximum concurrent artifacts for one batch (default: 1)")
+    argp.add_argument("--jobs", type=int, choices=range(1, 5), default=4,
+                      help="Maximum concurrent artifacts across selected batches (default: 4)")
+    argp.add_argument("--target", action="append", metavar="BATCH/MODULE/SESSION",
+                      help="Exact session across batches. Repeat for all sessions in this week")
     argp.add_argument("--artifact", choices=ARTIFACTS)
     argp.add_argument("--limit", type=int, help="Maximum number of distinct sessions in this invocation")
     argp.add_argument("--retry-blocked", action="store_true", help="Explicitly retry interrupted work within policy")
@@ -645,8 +678,9 @@ def main():
     if args.include_session and (not args.batch or args.module_id or args.session
                                  or args.command not in {"plan", "status", "generate", "resume"}):
         argp.error("--include-session requires --batch and replaces --module-id and --session")
-    if args.jobs > 1 and (not args.batch or args.command not in {"generate", "resume"}):
-        argp.error("--jobs above 1 requires generate or resume with --batch")
+    if args.target and (args.batch or args.module_id or args.session or args.include_session
+                        or args.command not in {"plan", "status", "generate", "resume"}):
+        argp.error("--target replaces batch and session selectors for plan, status, generate or resume")
     config = read_json(ROOT / "automation/config.json")
     args.policy = read_json(ROOT / "automation/model-policy.json")
     index = read_json(ROOT / "curriculum-index.json")
@@ -658,6 +692,11 @@ def main():
     folder = ROOT / ".weekly-curriculum" / str(start)
     manifest = folder / "manifest.json"
     initial = make_plan(index, config, args.policy, start)
+    if args.target:
+        available_targets = {f"{task['batch']}/{task['module_id']}/{task['session']}" for task in initial["tasks"]}
+        unknown_targets = set(args.target) - available_targets
+        if unknown_targets:
+            argp.error("Targets outside this week: " + ", ".join(sorted(unknown_targets)))
     if args.include_session:
         available = {f"{task['module_id']}/{task['session']}" for task in initial["tasks"]
                      if task["batch"] == args.batch}

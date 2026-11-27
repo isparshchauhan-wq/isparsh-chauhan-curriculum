@@ -48,6 +48,14 @@ class WeeklyPlanTests(unittest.TestCase):
         self.assertEqual(state, "unverified")
         self.assertTrue(any(item["state"] == "unverified" for item in checks))
 
+    def test_targets_select_exact_sessions_across_batches(self):
+        args = weekly.parser().parse_args(["generate", "--week-start", "2026-11-21",
+            "--target", "batch-one/01/1.1", "--target", "batch-two/02/2.1"])
+        self.assertEqual(args.jobs, 4)
+        self.assertTrue(weekly.selected(dict(batch="batch-one", module_id="01", session="1.1", artifact="pre-read"), args))
+        self.assertTrue(weekly.selected(dict(batch="batch-two", module_id="02", session="2.1", artifact="lecture-script"), args))
+        self.assertFalse(weekly.selected(dict(batch="batch-one", module_id="01", session="1.2", artifact="pre-read"), args))
+
     def test_artifact_scope_rejects_sibling_changes(self):
         task = {"path": "batch/lecture", "artifact": "pre-read"}
         weekly.scoped(task, ["batch/lecture/pre-read.md"])
@@ -98,6 +106,10 @@ class CheckpointIntegrationTests(unittest.TestCase):
                     (checkout / weekly.lesson_file(unit)).write_text("# Draft\n")
                 elif model_stages.count("verify") == 1:
                     return None, "usage_limit"
+                elif model_stages.count("verify") == 2:
+                    return {"status": "failed", "checks": [
+                        {"name": "code_examples", "state": "failed", "evidence": "Fix the expected result"}
+                    ], "handoff": [], "notes": ""}, None
                 return {"status": "unverified", "checks": [], "handoff": [], "notes": ""}, None
 
             def fake_gh(*command, **kwargs):
@@ -115,7 +127,10 @@ class CheckpointIntegrationTests(unittest.TestCase):
                 self.assertEqual(weekly.read_json(manifest)["tasks"][0]["generation"], "generated")
                 arguments.retry_blocked = True
                 weekly.checkpoint_task(state, task, manifest, folder, "codex", {}, arguments)
-                self.assertEqual(model_stages, ["create", "verify", "verify"])
+                self.assertEqual(model_stages, ["create", "verify", "verify", "verify"])
+                self.assertTrue(task["prevention_pending"])
+                self.assertEqual(task["repair_attempts"], 1)
+                self.assertTrue(task["failure_history"])
                 self.assertTrue(task["included"])
                 self.assertEqual(task["verification"], "unverified")
                 weekly.submit_batches(state, manifest, config)
@@ -127,6 +142,12 @@ class CheckpointIntegrationTests(unittest.TestCase):
             self.assertEqual(weekly.git(root, "rev-parse", "main"), state["base_commit"])
 
     def test_four_artifacts_overlap_and_share_a_consistent_batch_checkpoint(self):
+        self.check_parallel_batches(False)
+
+    def test_two_batches_overlap_with_separate_consistent_branches(self):
+        self.check_parallel_batches(True)
+
+    def check_parallel_batches(self, split_batches):
         with tempfile.TemporaryDirectory() as sandbox:
             root = Path(sandbox) / "repo"
             root.mkdir()
@@ -146,13 +167,20 @@ class CheckpointIntegrationTests(unittest.TestCase):
             index = {"batches": [{"batch": "example", "modules": [
                 {"module_id": "01", "title": "Example", "sessions": sessions}
             ]}]}
+            if split_batches:
+                index["batches"] = [
+                    {"batch": name, "modules": [
+                        {"module_id": "01", "title": "Example", "sessions": [session]}
+                    ]}
+                    for name, session in zip(("example", "other"), sessions)
+                ]
             weekly.write_json(root / "curriculum-index.json", index)
             weekly.git(root, "init", "-b", "main")
             weekly.git(root, "config", "user.name", "Test")
             weekly.git(root, "config", "user.email", "test@example.com")
             weekly.git(root, "add", ".")
             weekly.git(root, "commit", "-m", "Seed fixture")
-            config = {**CONFIG, "batches": ["example"]}
+            config = {**CONFIG, "batches": [row["batch"] for row in index["batches"]]}
             state = weekly.make_plan(index, config, POLICY, dt.date(2026, 11, 21))
             state["base_commit"] = weekly.git(root, "rev-parse", "HEAD")
             folder = root / ".weekly-curriculum/2026-11-21"
@@ -181,8 +209,8 @@ class CheckpointIntegrationTests(unittest.TestCase):
                     state, state["tasks"], manifest, folder, "codex", {}, arguments
                 ))
             saved = weekly.read_json(manifest)
-            batch = Path(saved["batches"]["example"]["worktree"])
             for task in saved["tasks"]:
+                batch = Path(saved["batches"][task["batch"]]["worktree"])
                 self.assertTrue(task["included"])
                 self.assertEqual(task["verification"], "passed")
                 self.assertEqual([entry["stage"] for entry in task["attempts"]], ["create", "verify"])

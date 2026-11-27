@@ -794,7 +794,7 @@
               "source_session": "12.2",
               "title": "Visualising Data I: Matplotlib and Distributions",
               "path": "IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-12.2-visualising-data-i-matplotlib-and-distributions",
-              "status": "scaffold",
+              "status": "ready",
               "source_title": "Visualising Data I: Matplotlib and Distributions",
               "learning_objectives": [
                 "Create core plots with Matplotlib",
@@ -817,15 +817,15 @@
                 ]
               },
               "delivery_status": "unknown",
-              "pre_read_status": "scaffold",
-              "lecture_script_status": "scaffold",
+              "pre_read_status": "ready",
+              "lecture_script_status": "ready",
               "authoring_notes": []
             },
             {
               "source_session": "13.1",
               "title": "Visualising Data II: Seaborn for Relationships and Categories",
               "path": "IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-13.1-visualising-data-ii-seaborn-for-relationships-and-categories",
-              "status": "scaffold",
+              "status": "partial",
               "source_title": "Visualising Data II: Seaborn for Relationships and Categories",
               "learning_objectives": [
                 "Use Seaborn for relationship and category plots",
@@ -847,8 +847,8 @@
                 ]
               },
               "delivery_status": "unknown",
-              "pre_read_status": "scaffold",
-              "lecture_script_status": "scaffold",
+              "pre_read_status": "ready",
+              "lecture_script_status": "needs_verification",
               "authoring_notes": []
             },
             {

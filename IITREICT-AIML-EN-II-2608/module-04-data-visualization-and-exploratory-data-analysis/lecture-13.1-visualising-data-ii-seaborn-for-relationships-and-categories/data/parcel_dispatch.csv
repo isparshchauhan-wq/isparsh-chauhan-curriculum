@@ -1,0 +1,121 @@
+parcel_id,channel,distance_km,transit_min,handling_min
+P001,Counter,12,44,11
+P002,Counter,12,57,15
+P003,Counter,3,24,6
+P004,Business pickup,8,102,23
+P005,Business pickup,42,123,21
+P006,Business pickup,18,66,23
+P007,Counter,18,61,16
+P008,Counter,11,41,8
+P009,Counter,24,67,11
+P010,Counter,15,54,10
+P011,Counter,30,77,13
+P012,Counter,14,40,10
+P013,Business pickup,12,55,25
+P014,Counter,37,97,10
+P015,Business pickup,37,97,22
+P016,Business pickup,19,56,20
+P017,Business pickup,9,42,19
+P018,Counter,29,69,12
+P019,Business pickup,6,29,27
+P020,Counter,12,53,16
+P021,Counter,10,46,20
+P022,Counter,27,80,13
+P023,Business pickup,13,41,26
+P024,Business pickup,15,52,22
+P025,Locker,31,91,15
+P026,Counter,28,93,16
+P027,Business pickup,15,55,23
+P028,Business pickup,25,74,21
+P029,Counter,7,39,15
+P030,Counter,38,110,11
+P031,Locker,8,37,8
+P032,Business pickup,22,55,20
+P033,Counter,13,47,13
+P034,Counter,19,63,6
+P035,Business pickup,18,60,24
+P036,Counter,36,100,12
+P037,Counter,37,113,15
+P038,Counter,19,69,12
+P039,Counter,34,99,16
+P040,Business pickup,14,51,27
+P041,Counter,6,38,13
+P042,Business pickup,9,33,21
+P043,Counter,8,27,14
+P044,Counter,36,94,9
+P045,Business pickup,18,52,27
+P046,Counter,39,106,11
+P047,Counter,23,72,8
+P048,Counter,29,86,10
+P049,Locker,26,80,10
+P050,Locker,11,37,10
+P051,Counter,8,38,14
+P052,Business pickup,36,109,29
+P053,Locker,22,53,10
+P054,Counter,25,75,12
+P055,Counter,22,57,16
+P056,Counter,20,72,9
+P057,Counter,5,27,13
+P058,Business pickup,23,71,19
+P059,Counter,9,34,15
+P060,Counter,27,79,6
+P061,Counter,28,87,13
+P062,Counter,15,50,15
+P063,Counter,33,85,18
+P064,Business pickup,32,108,27
+P065,Counter,26,84,16
+P066,Counter,22,73,13
+P067,Counter,4,27,16
+P068,Counter,20,63,12
+P069,Counter,9,46,6
+P070,Counter,13,49,10
+P071,Business pickup,23,60,17
+P072,Counter,7,36,10
+P073,Business pickup,11,34,27
+P074,Counter,25,80,8
+P075,Business pickup,36,106,24
+P076,Locker,26,87,7
+P077,Business pickup,4,26,23
+P078,Business pickup,31,82,22
+P079,Business pickup,9,34,24
+P080,Counter,6,46,15
+P081,Locker,8,40,15
+P082,Business pickup,5,29,25
+P083,Counter,33,99,11
+P084,Counter,26,85,8
+P085,Counter,24,57,15
+P086,Counter,32,97,13
+P087,Counter,10,35,11
+P088,Counter,35,101,10
+P089,Business pickup,38,112,23
+P090,Counter,38,93,8
+P091,Locker,31,87,6
+P092,Counter,35,97,16
+P093,Business pickup,37,90,27
+P094,Business pickup,22,71,23
+P095,Counter,7,40,11
+P096,Counter,37,106,15
+P097,Counter,30,88,10
+P098,Business pickup,14,56,19
+P099,Business pickup,28,81,24
+P100,Business pickup,38,98,23
+P101,Business pickup,31,96,20
+P102,Business pickup,8,40,18
+P103,Counter,21,59,21
+P104,Counter,5,28,7
+P105,Business pickup,27,68,24
+P106,Counter,38,107,13
+P107,Business pickup,4,19,26
+P108,Business pickup,36,100,19
+P109,Counter,21,83,9
+P110,Counter,37,102,14
+P111,Business pickup,5,17,25
+P112,Counter,9,42,13
+P113,Counter,33,100,9
+P114,Counter,28,83,13
+P115,Counter,29,80,13
+P116,Counter,26,72,14
+P117,Counter,4,25,10
+P118,Business pickup,14,56,21
+P119,Counter,16,60,8
+P120,Counter,35,103,13

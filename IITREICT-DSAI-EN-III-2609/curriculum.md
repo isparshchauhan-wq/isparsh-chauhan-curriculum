@@ -376,7 +376,7 @@ Joins; INNER JOIN; LEFT JOIN; Multi-table Queries
 
 - Source: `IITREICT-DSAI-EN-III-2609 - Batch 3 - Institute Version - DSAI V2 syllabus.pdf`, page(s) 2
 - Scheduled date: 2026-11-25; duration: 120 minutes
-- Delivery: unknown; material: scaffold
+- Delivery: unknown; material: partial
 
 **Source learning objectives**
 

@@ -388,12 +388,23 @@ def checkpoint_task(state, task, manifest, folder, cli, env, args,
                     task["prevention_pending"] = True
                     task["repair_findings"] = [item for item in task["checks"] if item["state"] == "failed"]
                     write_json(directory / "verify-before-repair.json", report)
+                    original_log = directory / "verify-cli.log"
+                    if original_log.is_file():
+                        shutil.copyfile(original_log, directory / "verify-before-repair-cli.log")
                     task["repair_attempts"] = task.get("repair_attempts", 0) + 1
                     write_json(manifest, state)
                     print(f"Repairing verification findings for {task['id']}", flush=True)
                     if task["repair_attempts"] <= 1 and not halted():
+                        repair_attempt = {"stage": stage, "route": route, "revision": task["revision"],
+                                          "start": dt.datetime.now(dt.timezone.utc).isoformat(),
+                                          "state": "running", "repair": True}
+                        task["attempts"].append(repair_attempt)
+                        write_json(manifest, state)
+                        repair_started = time.monotonic()
                         with model_slot():
                             repaired, repair_error = model_task(cli, env, worktree, directory, task, stage, route)
+                        repair_attempt["seconds"] = round(time.monotonic() - repair_started, 1)
+                        repair_attempt["state"] = repair_error or "completed"
                         if repair_error:
                             task["handoff"] = report["handoff"]
                             task["verification_notes"] = "Repair execution stopped: " + repair_error

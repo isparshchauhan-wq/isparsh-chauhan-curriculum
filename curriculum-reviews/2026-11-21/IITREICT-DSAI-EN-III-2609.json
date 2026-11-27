@@ -1,0 +1,110 @@
+{
+  "week_start": "2026-11-21",
+  "week_end": "2026-11-27",
+  "batch": "IITREICT-DSAI-EN-III-2609",
+  "branch": "curriculum/2026-11-21/iitreict-dsai-en-iii-2609",
+  "tasks": [
+    {
+      "id": "IITREICT-DSAI-EN-III-2609/03a/11.2/pre-read",
+      "batch": "IITREICT-DSAI-EN-III-2609",
+      "module": "SQL",
+      "module_id": "03a",
+      "session": "11.2",
+      "title": "Subqueries",
+      "date": "2026-11-25",
+      "minutes": 120,
+      "path": "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-11.2-subqueries",
+      "objectives": [
+        "Write a subquery to compute an intermediate result",
+        "Use subqueries in WHERE and in the SELECT list",
+        "Distinguish a correlated from an uncorrelated subquery, by example",
+        "Answer a question such as customers who spend above the average"
+      ],
+      "topics": [
+        "Subqueries",
+        "Nested Queries"
+      ],
+      "authoring_notes": [],
+      "artifact": "pre-read",
+      "existing_status": "scaffold",
+      "create_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "medium"
+      },
+      "verify_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "medium"
+      },
+      "generation": "generated",
+      "verification": "unverified",
+      "checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "The session resolver confirmed DSAI module 03a, session 11.2, the exact artifact path, the indexed date of 2026-11-25, and the 120-minute duration. The draft preserves both topic names and covers all four objectives through the intermediate average, its use in filtering and display, the shared versus per-person lookup, and above-average spending."
+        },
+        {
+          "name": "student_suitability",
+          "state": "passed",
+          "evidence": "The pre-read checker with --setup No exited 0 with zero findings, 466 words, four outcomes, and three unanswered questions. The breakfast-stall scenario differs from the completed pre-reads. A Python 3 isolated check recalculated the ₹130 average, confirmed Dev alone exceeded it, and confirmed Asha spent ₹10 more than on her last visit."
+        },
+        {
+          "name": "code_examples",
+          "state": "passed",
+          "evidence": "A scan of fenced blocks found only Mermaid. The pre-read contains no executable preview, so example execution does not apply."
+        },
+        {
+          "name": "mermaid",
+          "state": "unverified",
+          "evidence": "The source matches the canonical Mermaid template with four populated labels. Rendering and visual inspection could not run because mmdc, npx, and node were unavailable on PATH."
+        },
+        {
+          "name": "dependencies",
+          "state": "passed",
+          "evidence": "The draft contains an inline data table and Mermaid source. A scan found no external links, image references, code dependencies, setup section, or announcements. The diagram requires a Mermaid-capable renderer."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "{\n  \"ok\": true,\n  \"findings\": [],\n  \"body_words\": 466,\n  \"outcome_verbs\": [\n    \"use\",\n    \"determine\",\n    \"compare\",\n    \"write\"\n  ],\n  \"think_questions\": 3,\n  \"scenario\": \"Compare what regulars spent at a breakfast stall.\",\n  \"prior_scenarios\": [\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-01.1-python-and-colab-variables-data-types-and-expressions/pre-read.md\",\n      \"scenario\": \"Check which kites have enough line for a turn at the park.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.3-cleaning-data-ii-type-conversions-and-tidying/pre-read.md\",\n      \"scenario\": \"Sort out a school coat check log to see who waited longest.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-12.1-aggregating-and-combining-groupby-merge-and-reshape/pre-read.md\",\n      \"scenario\": \"Find out which seeds were most popular at a seed swap.\"\n    }\n  ],\n  \"code_preview_syntax\": [],\n  \"mermaid_render\": \"not-rendered\",\n  \"setup_input_exact_match\": null,\n  \"manual_checks_required\": [\n    \"Topic and objective coverage\",\n    \"Scenario originality beyond exact text\",\n    \"Beginner readability\",\n    \"No answers leaked\",\n    \"Snippet execution\",\n    \"Mermaid rendering\"\n  ]\n}"
+        }
+      ],
+      "handoff": [
+        "For manual LMS publication, preview the Mental Map in the LMS. If the LMS cannot render Mermaid, render and inspect the diagram separately and insert the exported image with alt text.",
+        "Keep the three-row puzzle table in the LMS copy. No separate data file, code, database connection, or external link is required."
+      ],
+      "attempts": [
+        {
+          "stage": "create",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "medium"
+          },
+          "revision": 0,
+          "start": "2026-11-27T08:15:58.454304+00:00",
+          "state": "completed"
+        },
+        {
+          "stage": "verify",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "medium"
+          },
+          "revision": 0,
+          "start": "2026-11-27T08:18:22.851894+00:00",
+          "state": "completed"
+        }
+      ],
+      "blocked_reason": null,
+      "checkpoint": "19e5806c18ecd1ad6d90d4a9785e1a07ef23102a",
+      "branch": "curriculum/2026-11-21/iitreict-dsai-en-iii-2609",
+      "revision": 0,
+      "base": "0432effad3b081b993c1202e281f6ec09200a72e",
+      "create_checkpoint": "fba13f9470063a9986e531ebe62f5c7bf98b9238",
+      "verify_checkpoint": "88f97a836c5c61028c030bd0c7ade7f26c47aa34",
+      "verification_notes": "Updated only pre-read.md. Clarified how the average is used, how a previous bill depends on the person, and what to compare in the third hint. git diff --check passed. Mermaid rendering remains the only unverified check.",
+      "finished": true,
+      "included": true
+    }
+  ]
+}

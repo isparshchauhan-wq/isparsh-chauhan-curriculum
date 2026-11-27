@@ -1,0 +1,454 @@
+{
+  "week_start": "2026-11-28",
+  "week_end": "2026-12-04",
+  "batch": "IITREICT-AIML-EN-II-2608",
+  "branch": "curriculum/2026-11-28/iitreict-aiml-en-ii-2608",
+  "tasks": [
+    {
+      "id": "IITREICT-AIML-EN-II-2608/04/12.2/pre-read",
+      "batch": "IITREICT-AIML-EN-II-2608",
+      "module": "Data Visualization and Exploratory Data Analysis",
+      "module_id": "04",
+      "session": "12.2",
+      "title": "Visualising Data I: Matplotlib and Distributions",
+      "date": "2026-11-28",
+      "minutes": 120,
+      "path": "IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-12.2-visualising-data-i-matplotlib-and-distributions",
+      "objectives": [
+        "Create core plots with Matplotlib",
+        "Visualise a distribution with histograms and boxplots",
+        "Label and title a chart for clarity",
+        "Read a chart to draw a conclusion"
+      ],
+      "topics": [
+        "Matplotlib",
+        "Distributions",
+        "Histograms",
+        "Chart Anatomy"
+      ],
+      "authoring_notes": [],
+      "artifact": "pre-read",
+      "existing_status": "scaffold",
+      "create_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "medium"
+      },
+      "verify_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "medium"
+      },
+      "generation": "generated",
+      "verification": "passed",
+      "checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "The session resolver matched the requested artifact path, exact title, four topics, four objectives, scheduled date of 2026-11-28, and 120-minute duration. SOURCES.md identified no conflict for this session. The revised outcomes cover core plots, histograms and boxplots, chart titles and labels, and drawing a conclusion. Delivery status remains unknown."
+        },
+        {
+          "name": "student_suitability",
+          "state": "passed",
+          "evidence": "The canonical pre-read checker with --setup No exited 0 with zero findings and counted 485 words. Manual review confirmed that the laundry scenario differs from the other completed pre-reads and that all three reflection prompts leave their answers open. I revised a hint that gave away the data pattern. The draft contains no setup or announcements section."
+        },
+        {
+          "name": "code_examples",
+          "state": "passed",
+          "evidence": "Executed the exact three-line preview with Python 3.12 in isolated mode and Matplotlib 3.11.2 using the Agg backend in a disposable directory. The six inputs matched the table. Independently recomputed histogram counts of 4, 1, 0, and 1 matched the rendered bars. The median was 33.5 minutes and the range was 17 minutes. The pre-read contains open questions and no scored quiz."
+        },
+        {
+          "name": "mermaid",
+          "state": "passed",
+          "evidence": "Parsed and rendered the exact Mermaid block with the local Mermaid runtime in WebKit. Verified four nodes and three links, then visually inspected a temporary PNG and confirmed that all labels fit. Removed the temporary renders."
+        },
+        {
+          "name": "dependencies",
+          "state": "passed",
+          "evidence": "Scanned the Markdown for links, image references, and external data paths. The timings and chart values are inline. The optional preview requires Python with Matplotlib, and the inline diagram requires a Mermaid-capable renderer. Git diff --check passed, and git status showed only the selected pre-read modified."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "{\n  \"ok\": true,\n  \"findings\": [],\n  \"body_words\": 485,\n  \"outcome_verbs\": [\n    \"interpret\",\n    \"apply\",\n    \"build\",\n    \"design\"\n  ],\n  \"think_questions\": 3,\n  \"scenario\": \"Use laundry drying times to plan when to check the dryer.\",\n  \"prior_scenarios\": [\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-01.1-python-and-colab-variables-data-types-and-expressions/pre-read.md\",\n      \"scenario\": \"Check which kites have enough line for a turn at the park.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.3-cleaning-data-ii-type-conversions-and-tidying/pre-read.md\",\n      \"scenario\": \"Sort out a school coat check log to see who waited longest.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-12.1-aggregating-and-combining-groupby-merge-and-reshape/pre-read.md\",\n      \"scenario\": \"Find out which seeds were most popular at a seed swap.\"\n    }\n  ],\n  \"code_preview_syntax\": [\n    \"parsed-not-executed\"\n  ],\n  \"mermaid_render\": \"not-rendered\",\n  \"setup_input_exact_match\": null,\n  \"manual_checks_required\": [\n    \"Topic and objective coverage\",\n    \"Scenario originality beyond exact text\",\n    \"Beginner readability\",\n    \"No answers leaked\",\n    \"Snippet execution\",\n    \"Mermaid rendering\"\n  ]\n}"
+        }
+      ],
+      "handoff": [
+        "For manual LMS publication, preserve the Mental Map and preview the page in the LMS. If the LMS cannot render Mermaid, render the inline block and upload an image with alt text.",
+        "Keep the three-line Python preview and the six-row laundry table in the pre-read. Instructors who demonstrate the snippet should use an environment with Matplotlib and plot display. No separate image, code, or data files are required."
+      ],
+      "attempts": [
+        {
+          "stage": "create",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "medium"
+          },
+          "revision": 0,
+          "start": "2026-11-27T07:09:41.246101+00:00",
+          "state": "completed"
+        },
+        {
+          "stage": "verify",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "medium"
+          },
+          "revision": 0,
+          "start": "2026-11-27T07:13:05.012750+00:00",
+          "state": "completed"
+        }
+      ],
+      "blocked_reason": null,
+      "checkpoint": "0ea4abbfdc189ddbe6e026fdb66206d78eb887d2",
+      "branch": "curriculum/2026-11-28/iitreict-aiml-en-ii-2608",
+      "revision": 0,
+      "base": "0432effad3b081b993c1202e281f6ec09200a72e",
+      "create_checkpoint": "0ff32419659f247dc2b5bb7c6167deca136a2d40",
+      "verify_checkpoint": "1e77de9b9e386655a8d93dbe4640cb085a354386",
+      "verification_notes": "Verified and repaired only the selected Session 12.2 pre-read. The edits clarify the four outcomes and keep the dryer check-in question open.",
+      "finished": true,
+      "included": true
+    },
+    {
+      "id": "IITREICT-AIML-EN-II-2608/04/12.2/lecture-script",
+      "batch": "IITREICT-AIML-EN-II-2608",
+      "module": "Data Visualization and Exploratory Data Analysis",
+      "module_id": "04",
+      "session": "12.2",
+      "title": "Visualising Data I: Matplotlib and Distributions",
+      "date": "2026-11-28",
+      "minutes": 120,
+      "path": "IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-12.2-visualising-data-i-matplotlib-and-distributions",
+      "objectives": [
+        "Create core plots with Matplotlib",
+        "Visualise a distribution with histograms and boxplots",
+        "Label and title a chart for clarity",
+        "Read a chart to draw a conclusion"
+      ],
+      "topics": [
+        "Matplotlib",
+        "Distributions",
+        "Histograms",
+        "Chart Anatomy"
+      ],
+      "authoring_notes": [],
+      "artifact": "lecture-script",
+      "existing_status": "scaffold",
+      "create_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "high"
+      },
+      "verify_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "high"
+      },
+      "generation": "generated",
+      "verification": "passed",
+      "checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "resolve_session.py and curriculum_context.py confirmed the exact path, title, indexed date of 2026-11-28, four topics, four verbatim objectives and 120-minute duration for module 04, session 12.2. SOURCES.md identifies no conflict for this session. The context lists zero confirmed earlier deliveries, and the script makes no delivery claims."
+        },
+        {
+          "name": "pedagogy",
+          "state": "passed",
+          "evidence": "check_script.py with --duration 120, the verbatim objectives and --announcements no returned 0 failures and 0 warnings. The four topics and Closing use 26, 36, 20, 28 and 10 minutes. The new Topic 1 bar-chart exercise teaches the technique before the Closing reuses it."
+        },
+        {
+          "name": "math",
+          "state": "passed",
+          "evidence": "An independent CSV calculation reproduced the wave means, item counts, histogram counts, quartiles and boxplot flags. Both medians are 14 minutes. The IQRs are 4 and 8.25 minutes. Station A met the inclusive target on 57 of 60 orders (95.0%) and Station B on 46 of 60 (76.7%)."
+        },
+        {
+          "name": "code_examples",
+          "state": "passed",
+          "evidence": "Ran all 10 fenced Python blocks in order in a fresh temporary directory using Python 3.12.14 and Matplotlib 3.11.2 with Agg. Every block matched its printed output exactly. Rendered plots and checked the plotted values against the independent CSV calculation."
+        },
+        {
+          "name": "quizzes",
+          "state": "passed",
+          "evidence": "Rechecked all four answers and distractors. B uses the requested scatter axes, C assigns 20 minutes to the bin starting at 20, A names the histogram's actual quantities and units, and D reports the observed 14 versus 3 late orders. Each option has an explanation."
+        },
+        {
+          "name": "mermaid",
+          "state": "passed",
+          "evidence": "Extracted the final Mermaid fence and ran mermaid.parse and mermaid.render in local WebKit. The SVG rendered five correctly ordered nodes and four arrows."
+        },
+        {
+          "name": "dependencies",
+          "state": "passed",
+          "evidence": "Opened and visually checked all seven PNGs. Each resolves locally, has alt text and is 1600 × 800 at 200 dpi. The CSV link resolves and contains 120 unique orders. Examples use local data, Python's standard library and Matplotlib."
+        },
+        {
+          "name": "instructor_suitability",
+          "state": "passed",
+          "evidence": "Reviewed pacing notes, prediction prompts and the poll reveal. The Closing recommends investigating Station B first and limits the conclusion to the observed waves. Setup and Announcements are omitted. The final feedback prompt is present."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "PASS: 0 fail, 0 warn  (IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-12.2-visualising-data-i-matplotlib-and-distributions/lecture-script.md)"
+        }
+      ],
+      "handoff": [
+        "Share the lecture script manually with the mentor. Keep all seven PNGs in images/ and packing_times.csv in data/ beside the script so the relative paths resolve.",
+        "Use a Python 3.12 notebook with Matplotlib 3.11.2 and inline plots. Set the working directory to the lecture folder and run the ten cells in order. The examples use local files and require no external service.",
+        "If the LMS does not render Mermaid, export the embedded flowchart as a static image and upload it manually with alt text."
+      ],
+      "attempts": [
+        {
+          "stage": "create",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "high"
+          },
+          "revision": 0,
+          "start": "2026-11-27T07:35:30.582339+00:00",
+          "state": "completed"
+        },
+        {
+          "stage": "verify",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "high"
+          },
+          "revision": 0,
+          "start": "2026-11-27T07:44:35.681733+00:00",
+          "state": "completed"
+        }
+      ],
+      "blocked_reason": null,
+      "checkpoint": "404c5d4fbafa014edcb9455963618cdc67684b91",
+      "branch": "curriculum/2026-11-28/iitreict-aiml-en-ii-2608",
+      "revision": 0,
+      "base": "0ea4abbfdc189ddbe6e026fdb66206d78eb887d2",
+      "create_checkpoint": "b3a6ad5e839bade1ddd36d33cca9239e1d929cc0",
+      "verify_checkpoint": "6346299245a9063a81aaf845e6a5d9f18c0a314a",
+      "verification_notes": "Accepted for session 12.2, Visualising Data I: Matplotlib and Distributions. Updated the lecture script and added images/02b_order_sizes.png. The review added the bar-chart walkthrough, clarified the quartile and target-boundary explanations, and revised Quiz 1 to use plot types already taught.",
+      "finished": true,
+      "included": true
+    },
+    {
+      "id": "IITREICT-AIML-EN-II-2608/04/13.1/pre-read",
+      "batch": "IITREICT-AIML-EN-II-2608",
+      "module": "Data Visualization and Exploratory Data Analysis",
+      "module_id": "04",
+      "session": "13.1",
+      "title": "Visualising Data II: Seaborn for Relationships and Categories",
+      "date": "2026-11-29",
+      "minutes": 120,
+      "path": "IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-13.1-visualising-data-ii-seaborn-for-relationships-and-categories",
+      "objectives": [
+        "Use Seaborn for relationship and category plots",
+        "Plot correlations with scatter and pair plots",
+        "Compare categories with bar and count plots",
+        "Choose a chart that fits the question"
+      ],
+      "topics": [
+        "Seaborn",
+        "Relationships",
+        "Categorical Plots"
+      ],
+      "authoring_notes": [],
+      "artifact": "pre-read",
+      "existing_status": "scaffold",
+      "create_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "medium"
+      },
+      "verify_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "medium"
+      },
+      "generation": "generated",
+      "verification": "passed",
+      "checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "The session resolver matched AIML module 04, session 13.1, the exact artifact path and title, the scheduled date of 2026-11-29, and the 120-minute duration. The draft reproduces all three indexed topics and covers all four objectives through plain-language outcomes."
+        },
+        {
+          "name": "student_suitability",
+          "state": "passed",
+          "evidence": "check_preread.py with --setup No exited 0 with zero findings. Manual review confirmed the bike repair scenario was distinct from the four other completed pre-reads and that all three reflection prompts leave the answers open. A Python table check confirmed three wheel jobs averaging 16 minutes and two brake jobs averaging 22 minutes. Mira's age and repair time are 1 year and 10 minutes."
+        },
+        {
+          "name": "code_examples",
+          "state": "passed",
+          "evidence": "Fence inspection found only Mermaid. The pre-read contains no runnable examples or scored quizzes."
+        },
+        {
+          "name": "mermaid",
+          "state": "passed",
+          "evidence": "Parsed and rendered the exact Markdown fence using VS Code's bundled Mermaid in local WebKit. The SVG contained four nodes and three links. Visual inspection confirmed all labels and arrowheads were legible. The temporary render was removed."
+        },
+        {
+          "name": "dependencies",
+          "state": "passed",
+          "evidence": "Inspection found no image references, external links, separate data files, or student runtime requirements. The five-row dataset is inline. Setup and Announcements are omitted. The Mental Map requires Mermaid support in the publication view."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "{\n  \"ok\": true,\n  \"findings\": [],\n  \"body_words\": 468,\n  \"outcome_verbs\": [\n    \"use\",\n    \"demonstrate\",\n    \"compare\",\n    \"justify\"\n  ],\n  \"think_questions\": 3,\n  \"scenario\": \"Use a bike repair log to plan the next repair day.\",\n  \"prior_scenarios\": [\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-01.1-python-and-colab-variables-data-types-and-expressions/pre-read.md\",\n      \"scenario\": \"Check which kites have enough line for a turn at the park.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.3-cleaning-data-ii-type-conversions-and-tidying/pre-read.md\",\n      \"scenario\": \"Sort out a school coat check log to see who waited longest.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-12.1-aggregating-and-combining-groupby-merge-and-reshape/pre-read.md\",\n      \"scenario\": \"Find out which seeds were most popular at a seed swap.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-12.2-visualising-data-i-matplotlib-and-distributions/pre-read.md\",\n      \"scenario\": \"Use laundry drying times to plan when to check the dryer.\"\n    }\n  ],\n  \"code_preview_syntax\": [],\n  \"mermaid_render\": \"not-rendered\",\n  \"setup_input_exact_match\": null,\n  \"manual_checks_required\": [\n    \"Topic and objective coverage\",\n    \"Scenario originality beyond exact text\",\n    \"Beginner readability\",\n    \"No answers leaked\",\n    \"Snippet execution\",\n    \"Mermaid rendering\"\n  ]\n}"
+        }
+      ],
+      "handoff": [
+        "Preview the Mental Map in the LMS before manual publication. If the LMS cannot render Mermaid, embed a rendered image with descriptive alt text.",
+        "Keep the five-row bike repair table inline. There are no separate images, code files, datasets, or external services to attach or configure."
+      ],
+      "attempts": [
+        {
+          "stage": "create",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "medium"
+          },
+          "revision": 0,
+          "start": "2026-11-27T07:51:39.374013+00:00",
+          "state": "completed"
+        },
+        {
+          "stage": "verify",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "medium"
+          },
+          "revision": 0,
+          "start": "2026-11-27T07:55:34.231622+00:00",
+          "state": "completed"
+        }
+      ],
+      "blocked_reason": null,
+      "checkpoint": "c6d954fbea0599f1e64d473635892b9a54b96a19",
+      "branch": "curriculum/2026-11-28/iitreict-aiml-en-ii-2608",
+      "revision": 0,
+      "base": "404c5d4fbafa014edcb9455963618cdc67684b91",
+      "create_checkpoint": "37f594abb9246b71398a35ef3d0134e2fb768fc9",
+      "verify_checkpoint": "df446031cecbd670604722566190b30c83c0a663",
+      "verification_notes": "Edited only the session 13.1 pre-read. Simplified the course example, clarified the paired-dot outcome, made the chart definition explicit, and specified the two quantities in Mira's question. git diff --check passed.",
+      "finished": true,
+      "included": true
+    },
+    {
+      "id": "IITREICT-AIML-EN-II-2608/04/13.1/lecture-script",
+      "batch": "IITREICT-AIML-EN-II-2608",
+      "module": "Data Visualization and Exploratory Data Analysis",
+      "module_id": "04",
+      "session": "13.1",
+      "title": "Visualising Data II: Seaborn for Relationships and Categories",
+      "date": "2026-11-29",
+      "minutes": 120,
+      "path": "IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-13.1-visualising-data-ii-seaborn-for-relationships-and-categories",
+      "objectives": [
+        "Use Seaborn for relationship and category plots",
+        "Plot correlations with scatter and pair plots",
+        "Compare categories with bar and count plots",
+        "Choose a chart that fits the question"
+      ],
+      "topics": [
+        "Seaborn",
+        "Relationships",
+        "Categorical Plots"
+      ],
+      "authoring_notes": [],
+      "artifact": "lecture-script",
+      "existing_status": "scaffold",
+      "create_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "high"
+      },
+      "verify_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "high"
+      },
+      "generation": "generated",
+      "verification": "unverified",
+      "checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "The session resolver and curriculum context matched batch IITREICT-AIML-EN-II-2608, module 04, session 13.1, the artifact path, the 2026-11-29 date, all three indexed topics and all four verbatim objectives. The index specifies 120 minutes and confirms zero earlier sessions as delivered. The script makes no prior-delivery claims."
+        },
+        {
+          "name": "pedagogy",
+          "state": "passed",
+          "evidence": "The artifact checker reported 0 failures and 0 warnings. Four topics and the closing run 24, 32, 32, 20 and 12 minutes, respectively. Learners work through one parcel dataset, predict before each code cell and return to the opening decision and poll in the closing. Setup and Announcements are omitted."
+        },
+        {
+          "name": "math",
+          "state": "passed",
+          "evidence": "Independent Python standard-library calculations on the 120-row CSV reproduced channel counts of 72, 40 and 8, means of 12.14, 23.00 and 10.12 minutes, and threshold counts of 2, 34 and 0. Pearson correlations rounded to 0.94, -0.05 and -0.05. The distance–transit correlation rounded to 0.97 with P004 excluded."
+        },
+        {
+          "name": "code_examples",
+          "state": "unverified",
+          "evidence": "All 12 Python cells compiled in a disposable workspace. Seven cells ran and matched the recorded output exactly. The five plotting cells could not run because Seaborn was unavailable. The calls were reviewed against the [scatterplot documentation](https://seaborn.pydata.org/generated/seaborn.scatterplot.html), [pairplot documentation](https://seaborn.pydata.org/generated/seaborn.pairplot.html), [countplot documentation](https://seaborn.pydata.org/generated/seaborn.countplot.html) and [barplot documentation](https://seaborn.pydata.org/generated/seaborn.barplot.html)."
+        },
+        {
+          "name": "quizzes",
+          "state": "passed",
+          "evidence": "Independently checked all four answers and their distractor explanations. B maps the requested columns, D describes the observed positive relationship, A matches 40 Business pickup parcels and a 23-minute mean, and C isolates the two requested measurements at parcel level."
+        },
+        {
+          "name": "mermaid",
+          "state": "passed",
+          "evidence": "Mermaid parsed and rendered the final fenced source to SVG in a local WebKit view. The SVG contains the five expected labelled nodes and four connecting arrows."
+        },
+        {
+          "name": "dependencies",
+          "state": "unverified",
+          "evidence": "Python 3.12, pandas 2.2.3 and Matplotlib 3.11.2 imported successfully. The local CSV and six PNGs resolved. Seaborn 0.13.2 was unavailable, so the complete live-demo environment remains unverified. No packages were installed."
+        },
+        {
+          "name": "instructor_suitability",
+          "state": "passed",
+          "evidence": "The mentor notes cover pacing, expected responses, the poll reveal and how to run the notebook. All six 200 dpi PNGs opened, had descriptive alt text and matched the CSV findings on visual inspection. The Matplotlib reference figures support the discussion while live Seaborn execution remains unverified."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "PASS: 0 fail, 0 warn  (IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-13.1-visualising-data-ii-seaborn-for-relationships-and-categories/lecture-script.md)"
+        }
+      ],
+      "handoff": [
+        "Share the lecture script with the instructor alongside the six PNGs in images/ and the invented parcel dataset at data/parcel_dispatch.csv. Keep the relative paths intact and retain the image alt text.",
+        "Use the inline Mermaid flow in a Mermaid-capable viewer. If the LMS or instructor viewer displays only the source, export the rendered flow as an SVG for manual placement.",
+        "Before the live demo, use an instructor notebook with pandas, Matplotlib and Seaborn 0.13.2 available. Set the working directory to the lecture folder and run all cells in order, including the five plotting cells. The examples use local data and require no external service."
+      ],
+      "attempts": [
+        {
+          "stage": "create",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "high"
+          },
+          "revision": 0,
+          "start": "2026-11-27T07:58:08.356807+00:00",
+          "state": "completed"
+        },
+        {
+          "stage": "verify",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "high"
+          },
+          "revision": 0,
+          "start": "2026-11-27T08:06:59.579594+00:00",
+          "state": "completed"
+        }
+      ],
+      "blocked_reason": null,
+      "checkpoint": "1050e003f38fa0e9f6bb5a3b217393e429aaeecc",
+      "branch": "curriculum/2026-11-28/iitreict-aiml-en-ii-2608",
+      "revision": 0,
+      "base": "c6d954fbea0599f1e64d473635892b9a54b96a19",
+      "create_checkpoint": "8f07a5193dec7f030843e00068795503dc3cf004",
+      "verify_checkpoint": "40dd705dcb719c809b9defcb55eab2c1738c2337",
+      "verification_notes": "Verification remains open for the five Seaborn plotting cells. Repairs were limited to the selected lecture script. The review clarified the scan-to-loading measure and rounding, combined the pair-grid setup with its example, and sharpened the chart-selection quiz. [Lecture script](/Users/isparshchauhan/Documents/Codex/2026-11-20/extract-the-text-as-it-is/tmp/weekly-2026-11-28-main/.weekly-curriculum/2026-11-28/tasks/IITREICT-AIML-EN-II-2608--04--13.1--lecture-script--r0/worktree/IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-13.1-visualising-data-ii-seaborn-for-relationships-and-categories/lecture-script.md)",
+      "finished": true,
+      "included": true
+    }
+  ]
+}

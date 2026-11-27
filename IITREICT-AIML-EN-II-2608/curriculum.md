@@ -433,7 +433,7 @@ groupby; merge; reshape; Combining DataFrames
 
 - Source: `IITREICT-AIML-EN-II-2608 - Batch 2 - Institute Version - EICT_AIML_6-month_V3_-_Session_wise_detailed_syllabus(1).pdf`, page(s) 2
 - Scheduled date: 2026-11-28; duration: 120 minutes
-- Delivery: unknown; material: scaffold
+- Delivery: unknown; material: ready
 
 **Source learning objectives**
 
@@ -450,7 +450,7 @@ Matplotlib; Distributions; Histograms; Chart Anatomy
 
 - Source: `IITREICT-AIML-EN-II-2608 - Batch 2 - Institute Version - EICT_AIML_6-month_V3_-_Session_wise_detailed_syllabus(1).pdf`, page(s) 2
 - Scheduled date: 2026-11-29; duration: 120 minutes
-- Delivery: unknown; material: scaffold
+- Delivery: unknown; material: partial
 
 **Source learning objectives**
 

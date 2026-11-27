@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import tempfile
 from types import SimpleNamespace
+from threading import Barrier
 import unittest
 from unittest.mock import patch
 
@@ -123,6 +124,70 @@ class CheckpointIntegrationTests(unittest.TestCase):
             self.assertTrue(task["pr"].endswith("/1"))
             self.assertIsNone(task["approved"])
             self.assertIsNone(task["published_to_lms"])
+            self.assertEqual(weekly.git(root, "rev-parse", "main"), state["base_commit"])
+
+    def test_four_artifacts_overlap_and_share_a_consistent_batch_checkpoint(self):
+        with tempfile.TemporaryDirectory() as sandbox:
+            root = Path(sandbox) / "repo"
+            root.mkdir()
+            for path in ("example/module/one", "example/module/two"):
+                (root / path).mkdir(parents=True)
+                for artifact in weekly.ARTIFACTS:
+                    (root / path / f"{artifact}.md").write_text("Status: scaffold\n")
+            (root / ".gitignore").write_text(".weekly-curriculum/\n")
+            (root / "tools").mkdir()
+            (root / "tools/sync_curriculum.py").write_text("pass\n")
+            sessions = [
+                {"source_session": label, "title": label, "scheduled_date": "2026-11-21",
+                 "duration_minutes": 120, "learning_objectives": ["One", "Two", "Three", "Four"],
+                 "path": f"example/module/{label}"}
+                for label in ("one", "two")
+            ]
+            index = {"batches": [{"batch": "example", "modules": [
+                {"module_id": "01", "title": "Example", "sessions": sessions}
+            ]}]}
+            weekly.write_json(root / "curriculum-index.json", index)
+            weekly.git(root, "init", "-b", "main")
+            weekly.git(root, "config", "user.name", "Test")
+            weekly.git(root, "config", "user.email", "test@example.com")
+            weekly.git(root, "add", ".")
+            weekly.git(root, "commit", "-m", "Seed fixture")
+            config = {**CONFIG, "batches": ["example"]}
+            state = weekly.make_plan(index, config, POLICY, dt.date(2026, 11, 21))
+            state["base_commit"] = weekly.git(root, "rev-parse", "HEAD")
+            folder = root / ".weekly-curriculum/2026-11-21"
+            manifest = folder / "manifest.json"
+            arguments = SimpleNamespace(policy=POLICY, astra=False, retry_blocked=False, jobs=4)
+            creators = Barrier(4)
+            verifiers = Barrier(4)
+
+            def fake_model(_cli, _env, checkout, _directory, task, stage, _route):
+                artifact = checkout / weekly.lesson_file(task)
+                if stage == "create":
+                    creators.wait(timeout=10)
+                    artifact.write_text(f"# Draft for {task['id']}\n")
+                else:
+                    self.assertIn(task["id"], artifact.read_text())
+                    verifiers.wait(timeout=10)
+                checks = [{"name": name, "state": "passed", "evidence": "test"}
+                          for name in weekly.GATE_CHECKS[task["artifact"]]]
+                return {"status": "passed", "checks": checks, "handoff": [], "notes": ""}, None
+
+            with patch.object(weekly, "ROOT", root), patch.object(weekly, "model_task", side_effect=fake_model), \
+                 patch.object(weekly, "check_artifact", return_value={
+                     "name": "structural_checker", "state": "passed", "evidence": "test"
+                 }):
+                self.assertIsNone(weekly.run_pending(
+                    state, state["tasks"], manifest, folder, "codex", {}, arguments
+                ))
+            saved = weekly.read_json(manifest)
+            batch = Path(saved["batches"]["example"]["worktree"])
+            for task in saved["tasks"]:
+                self.assertTrue(task["included"])
+                self.assertEqual(task["verification"], "passed")
+                self.assertEqual([entry["stage"] for entry in task["attempts"]], ["create", "verify"])
+                self.assertIn(task["id"], (batch / weekly.lesson_file(task)).read_text())
+            self.assertFalse(weekly.changed(batch))
             self.assertEqual(weekly.git(root, "rev-parse", "main"), state["base_commit"])
 
 

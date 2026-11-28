@@ -21,3 +21,8 @@ On a weekly PR, the owner's `Review done <commit SHA>` comment authorizes mergin
 - Use source durations of 90 or 120 minutes, four lecture topics and four quizzes. Confirm missing duration or an unresolved objective grouping. Keep batch/module identifiers out of the student document. Preserve supplied setup text without inventing URLs.
 - Run the artifact checker and verify code outputs, diagrams, calculations, quizzes and assets as applicable. Report unavailable checks accurately. Keep artifact generation, verification, human approval, LMS publication and class delivery separate.
 - After changing the index, run `python3 tools/sync_curriculum.py`. Preserve unrelated work and use a branch and draft PR for curriculum changes.
+
+
+## Local SQL recovery
+
+A nested Codex task can be denied a local MySQL socket even when the operator Terminal connects successfully. Probe in the actual task context once. Preserve ERROR 2002/socket error 1, avoid repeated service or permission changes, and complete the saved SQL blocks in the coordinator's local VS Code Terminal using the designated disposable database. Attach exact inputs, engine/version, observed outputs and matching source hashes to the review evidence. Fill pending outputs, rerun relevant checks, and retain the original model reports before marking ready. Count and inspect the required four to six charts for SQL lectures as well as Python lectures. Missing chart references and pending output messages must not pass silently.

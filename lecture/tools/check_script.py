@@ -225,6 +225,8 @@ def main(argv):
             nxt = "\n".join(lines[e:e + 4])
             if "**Output**" not in nxt:
                 fail(f"line {s}: {lang} block is not followed by **Output**")
+            if re.search(r"(?im)^\s*(?:Pending execution\b|Not verified:)", nxt):
+                fail(f"line {s}: {lang} output is still pending execution")
     for n, ln in prose:
         if ln.strip() == "**Output**":
             pass
@@ -239,16 +241,23 @@ def main(argv):
 
     # images
     from pathlib import Path
+    image_sources = set()
     for n, ln in prose:
         for m in re.finditer(r'<img\s+[^>]*>', ln):
             tag = m.group(0)
             src = re.search(r'src="([^"]+)"', tag)
+            if src:
+                image_sources.add(src.group(1))
             if src and not (Path(base) / src.group(1)).resolve().is_relative_to(Path(base)):
                 fail(f"line {n}: image path must remain inside the lecture directory")
             if not src or not os.path.isfile(os.path.join(base, src.group(1))):
                 fail(f"line {n}: image missing: {src.group(1) if src else tag[:40]}")
             if 'alt="' not in tag: fail(f"line {n}: image has no alt text")
             if 'width="900"' not in tag: fail(f"line {n}: image should use width=\"900\"")
+    if n_code and not image_sources:
+        fail("code-based lecture has no charts; provide four to six verified charts")
+    elif n_code and not 4 <= len(image_sources) <= 6:
+        warn(f"lecture has {len(image_sources)} unique charts; creator and reviewer must confirm the required four to six")
     if re.search(r"!\[", text):
         fail("use <img ... width=\"900\"> instead of markdown images")
 

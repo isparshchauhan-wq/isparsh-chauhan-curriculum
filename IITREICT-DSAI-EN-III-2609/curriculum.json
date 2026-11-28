@@ -714,7 +714,7 @@
           "source_session": "12.1",
           "title": "Common Table Expressions (CTEs)",
           "path": "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.1-common-table-expressions-ctes",
-          "status": "scaffold",
+          "status": "ready",
           "source_title": "Common Table Expressions (CTEs)",
           "learning_objectives": [
             "Use a CTE to structure a complex query into readable steps",
@@ -735,15 +735,15 @@
             ]
           },
           "delivery_status": "unknown",
-          "pre_read_status": "scaffold",
-          "lecture_script_status": "scaffold",
+          "pre_read_status": "ready",
+          "lecture_script_status": "ready",
           "authoring_notes": []
         },
         {
           "source_session": "12.2",
           "title": "Window Functions",
           "path": "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.2-window-functions",
-          "status": "scaffold",
+          "status": "ready",
           "source_title": "Window Functions",
           "learning_objectives": [
             "Explain what a window function does versus a GROUP BY, by intuition",
@@ -767,8 +767,8 @@
             ]
           },
           "delivery_status": "unknown",
-          "pre_read_status": "scaffold",
-          "lecture_script_status": "scaffold",
+          "pre_read_status": "ready",
+          "lecture_script_status": "ready",
           "authoring_notes": []
         }
       ]

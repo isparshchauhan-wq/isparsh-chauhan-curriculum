@@ -393,7 +393,7 @@ Subqueries; Nested Queries
 
 - Source: `IITREICT-DSAI-EN-III-2609 - Batch 3 - Institute Version - DSAI V2 syllabus.pdf`, page(s) 2
 - Scheduled date: 2026-11-30; duration: 120 minutes
-- Delivery: unknown; material: scaffold
+- Delivery: unknown; material: ready
 
 **Source learning objectives**
 
@@ -410,7 +410,7 @@ Common Table Expressions; WITH Clause
 
 - Source: `IITREICT-DSAI-EN-III-2609 - Batch 3 - Institute Version - DSAI V2 syllabus.pdf`, page(s) 2
 - Scheduled date: 2026-12-02; duration: 120 minutes
-- Delivery: unknown; material: scaffold
+- Delivery: unknown; material: ready
 
 **Source learning objectives**
 

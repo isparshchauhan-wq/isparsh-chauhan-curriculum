@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Plan, generate, verify and submit a week of curriculum using local Codex."""
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 import contextlib
 import datetime as dt
 import fcntl
@@ -12,6 +13,8 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import threading
+import time
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -211,6 +214,10 @@ def model_task(cli, env, worktree, directory, task, stage, route):
     prompt = (worktree / "automation/prompt.md").read_text()
     prompt += f"\nRole: {stage}. Read {pack}/agents/{role}.md. Artifact: {lesson_file(task)}.\n"
     if stage == "verify":
+        if task.get("structural_precheck"):
+            prompt += "Repair these deterministic findings before final verification: " + json.dumps(task["structural_precheck"]) + "\n"
+        if task.get("repair_findings"):
+            prompt += "Repair the findings from your previous pass and re-run affected checks: " + json.dumps(task["repair_findings"]) + "\n"
         prompt += "Supply one result with evidence for each check named here: " + ", ".join(GATE_CHECKS[task["artifact"]]) + ".\n"
     if task.get("revision_note"):
         prompt += "Requested correction: " + task["revision_note"] + "\n"
@@ -218,17 +225,20 @@ def model_task(cli, env, worktree, directory, task, stage, route):
         "batch", "module", "module_id", "session", "title", "date", "minutes",
         "topics", "objectives", "path", "authoring_notes",
     )}, ensure_ascii=False)
-    result = run(cli, "exec", "--ignore-user-config", "--ephemeral", "--json",
-                 "-c", 'force_login_method="chatgpt"', "-c", 'model_provider="openai"',
-                 "-c", f'model_reasoning_effort="{route["effort"]}"', "-m", route["model"],
-                 "-s", "workspace-write", "--output-schema", str(schema),
-                 "-o", str(output), "-", input=prompt, cwd=worktree, env=env, check=False)
-    combined = result.stdout + "\n" + result.stderr
-    (directory / f"{stage}-cli.log").write_text(combined, encoding="utf-8")
+    log = directory / f"{stage}-cli.log"
+    with log.open("w", encoding="utf-8") as stream:
+        result = subprocess.run(
+            [cli, "exec", "--ignore-user-config", "--ephemeral", "--json",
+             "-c", 'force_login_method="chatgpt"', "-c", 'model_provider="openai"',
+             "-c", f'model_reasoning_effort="{route["effort"]}"', "-m", route["model"],
+             "-s", "workspace-write", "--output-schema", str(schema), "-o", str(output), "-"],
+            input=prompt, text=True, stdout=stream, stderr=subprocess.STDOUT, cwd=worktree, env=env,
+        )
+    combined = log.read_text(encoding="utf-8", errors="replace")
     if result.returncode or not output.is_file():
         return None, task_error(combined)
     events = []
-    for line in result.stdout.splitlines():
+    for line in combined.splitlines():
         try:
             events.append(json.loads(line))
         except ValueError:
@@ -302,7 +312,8 @@ def validate_delta(worktree, task, paths, baseline="HEAD"):
             raise StopRun(f"Unexpected deletion: {name}")
 
 
-def checkpoint_task(state, task, manifest, folder, cli, env, args):
+def checkpoint_task(state, task, manifest, folder, cli, env, args,
+                    model_slot=contextlib.nullcontext, halted=lambda: False):
     batch, record = batch_tree(state, folder, manifest, task)
     label = "Weekly artifact " + task["id"] + " revision " + str(task["revision"])
     key = task["id"].replace("/", "--") + f"--r{task['revision']}"
@@ -319,6 +330,10 @@ def checkpoint_task(state, task, manifest, folder, cli, env, args):
         for stage in ("create", "verify"):
             if task.get(f"{stage}_checkpoint"):
                 continue
+            if halted():
+                return
+            if stage == "verify":
+                task["structural_precheck"] = check_artifact(worktree, task)
             route = model_route(args.policy, task["artifact"], stage, args.astra)
             active = [entry for entry in task["attempts"] if entry["stage"] == stage
                       and entry["route"] == route and entry["revision"] == task["revision"]]
@@ -331,9 +346,15 @@ def checkpoint_task(state, task, manifest, folder, cli, env, args):
             attempt = {"stage": stage, "route": route, "revision": task["revision"],
                        "start": dt.datetime.now(dt.timezone.utc).isoformat(), "state": "running"}
             task["attempts"].append(attempt)
-            state["paused_at"] = {"task": task["id"], "stage": stage}
             write_json(manifest, state)
-            report, error = model_task(cli, env, worktree, directory, task, stage, route)
+            print(f"Started {stage} for {task['id']}", flush=True)
+            started = time.monotonic()
+            try:
+                with model_slot():
+                    report, error = model_task(cli, env, worktree, directory, task, stage, route)
+            finally:
+                attempt["seconds"] = round(time.monotonic() - started, 1)
+                print(f"Ended {stage} for {task['id']} after {attempt['seconds']:.1f}s", flush=True)
             if error:
                 attempt["state"] = error
                 task["blocked_reason"] = error
@@ -362,6 +383,39 @@ def checkpoint_task(state, task, manifest, folder, cli, env, args):
                 task["verification"], task["checks"] = verify_report(
                     report, task["artifact"], check_artifact(worktree, task)
                 )
+                if task["verification"] == "failed":
+                    task["failure_history"] = list(task.get("failure_history", [])) + [task["checks"]]
+                    task["prevention_pending"] = True
+                    task["repair_findings"] = [item for item in task["checks"] if item["state"] == "failed"]
+                    write_json(directory / "verify-before-repair.json", report)
+                    original_log = directory / "verify-cli.log"
+                    if original_log.is_file():
+                        shutil.copyfile(original_log, directory / "verify-before-repair-cli.log")
+                    task["repair_attempts"] = task.get("repair_attempts", 0) + 1
+                    write_json(manifest, state)
+                    print(f"Repairing verification findings for {task['id']}", flush=True)
+                    if task["repair_attempts"] <= 1 and not halted():
+                        repair_attempt = {"stage": stage, "route": route, "revision": task["revision"],
+                                          "start": dt.datetime.now(dt.timezone.utc).isoformat(),
+                                          "state": "running", "repair": True}
+                        task["attempts"].append(repair_attempt)
+                        write_json(manifest, state)
+                        repair_started = time.monotonic()
+                        with model_slot():
+                            repaired, repair_error = model_task(cli, env, worktree, directory, task, stage, route)
+                        repair_attempt["seconds"] = round(time.monotonic() - repair_started, 1)
+                        repair_attempt["state"] = repair_error or "completed"
+                        if repair_error:
+                            task["handoff"] = report["handoff"]
+                            task["verification_notes"] = "Repair execution stopped: " + repair_error
+                            task["finished"] = True
+                            raise StopRun(f"{task['id']} repair stopped with {repair_error}")
+                        validate_delta(worktree, task, changed(worktree))
+                        task["verify_checkpoint"] = commit(worktree, changed(worktree), f"{label}: verify repair")
+                        task["checkpoint"] = task["verify_checkpoint"]
+                        report = repaired
+                        task["verification"], task["checks"] = verify_report(
+                            report, task["artifact"], check_artifact(worktree, task))
                 task["handoff"] = report["handoff"]
                 task["verification_notes"] = report["notes"]
                 task["finished"] = True
@@ -393,6 +447,48 @@ def checkpoint_task(state, task, manifest, folder, cli, env, args):
     run(sys.executable, "tools/sync_curriculum.py", cwd=batch)
     task["checkpoint"] = commit(batch, changed(batch), label)
     task["included"] = True
+
+
+def run_pending(state, pending, manifest, folder, cli, env, args):
+    # Git integration and the shared manifest have one writer at a time.
+    # Only Codex invocations in detached worktrees overlap.
+    lock = threading.Lock()
+    stop = threading.Event()
+    state["paused_at"] = None
+
+    @contextlib.contextmanager
+    def model_slot():
+        lock.release()
+        try:
+            yield
+        finally:
+            lock.acquire()
+
+    def process(task):
+        with lock:
+            if stop.is_set() or (task.get("finished") and task["verification"] in {"failed", "blocked"}):
+                return
+            try:
+                checkpoint_task(state, task, manifest, folder, cli, env, args, model_slot, stop.is_set)
+            except (StopRun, OSError, ValueError, KeyboardInterrupt) as exc:
+                if not stop.is_set():
+                    state["paused_at"] = {"task": task["id"], "reason": str(exc) or "Interrupted by the operator"}
+                    stop.set()
+            finally:
+                write_json(manifest, state)
+
+    if args.jobs == 1:
+        for task in pending:
+            process(task)
+    else:
+        with ThreadPoolExecutor(max_workers=args.jobs) as workers:
+            try:
+                for _ in workers.map(process, pending):
+                    pass
+            except KeyboardInterrupt:
+                stop.set()
+                raise
+    return state["paused_at"]
 
 
 def submit_batches(state, manifest, config):
@@ -481,6 +577,8 @@ def print_plan(state):
               f"{task['minutes'] or 'unspecified'} min | {task['artifact']} | "
               f"create {create['model']}:{create['effort']} | verify {verify['model']}:{verify['effort']} | "
               f"index {task['existing_status']} | {status}")
+        if task["attempts"] and task["attempts"][-1]["state"] == "running":
+            print("  Last recorded stage: " + task["attempts"][-1]["stage"])
         if task["pr"]:
             print("  PR " + task["pr"])
         if task["approved"] or task["published_to_lms"]:
@@ -492,8 +590,13 @@ def print_plan(state):
 
 
 def selected(task, args):
+    sessions = args.include_session
+    targets = getattr(args, "target", None)
+    if targets and f"{task['batch']}/{task['module_id']}/{task['session']}" not in targets:
+        return False
     return all(not getattr(args, field) or getattr(args, field) == task[field]
-               for field in ("batch", "module_id", "session", "artifact"))
+               for field in ("batch", "module_id", "session", "artifact")) and (
+                   not sessions or f"{task['module_id']}/{task['session']}" in sessions)
 
 
 def revise_task(state, task, folder, manifest, args, config):
@@ -564,6 +667,12 @@ def parser():
     argp.add_argument("--batch")
     argp.add_argument("--module-id")
     argp.add_argument("--session")
+    argp.add_argument("--include-session", action="append", metavar="MODULE/SESSION",
+                      help="Exact session to include in a batch. Repeat to select multiple sessions")
+    argp.add_argument("--jobs", type=int, choices=range(1, 5), default=4,
+                      help="Maximum concurrent artifacts across selected batches (default: 4)")
+    argp.add_argument("--target", action="append", metavar="BATCH/MODULE/SESSION",
+                      help="Exact session across batches. Repeat for all sessions in this week")
     argp.add_argument("--artifact", choices=ARTIFACTS)
     argp.add_argument("--limit", type=int, help="Maximum number of distinct sessions in this invocation")
     argp.add_argument("--retry-blocked", action="store_true", help="Explicitly retry interrupted work within policy")
@@ -575,7 +684,14 @@ def parser():
 
 
 def main():
-    args = parser().parse_args()
+    argp = parser()
+    args = argp.parse_args()
+    if args.include_session and (not args.batch or args.module_id or args.session
+                                 or args.command not in {"plan", "status", "generate", "resume"}):
+        argp.error("--include-session requires --batch and replaces --module-id and --session")
+    if args.target and (args.batch or args.module_id or args.session or args.include_session
+                        or args.command not in {"plan", "status", "generate", "resume"}):
+        argp.error("--target replaces batch and session selectors for plan, status, generate or resume")
     config = read_json(ROOT / "automation/config.json")
     args.policy = read_json(ROOT / "automation/model-policy.json")
     index = read_json(ROOT / "curriculum-index.json")
@@ -587,6 +703,17 @@ def main():
     folder = ROOT / ".weekly-curriculum" / str(start)
     manifest = folder / "manifest.json"
     initial = make_plan(index, config, args.policy, start)
+    if args.target:
+        available_targets = {f"{task['batch']}/{task['module_id']}/{task['session']}" for task in initial["tasks"]}
+        unknown_targets = set(args.target) - available_targets
+        if unknown_targets:
+            argp.error("Targets outside this week: " + ", ".join(sorted(unknown_targets)))
+    if args.include_session:
+        available = {f"{task['module_id']}/{task['session']}" for task in initial["tasks"]
+                     if task["batch"] == args.batch}
+        unknown = set(args.include_session) - available
+        if unknown:
+            argp.error("Sessions outside the selected batch and week: " + ", ".join(sorted(unknown)))
     if args.command in {"plan", "status"}:
         state = read_json(manifest) if manifest.exists() else initial
         print_plan({**state, "tasks": [task for task in state["tasks"] if selected(task, args)]})
@@ -646,24 +773,11 @@ def main():
                 submit_batches(state, manifest, config)
             return
         cli, env = codex_preflight()
-        stop = None
-        for task in pending:
-            if task.get("finished") and task["verification"] in {"failed", "blocked"}:
-                continue
-            try:
-                checkpoint_task(state, task, manifest, folder, cli, env, args)
-                state["paused_at"] = None
-            except (StopRun, OSError, ValueError, KeyboardInterrupt) as exc:
-                stop = str(exc) or "Interrupted by the operator"
-                state["paused_at"] = {"task": task["id"], "reason": stop}
-            finally:
-                write_json(manifest, state)
-            if stop:
-                break
+        stopped = run_pending(state, pending, manifest, folder, cli, env, args)
         if not args.local_only:
             submit_batches(state, manifest, config)
-        if stop:
-            raise StopRun(f"{stop}\nResume: python3 tools/weekly_curriculum.py resume --week-start {start}")
+        if stopped:
+            raise StopRun(f"{stopped['reason']}\nResume using the same selectors and the resume command")
         print(f"Saved manifest at {manifest}")
 
 

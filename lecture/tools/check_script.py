@@ -194,7 +194,10 @@ def main(argv):
             if is_emoji(ch):
                 fail(f"line {n}: emoji {ch!r} (only the target emoji is allowed)")
                 break
-    if opt.get("module") and opt["module"].lower() in text.lower():
+    module_pattern = r"(?<!\w)" + re.escape(opt.get("module", "")) + r"(?!\w)"
+    prose_text = "\n".join(ln for _, ln in prose)
+    prose_text = re.sub(r"\[[^\]]+\]\([^)]*\)", "", prose_text)
+    if opt.get("module") and re.search(module_pattern, prose_text, re.I):
         fail("the Module Name must never be printed")
     if opt.get("session") and opt["session"].lower() not in lines[0].lower():
         warn("title line does not contain the session name")

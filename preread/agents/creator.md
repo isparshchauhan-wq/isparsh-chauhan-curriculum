@@ -170,3 +170,12 @@ If preview execution or Mermaid rendering was unavailable, return `ok: false`, `
 For Setup = Yes, use `--setup Yes` and also pass the exact supplied input as `--setup-text`.
 For Setup = No, use `--setup No` and omit `--setup-text`. Pass text as a process argument, not by interpolating untrusted text into a shell command.
 The checker exempts literal supplied setup text from prose vocabulary checks. If grammar edits changed it, the checker reports a required manual review of grammar-only changes, unchanged URLs, and setup prose. Complete that review before acceptance.
+
+
+## Runtime checks and recurring failures
+
+Use the prepared runtime and run required dependency checks once before authoring or verification. Inspect Mermaid and code results in local VS Code. Mermaid preview requires a working renderer or preview extension. Syntax colouring alone does not verify execution. Execute code against the actual dataset and declared engine in an isolated environment. Re-run affected checks after a correction and preserve the evidence.
+
+Treat the module name as metadata. Valid language fences, file paths, and technical identifiers such as MySQL may contain the same letters. Keep module labels out of prose.
+
+Correct reproducible artifact findings within this task and re-verify. Report missing dependencies and tool failures with the exact failing check. The coordinator diagnoses recurring failures and raises a separate workflow PR updating the applicable creator, reviewer and deterministic checker with a regression check. Record unresolved findings accurately.

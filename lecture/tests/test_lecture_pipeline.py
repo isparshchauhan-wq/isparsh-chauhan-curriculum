@@ -48,6 +48,18 @@ class CheckerTests(unittest.TestCase):
  def test_all_three_pack_examples_have_no_structural_failures(self):
   for p in (ROOT/'lecture/examples').glob('*/lecture_script.md'):
    code,output=self.check(p);self.assertEqual(code,0,output)
+ def test_module_name_allows_language_fences_and_mysql_but_rejects_label(self):
+  source=ROOT/'lecture/examples/Example_1_Probability_Distributions/lecture_script.md'
+  p=source.parent/'test-script-temporary.md'
+  try:
+   text=source.read_text().replace('```python','```sql')
+   p.write_text(text+'\nMySQL supports this query.\n')
+   _,output=self.check(p,['--module','SQL'])
+   self.assertNotIn('Module Name must never',output)
+   p.write_text(text+'\nModule: SQL\n')
+   _,output=self.check(p,['--module','SQL'])
+   self.assertIn('Module Name must never',output)
+  finally: p.unlink(missing_ok=True)
  def test_missing_output_is_a_failure(self):
   source=ROOT/'lecture/examples/Example_1_Probability_Distributions/lecture_script.md'
   with tempfile.TemporaryDirectory(dir=source.parent) as tmp:

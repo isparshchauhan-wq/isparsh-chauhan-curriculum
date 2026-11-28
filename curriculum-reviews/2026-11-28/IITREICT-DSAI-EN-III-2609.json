@@ -1,0 +1,866 @@
+{
+  "week_start": "2026-11-28",
+  "week_end": "2026-12-04",
+  "batch": "IITREICT-DSAI-EN-III-2609",
+  "branch": "curriculum/2026-11-28/iitreict-dsai-en-iii-2609",
+  "tasks": [
+    {
+      "id": "IITREICT-DSAI-EN-III-2609/03a/12.1/pre-read",
+      "batch": "IITREICT-DSAI-EN-III-2609",
+      "module": "SQL",
+      "module_id": "03a",
+      "session": "12.1",
+      "title": "Common Table Expressions (CTEs)",
+      "date": "2026-11-30",
+      "minutes": 120,
+      "path": "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.1-common-table-expressions-ctes",
+      "objectives": [
+        "Use a CTE to structure a complex query into readable steps",
+        "Rewrite a nested subquery as a clearer CTE",
+        "Chain multiple CTEs in one query",
+        "Build a stepwise analytical query with CTEs"
+      ],
+      "topics": [
+        "Common Table Expressions",
+        "WITH Clause"
+      ],
+      "authoring_notes": [],
+      "artifact": "pre-read",
+      "existing_status": "scaffold",
+      "create_model": {
+        "model": "gpt-6.1-terra",
+        "effort": "high"
+      },
+      "verify_model": {
+        "model": "gpt-6.1-terra",
+        "effort": "high"
+      },
+      "generation": "generated",
+      "verification": "passed",
+      "checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "The session resolver confirmed the supplied path, title, date, 120-minute duration, two topics and four objectives. The four outcome bullets cover the objectives. No matching conflict was found in SOURCES.md."
+        },
+        {
+          "name": "student_suitability",
+          "state": "passed",
+          "evidence": "Reviewed the full pre-read against the canonical guidelines: the library scenario is distinct from the completed scenarios reported by the checker, the language is beginner-oriented, and the questions leave answers for the session. No reproducible content defects required repair."
+        },
+        {
+          "name": "code_examples",
+          "state": "passed",
+          "evidence": "No executable preview, calculations or quizzes occur in this pre-read; code execution is not applicable."
+        },
+        {
+          "name": "mermaid",
+          "state": "passed",
+          "evidence": "Coordinator rendered the exact embedded Mermaid block in local VS Code with Markdown Preview Mermaid Support and visually inspected every label and arrow; no syntax or clipping defects remained. Diagram source was preserved through supplemental output/chart corrections."
+        },
+        {
+          "name": "dependencies",
+          "state": "passed",
+          "evidence": "The pre-read embeds its Mermaid diagram and any preview code; VS Code Mermaid rendering was checked. No external image or dataset is required. The applicable Python preview executed in the prepared runtime."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "{\n  \"ok\": true,\n  \"findings\": [],\n  \"body_words\": 396,\n  \"outcome_verbs\": [\n    \"use\",\n    \"write\",\n    \"design\",\n    \"build\"\n  ],\n  \"think_questions\": 3,\n  \"scenario\": \"Use a library return log to plan a shelf check.\",\n  \"prior_scenarios\": [\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-01.1-python-and-colab-variables-data-types-and-expressions/pre-read.md\",\n      \"scenario\": \"Check which kites have enough line for a turn at the park.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.3-cleaning-data-ii-type-conversions-and-tidying/pre-read.md\",\n      \"scenario\": \"Sort out a school coat check log to see who waited longest.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-12.1-aggregating-and-combining-groupby-merge-and-reshape/pre-read.md\",\n      \"scenario\": \"Find out which seeds were most popular at a seed swap.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-12.2-visualising-data-i-matplotlib-and-distributions/pre-read.md\",\n      \"scenario\": \"Use laundry drying times to plan when to check the dryer.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-13.1-visualising-data-ii-seaborn-for-relationships-and-categories/pre-read.md\",\n      \"scenario\": \"Use a bike repair log to plan the next repair day.\"\n    },\n    {\n      \"file\": \"IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-11.2-subqueries/pre-read.md\",\n      \"scenario\": \"Compare what regulars spent at a breakfast stall.\"\n    },\n    {\n      \"file\": \"IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.2-window-functions/pre-read.md\",\n      \"scenario\": \"Compare daily notebook sales at a school shop.\"\n    }\n  ],\n  \"code_preview_syntax\": [],\n  \"mermaid_render\": \"not-rendered\",\n  \"setup_input_exact_match\": null,\n  \"manual_checks_required\": [\n    \"Topic and objective coverage\",\n    \"Scenario originality beyond exact text\",\n    \"Beginner readability\",\n    \"No answers leaked\",\n    \"Snippet execution\",\n    \"Mermaid rendering\"\n  ]\n}"
+        }
+      ],
+      "handoff": [
+        "Publish the pre-read manually in the LMS at 15:00 IST on the calendar day before the indexed class. Preserve the embedded Mermaid diagram; use a Mermaid-capable viewer or an inspected static export."
+      ],
+      "attempts": [
+        {
+          "stage": "create",
+          "route": {
+            "model": "gpt-6.1-terra",
+            "effort": "high"
+          },
+          "revision": 0,
+          "start": "2026-11-28T02:17:02.161037+00:00",
+          "state": "completed",
+          "seconds": 61.6
+        },
+        {
+          "stage": "verify",
+          "route": {
+            "model": "gpt-6.1-terra",
+            "effort": "high"
+          },
+          "revision": 0,
+          "start": "2026-11-28T02:18:04.150195+00:00",
+          "state": "completed",
+          "seconds": 35.0
+        }
+      ],
+      "blocked_reason": null,
+      "checkpoint": "7f1acb4b1a4093b02bd69c5afb6504b923b06a38",
+      "branch": "curriculum/2026-11-28/iitreict-dsai-en-iii-2609",
+      "revision": 0,
+      "base": "e5602f1794abb7e5110d9e7f015626423729dfc4",
+      "create_checkpoint": "07f44be8f4da8b0fb7c1a9de98a2d15ea9a0fc76",
+      "structural_precheck": {
+        "name": "structural_checker",
+        "state": "passed",
+        "evidence": "{\n  \"ok\": true,\n  \"findings\": [],\n  \"body_words\": 396,\n  \"outcome_verbs\": [\n    \"use\",\n    \"write\",\n    \"design\",\n    \"build\"\n  ],\n  \"think_questions\": 3,\n  \"scenario\": \"Use a library return log to plan a shelf check.\",\n  \"prior_scenarios\": [\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-01.1-python-and-colab-variables-data-types-and-expressions/pre-read.md\",\n      \"scenario\": \"Check which kites have enough line for a turn at the park.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.3-cleaning-data-ii-type-conversions-and-tidying/pre-read.md\",\n      \"scenario\": \"Sort out a school coat check log to see who waited longest.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-12.1-aggregating-and-combining-groupby-merge-and-reshape/pre-read.md\",\n      \"scenario\": \"Find out which seeds were most popular at a seed swap.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-12.2-visualising-data-i-matplotlib-and-distributions/pre-read.md\",\n      \"scenario\": \"Use laundry drying times to plan when to check the dryer.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-13.1-visualising-data-ii-seaborn-for-relationships-and-categories/pre-read.md\",\n      \"scenario\": \"Use a bike repair log to plan the next repair day.\"\n    },\n    {\n      \"file\": \"IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-11.2-subqueries/pre-read.md\",\n      \"scenario\": \"Compare what regulars spent at a breakfast stall.\"\n    }\n  ],\n  \"code_preview_syntax\": [],\n  \"mermaid_render\": \"not-rendered\",\n  \"setup_input_exact_match\": null,\n  \"manual_checks_required\": [\n    \"Topic and objective coverage\",\n    \"Scenario originality beyond exact text\",\n    \"Beginner readability\",\n    \"No answers leaked\",\n    \"Snippet execution\",\n    \"Mermaid rendering\"\n  ]\n}"
+      },
+      "verify_checkpoint": "07f44be8f4da8b0fb7c1a9de98a2d15ea9a0fc76",
+      "verification_notes": "Original independent Terra-high model review retained. Coordinator supplemental execution, chart corrections and local VS Code visual review resolved the original unverified checks; this is separate from human approval.",
+      "finished": true,
+      "included": true,
+      "original_model_checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "The session resolver confirmed the supplied path, title, date, 120-minute duration, two topics and four objectives. The four outcome bullets cover the objectives. No matching conflict was found in SOURCES.md."
+        },
+        {
+          "name": "student_suitability",
+          "state": "passed",
+          "evidence": "Reviewed the full pre-read against the canonical guidelines: the library scenario is distinct from the completed scenarios reported by the checker, the language is beginner-oriented, and the questions leave answers for the session. No reproducible content defects required repair."
+        },
+        {
+          "name": "code_examples",
+          "state": "passed",
+          "evidence": "The pre-read contains no executable code preview, calculations or quizzes; execution and answer checks are not applicable. No database changes were made."
+        },
+        {
+          "name": "mermaid",
+          "state": "unverified",
+          "evidence": "Inspected the Mermaid source for the required four boxes, arrows and template styles. The single availability check found no mmdc or code command on PATH, so rendering and visual inspection were not performed. The coordinator must open the checkpointed Markdown in local VS Code Markdown preview with Mermaid support and inspect the labels and arrows."
+        },
+        {
+          "name": "dependencies",
+          "state": "unverified",
+          "evidence": "The availability check found python3 and the supplied MySQL client, but no mmdc or code command on PATH. No executable preview or external asset requires those runtime dependencies; Mermaid rendering remains unverified until the coordinator records the VS Code preview result."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "{\n  \"ok\": true,\n  \"findings\": [],\n  \"body_words\": 396,\n  \"outcome_verbs\": [\n    \"use\",\n    \"write\",\n    \"design\",\n    \"build\"\n  ],\n  \"think_questions\": 3,\n  \"scenario\": \"Use a library return log to plan a shelf check.\",\n  \"prior_scenarios\": [\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-01.1-python-and-colab-variables-data-types-and-expressions/pre-read.md\",\n      \"scenario\": \"Check which kites have enough line for a turn at the park.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.3-cleaning-data-ii-type-conversions-and-tidying/pre-read.md\",\n      \"scenario\": \"Sort out a school coat check log to see who waited longest.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-12.1-aggregating-and-combining-groupby-merge-and-reshape/pre-read.md\",\n      \"scenario\": \"Find out which seeds were most popular at a seed swap.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-12.2-visualising-data-i-matplotlib-and-distributions/pre-read.md\",\n      \"scenario\": \"Use laundry drying times to plan when to check the dryer.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-13.1-visualising-data-ii-seaborn-for-relationships-and-categories/pre-read.md\",\n      \"scenario\": \"Use a bike repair log to plan the next repair day.\"\n    },\n    {\n      \"file\": \"IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-11.2-subqueries/pre-read.md\",\n      \"scenario\": \"Compare what regulars spent at a breakfast stall.\"\n    }\n  ],\n  \"code_preview_syntax\": [],\n  \"mermaid_render\": \"not-rendered\",\n  \"setup_input_exact_match\": null,\n  \"manual_checks_required\": [\n    \"Topic and objective coverage\",\n    \"Scenario originality beyond exact text\",\n    \"Beginner readability\",\n    \"No answers leaked\",\n    \"Snippet execution\",\n    \"Mermaid rendering\"\n  ]\n}"
+        }
+      ],
+      "original_model_handoff": [
+        "The pre-read is at IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.1-common-table-expressions-ctes/pre-read.md. No edits were needed.",
+        "Before manual LMS publication, visually review the embedded Mermaid diagram in VS Code. No separate images, code files, datasets or external assets are required.",
+        "Provide the instructor with the Markdown and note that Mermaid-capable rendering is needed. Student LMS publication is manual at 15:00 IST on the calendar day before class."
+      ],
+      "original_verification_notes": "Needs verification: the required Mermaid render and local VS Code visual review have not been recorded. No commit, publication or status update was made.",
+      "supplemental_verification": {
+        "reviewer": "coordinator",
+        "at": "2026-11-28T08:52:37.238526+00:00",
+        "execution_evidence": "curriculum-reviews/2026-11-28/IITREICT-DSAI-EN-III-2609.json",
+        "final_source_sha256": {
+          "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.1-common-table-expressions-ctes/pre-read.md": "e856a8741e7384f38366e3e8a32b4794a1bc900f8bb1d42bbbc518cca2268582"
+        },
+        "model_review_preserved": true
+      }
+    },
+    {
+      "id": "IITREICT-DSAI-EN-III-2609/03a/12.1/lecture-script",
+      "batch": "IITREICT-DSAI-EN-III-2609",
+      "module": "SQL",
+      "module_id": "03a",
+      "session": "12.1",
+      "title": "Common Table Expressions (CTEs)",
+      "date": "2026-11-30",
+      "minutes": 120,
+      "path": "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.1-common-table-expressions-ctes",
+      "objectives": [
+        "Use a CTE to structure a complex query into readable steps",
+        "Rewrite a nested subquery as a clearer CTE",
+        "Chain multiple CTEs in one query",
+        "Build a stepwise analytical query with CTEs"
+      ],
+      "topics": [
+        "Common Table Expressions",
+        "WITH Clause"
+      ],
+      "authoring_notes": [],
+      "artifact": "lecture-script",
+      "existing_status": "scaffold",
+      "create_model": {
+        "model": "gpt-6.1-terra",
+        "effort": "high"
+      },
+      "verify_model": {
+        "model": "gpt-6.1-terra",
+        "effort": "high"
+      },
+      "generation": "generated",
+      "verification": "passed",
+      "checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "The indexed session and task input agree on the path, title, topics, four objectives, and 120-minute duration. Each objective appears verbatim once in the Agenda; no prior delivery is asserted."
+        },
+        {
+          "name": "pedagogy",
+          "state": "passed",
+          "evidence": "The independent model review confirmed four connected topics, prediction prompts and four quizzes. Supplemental MySQL execution resolved the pending outputs; the closing now states the verified Jaipur decision and all three city totals."
+        },
+        {
+          "name": "math",
+          "state": "passed",
+          "evidence": "Independent Python recomputation from orders.csv found paid totals of Pune 12,900, Jaipur 13,700, and Kochi 12,300; their equal-city mean is 12,966.6667, and Jaipur alone exceeds it. Agenda minutes sum to 120."
+        },
+        {
+          "name": "code_examples",
+          "state": "passed",
+          "evidence": "Coordinator executed all eight exact SQL blocks against the supplied 120-row fixture on disposable MySQL 8.4.11 in VS Code Terminal. Every result matched independently computed expectations. Recorded output blocks match captured stdout; query text matches the executed source."
+        },
+        {
+          "name": "quizzes",
+          "state": "passed",
+          "evidence": "Reviewed all four questions and option explanations against CTE statement scope, equivalent row counts, earlier-CTE references, and the average of city totals. Answers A, B, C, and D respectively are correct."
+        },
+        {
+          "name": "mermaid",
+          "state": "passed",
+          "evidence": "Coordinator rendered the exact embedded Mermaid block in local VS Code with Markdown Preview Mermaid Support and visually inspected every label and arrow; no syntax or clipping defects remained. Diagram source was preserved through supplemental output/chart corrections."
+        },
+        {
+          "name": "dependencies",
+          "state": "passed",
+          "evidence": "Prepared Python and MySQL 8.4.11 runtime executed in local VS Code Terminal. The SQL fixture and CSV resolve beside the lecture, and all four embedded PNG paths resolve. All charts were generated from the captured query results, rendered at 200 dpi and visually inspected in VS Code; label collisions were repaired and re-rendered."
+        },
+        {
+          "name": "instructor_suitability",
+          "state": "passed",
+          "evidence": "The independent review confirmed pacing, explanations and poll guidance. The coordinator filled all eight outputs from actual MySQL results, checked the closing against those results, added four charts, corrected label collisions and inspected the Markdown with relative assets in VS Code. No pending execution placeholders remain."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "PASS: 0 fail, 0 warn  (IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.1-common-table-expressions-ctes/lecture-script.md)"
+        }
+      ],
+      "handoff": [
+        "Share this lecture-script.md together with its images/ and data/ folders. Use an isolated MySQL 8.0-or-later teaching database and load the supplied SQL fixture before running examples."
+      ],
+      "attempts": [
+        {
+          "stage": "create",
+          "route": {
+            "model": "gpt-6.1-terra",
+            "effort": "high"
+          },
+          "revision": 0,
+          "start": "2026-11-28T02:17:02.415163+00:00",
+          "state": "completed",
+          "seconds": 166.8
+        },
+        {
+          "stage": "verify",
+          "route": {
+            "model": "gpt-6.1-terra",
+            "effort": "high"
+          },
+          "revision": 0,
+          "start": "2026-11-28T02:19:49.543955+00:00",
+          "state": "completed",
+          "seconds": 71.5
+        }
+      ],
+      "blocked_reason": null,
+      "checkpoint": "72fd7bd56782bafe8a4586c53fe6614e13b9f2b9",
+      "branch": "curriculum/2026-11-28/iitreict-dsai-en-iii-2609",
+      "revision": 0,
+      "base": "e5602f1794abb7e5110d9e7f015626423729dfc4",
+      "create_checkpoint": "0be948560cc3624f0057b6e480a8d62529cd1bd3",
+      "structural_precheck": {
+        "name": "structural_checker",
+        "state": "passed",
+        "evidence": "PASS: 0 fail, 0 warn  (IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.1-common-table-expressions-ctes/lecture-script.md)"
+      },
+      "verify_checkpoint": "0be948560cc3624f0057b6e480a8d62529cd1bd3",
+      "verification_notes": "Original independent Terra-high model review retained. Coordinator supplemental execution, chart corrections and local VS Code visual review resolved the original unverified checks; this is separate from human approval.",
+      "finished": true,
+      "included": true,
+      "original_model_checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "The indexed session and task input agree on the path, title, topics, four objectives, and 120-minute duration. Each objective appears verbatim once in the Agenda; no prior delivery is asserted."
+        },
+        {
+          "name": "pedagogy",
+          "state": "unverified",
+          "evidence": "The draft has four connected topics, prediction prompts, four quizzes, and a closing aligned to the scenario. Its eight SQL outputs and the specific closing decision remain pending MySQL execution, so the teaching flow is incomplete."
+        },
+        {
+          "name": "math",
+          "state": "passed",
+          "evidence": "Independent Python recomputation from orders.csv found paid totals of Pune 12,900, Jaipur 13,700, and Kochi 12,300; their equal-city mean is 12,966.6667, and Jaipur alone exceeds it. Agenda minutes sum to 120."
+        },
+        {
+          "name": "code_examples",
+          "state": "unverified",
+          "evidence": "The supplied MySQL client command against curriculum_121_lecture_verify failed before fixture loading with ERROR 2002: cannot connect through /tmp/curriculum-benchmark-3mi3hpxu/mysql.sock (1). Consequently none of the eight SQL blocks was executed and their output placeholders remain. The coordinator should restore socket access, load data/orders.sql into the designated disposable database, run every block, paste exact results, and update the closing decision."
+        },
+        {
+          "name": "quizzes",
+          "state": "passed",
+          "evidence": "Reviewed all four questions and option explanations against CTE statement scope, equivalent row counts, earlier-CTE references, and the average of city totals. Answers A, B, C, and D respectively are correct."
+        },
+        {
+          "name": "mermaid",
+          "state": "unverified",
+          "evidence": "mmdc and the code command were absent from PATH during the single availability check. The flowchart has not been rendered or inspected in local VS Code; the coordinator must preview the checkpointed Markdown with Mermaid support and record the result."
+        },
+        {
+          "name": "dependencies",
+          "state": "unverified",
+          "evidence": "Python and the supplied MySQL client are present, but the designated socket is inaccessible. Python comparison found that orders.sql and orders.csv contain the same 120 rows, including 108 paid and 12 cancelled orders. No image assets are referenced. VS Code visual review remains outstanding."
+        },
+        {
+          "name": "instructor_suitability",
+          "state": "unverified",
+          "evidence": "Pacing, scenario, instructor notes, quiz explanations, and the poll are present. The pending SQL outputs and unrendered diagram prevent a complete instructor-ready verification."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "PASS: 0 fail, 0 warn  (IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.1-common-table-expressions-ctes/lecture-script.md)"
+        }
+      ],
+      "original_model_handoff": [
+        "Give the instructor the lecture Markdown and both data/orders.sql and data/orders.csv. The fixture requires an isolated MySQL 8.0-or-later database.",
+        "After socket access is repaired, run the fixture and all eight examples in the designated disposable database; record exact outputs and the final city decision.",
+        "Preview the Mermaid diagram and relative asset links in local VS Code and record the observed result. No separate image files are referenced.",
+        "The LMS and instructor distribution are manual handoffs; this verification did not publish or distribute materials."
+      ],
+      "original_verification_notes": "Needs verification. No artifact files were changed because the missing SQL outputs require actual MySQL execution; the structural checker passed. This was the runner-specified verifier stage, without another model or the weekly runner.",
+      "supplemental_verification": {
+        "reviewer": "coordinator",
+        "at": "2026-11-28T08:52:37.238526+00:00",
+        "execution_evidence": "curriculum-reviews/2026-11-28/IITREICT-DSAI-EN-III-2609.json",
+        "final_source_sha256": {
+          "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.1-common-table-expressions-ctes/lecture-script.md": "c677f9761015a5f76f45f778e72888be0eacd6c3d2635ec74cdb554fafc2cff8",
+          "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.1-common-table-expressions-ctes/images/01-paid-orders.png": "9428eb40e4582943dcd09239db33631cd9a6aae0bf7ebab9e2b6b8b7098186e7",
+          "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.1-common-table-expressions-ctes/images/02-equivalent-counts.png": "8d561674b869ca73046f6a3506bc577875dae0504ed3f1ef7655e7b92d4635f1",
+          "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.1-common-table-expressions-ctes/images/03-city-totals.png": "badffb673f4719fbeaff835615cfce32e126bb2cf051daca40e181b18ed813cf",
+          "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.1-common-table-expressions-ctes/images/04-city-comparison.png": "65db81f4a9ca16b75d8b292a7f99f728365a52514baac7c32525da92afd43d3a",
+          "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.1-common-table-expressions-ctes/data/orders.csv": "e815bd8af32b1b6dbeb5a6ed0649276ed4954b7224976cf9cb216cf073240846",
+          "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.1-common-table-expressions-ctes/data/orders.sql": "ab659774657c1edbe6a1cfcf551ee1158a368cd1b8dce17f8da11aaed3605075"
+        },
+        "model_review_preserved": true
+      }
+    },
+    {
+      "id": "IITREICT-DSAI-EN-III-2609/03a/12.2/pre-read",
+      "batch": "IITREICT-DSAI-EN-III-2609",
+      "module": "SQL",
+      "module_id": "03a",
+      "session": "12.2",
+      "title": "Window Functions",
+      "date": "2026-12-02",
+      "minutes": 120,
+      "path": "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.2-window-functions",
+      "objectives": [
+        "Explain what a window function does versus a GROUP BY, by intuition",
+        "Use ranking functions such as ROW_NUMBER and RANK with PARTITION BY",
+        "Compute running totals and moving aggregates over a window",
+        "Answer a ranking question such as top products per category",
+        "Apply window functions to cohort-style questions such as ranking within groups over time"
+      ],
+      "topics": [
+        "Window Functions",
+        "Ranking",
+        "Running Totals",
+        "Cohort-style Analysis"
+      ],
+      "authoring_notes": [],
+      "artifact": "pre-read",
+      "existing_status": "scaffold",
+      "create_model": {
+        "model": "gpt-6.1-terra",
+        "effort": "high"
+      },
+      "verify_model": {
+        "model": "gpt-6.1-terra",
+        "effort": "high"
+      },
+      "generation": "generated",
+      "verification": "passed",
+      "checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "The session resolver confirmed the requested path, title, four topics, five objectives, 2026-12-02 date, and 120-minute duration. The draft covers all five objectives and preserves the supplied topic names."
+        },
+        {
+          "name": "student_suitability",
+          "state": "passed",
+          "evidence": "Reviewed the complete draft for beginner readability, unanswered questions, setup omission, and scenario consistency. The checker found no structural issues and counted 449 body words. A repository search found no other school-shop notebook-sales scenario."
+        },
+        {
+          "name": "code_examples",
+          "state": "passed",
+          "evidence": "The exact two-line Python preview executed in VS Code Terminal and printed [4, 4, 3, 2, 5], matching the inline table. No extra packages are required."
+        },
+        {
+          "name": "mermaid",
+          "state": "passed",
+          "evidence": "Coordinator rendered the exact embedded Mermaid block in local VS Code with Markdown Preview Mermaid Support and visually inspected every label and arrow; no syntax or clipping defects remained. Diagram source was preserved through supplemental output/chart corrections."
+        },
+        {
+          "name": "dependencies",
+          "state": "passed",
+          "evidence": "The pre-read embeds its Mermaid diagram and any preview code; VS Code Mermaid rendering was checked. No external image or dataset is required. The applicable Python preview executed in the prepared runtime."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "{\n  \"ok\": true,\n  \"findings\": [],\n  \"body_words\": 449,\n  \"outcome_verbs\": [\n    \"explain\",\n    \"use\",\n    \"calculate\",\n    \"determine\",\n    \"trace\"\n  ],\n  \"think_questions\": 3,\n  \"scenario\": \"Compare daily notebook sales at a school shop.\",\n  \"prior_scenarios\": [\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-01.1-python-and-colab-variables-data-types-and-expressions/pre-read.md\",\n      \"scenario\": \"Check which kites have enough line for a turn at the park.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.3-cleaning-data-ii-type-conversions-and-tidying/pre-read.md\",\n      \"scenario\": \"Sort out a school coat check log to see who waited longest.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-12.1-aggregating-and-combining-groupby-merge-and-reshape/pre-read.md\",\n      \"scenario\": \"Find out which seeds were most popular at a seed swap.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-12.2-visualising-data-i-matplotlib-and-distributions/pre-read.md\",\n      \"scenario\": \"Use laundry drying times to plan when to check the dryer.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-13.1-visualising-data-ii-seaborn-for-relationships-and-categories/pre-read.md\",\n      \"scenario\": \"Use a bike repair log to plan the next repair day.\"\n    },\n    {\n      \"file\": \"IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-11.2-subqueries/pre-read.md\",\n      \"scenario\": \"Compare what regulars spent at a breakfast stall.\"\n    },\n    {\n      \"file\": \"IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.1-common-table-expressions-ctes/pre-read.md\",\n      \"scenario\": \"Use a library return log to plan a shelf check.\"\n    }\n  ],\n  \"code_preview_syntax\": [\n    \"parsed-not-executed\"\n  ],\n  \"mermaid_render\": \"not-rendered\",\n  \"setup_input_exact_match\": null,\n  \"manual_checks_required\": [\n    \"Topic and objective coverage\",\n    \"Scenario originality beyond exact text\",\n    \"Beginner readability\",\n    \"No answers leaked\",\n    \"Snippet execution\",\n    \"Mermaid rendering\"\n  ]\n}"
+        }
+      ],
+      "handoff": [
+        "Publish the pre-read manually in the LMS at 15:00 IST on the calendar day before the indexed class. Preserve the embedded Mermaid diagram; use a Mermaid-capable viewer or an inspected static export."
+      ],
+      "attempts": [
+        {
+          "stage": "create",
+          "route": {
+            "model": "gpt-6.1-terra",
+            "effort": "high"
+          },
+          "revision": 0,
+          "start": "2026-11-28T02:17:02.674504+00:00",
+          "state": "completed",
+          "seconds": 57.3
+        },
+        {
+          "stage": "verify",
+          "route": {
+            "model": "gpt-6.1-terra",
+            "effort": "high"
+          },
+          "revision": 0,
+          "start": "2026-11-28T02:18:00.339233+00:00",
+          "state": "completed",
+          "seconds": 38.2
+        }
+      ],
+      "blocked_reason": null,
+      "checkpoint": "5cd8aa0ce071aaa03c2b41f89bd9267bc5433c13",
+      "branch": "curriculum/2026-11-28/iitreict-dsai-en-iii-2609",
+      "revision": 0,
+      "base": "e5602f1794abb7e5110d9e7f015626423729dfc4",
+      "create_checkpoint": "7d80ba889e674f43792a3a7af5ebabe36d951393",
+      "structural_precheck": {
+        "name": "structural_checker",
+        "state": "passed",
+        "evidence": "{\n  \"ok\": true,\n  \"findings\": [],\n  \"body_words\": 449,\n  \"outcome_verbs\": [\n    \"explain\",\n    \"use\",\n    \"calculate\",\n    \"determine\",\n    \"trace\"\n  ],\n  \"think_questions\": 3,\n  \"scenario\": \"Compare daily notebook sales at a school shop.\",\n  \"prior_scenarios\": [\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-01.1-python-and-colab-variables-data-types-and-expressions/pre-read.md\",\n      \"scenario\": \"Check which kites have enough line for a turn at the park.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.3-cleaning-data-ii-type-conversions-and-tidying/pre-read.md\",\n      \"scenario\": \"Sort out a school coat check log to see who waited longest.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-12.1-aggregating-and-combining-groupby-merge-and-reshape/pre-read.md\",\n      \"scenario\": \"Find out which seeds were most popular at a seed swap.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-12.2-visualising-data-i-matplotlib-and-distributions/pre-read.md\",\n      \"scenario\": \"Use laundry drying times to plan when to check the dryer.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-13.1-visualising-data-ii-seaborn-for-relationships-and-categories/pre-read.md\",\n      \"scenario\": \"Use a bike repair log to plan the next repair day.\"\n    },\n    {\n      \"file\": \"IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-11.2-subqueries/pre-read.md\",\n      \"scenario\": \"Compare what regulars spent at a breakfast stall.\"\n    }\n  ],\n  \"code_preview_syntax\": [\n    \"parsed-not-executed\"\n  ],\n  \"mermaid_render\": \"not-rendered\",\n  \"setup_input_exact_match\": null,\n  \"manual_checks_required\": [\n    \"Topic and objective coverage\",\n    \"Scenario originality beyond exact text\",\n    \"Beginner readability\",\n    \"No answers leaked\",\n    \"Snippet execution\",\n    \"Mermaid rendering\"\n  ]\n}"
+      },
+      "verify_checkpoint": "7d80ba889e674f43792a3a7af5ebabe36d951393",
+      "verification_notes": "Original independent Terra-high model review retained. Coordinator supplemental execution, chart corrections and local VS Code visual review resolved the original unverified checks; this is separate from human approval.",
+      "finished": true,
+      "included": true,
+      "original_model_checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "The session resolver confirmed the requested path, title, four topics, five objectives, 2026-12-02 date, and 120-minute duration. The draft covers all five objectives and preserves the supplied topic names."
+        },
+        {
+          "name": "student_suitability",
+          "state": "passed",
+          "evidence": "Reviewed the complete draft for beginner readability, unanswered questions, setup omission, and scenario consistency. The checker found no structural issues and counted 449 body words. A repository search found no other school-shop notebook-sales scenario."
+        },
+        {
+          "name": "code_examples",
+          "state": "unverified",
+          "evidence": "Executed the extracted Python preview with python3 -I; it printed [4, 4, 3, 2, 5], matching the table. Execution in the required VS Code Terminal or notebook remains unverified. There is no SQL snippet, so no database execution was applicable."
+        },
+        {
+          "name": "mermaid",
+          "state": "unverified",
+          "evidence": "The diagram was inspected as text, but mmdc and the VS Code CLI were unavailable on PATH. Rendering and visual inspection of labels and arrows remain for the coordinator's configured VS Code Mermaid preview."
+        },
+        {
+          "name": "dependencies",
+          "state": "unverified",
+          "evidence": "The single availability check found python3 and the designated MySQL executable, but no mmdc or code command on PATH. The Python preview has no external dependencies. The required VS Code visual review remains unverified."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "{\n  \"ok\": true,\n  \"findings\": [],\n  \"body_words\": 449,\n  \"outcome_verbs\": [\n    \"explain\",\n    \"use\",\n    \"calculate\",\n    \"determine\",\n    \"trace\"\n  ],\n  \"think_questions\": 3,\n  \"scenario\": \"Compare daily notebook sales at a school shop.\",\n  \"prior_scenarios\": [\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-01-python-programming-fundamentals-and-flow-control/lecture-01.1-python-and-colab-variables-data-types-and-expressions/pre-read.md\",\n      \"scenario\": \"Check which kites have enough line for a turn at the park.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-11.3-cleaning-data-ii-type-conversions-and-tidying/pre-read.md\",\n      \"scenario\": \"Sort out a school coat check log to see who waited longest.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-03-the-data-handling-toolkit-numpy-and-pandas/lecture-12.1-aggregating-and-combining-groupby-merge-and-reshape/pre-read.md\",\n      \"scenario\": \"Find out which seeds were most popular at a seed swap.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-12.2-visualising-data-i-matplotlib-and-distributions/pre-read.md\",\n      \"scenario\": \"Use laundry drying times to plan when to check the dryer.\"\n    },\n    {\n      \"file\": \"IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-13.1-visualising-data-ii-seaborn-for-relationships-and-categories/pre-read.md\",\n      \"scenario\": \"Use a bike repair log to plan the next repair day.\"\n    },\n    {\n      \"file\": \"IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-11.2-subqueries/pre-read.md\",\n      \"scenario\": \"Compare what regulars spent at a breakfast stall.\"\n    }\n  ],\n  \"code_preview_syntax\": [\n    \"parsed-not-executed\"\n  ],\n  \"mermaid_render\": \"not-rendered\",\n  \"setup_input_exact_match\": null,\n  \"manual_checks_required\": [\n    \"Topic and objective coverage\",\n    \"Scenario originality beyond exact text\",\n    \"Beginner readability\",\n    \"No answers leaked\",\n    \"Snippet execution\",\n    \"Mermaid rendering\"\n  ]\n}"
+        }
+      ],
+      "original_model_handoff": [
+        "In VS Code, open the pre-read in Markdown preview with Mermaid support and record whether all four boxes, labels, and arrows render correctly.",
+        "Run the two-line Python preview in the VS Code Terminal or a notebook and record the observed output.",
+        "The Mermaid diagram and Python example are embedded in the Markdown; no separate images, data files, or external packages are required for the student handoff.",
+        "After verification and approval, publish the pre-read manually in the LMS at 15:00 IST on the calendar day before class."
+      ],
+      "original_verification_notes": "Reviewed IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.2-window-functions/pre-read.md. No reproducible artifact defects were found, so no edits were made. The verifier stage was independent of the creator; acceptance remains pending the specified VS Code checks.",
+      "supplemental_verification": {
+        "reviewer": "coordinator",
+        "at": "2026-11-28T08:52:37.238526+00:00",
+        "execution_evidence": "curriculum-reviews/2026-11-28/IITREICT-DSAI-EN-III-2609.json",
+        "final_source_sha256": {
+          "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.2-window-functions/pre-read.md": "af2dbcfacf9d843677a29819a4f33ac945466f3cff671da4c303595dc94a7685"
+        },
+        "model_review_preserved": true
+      }
+    },
+    {
+      "id": "IITREICT-DSAI-EN-III-2609/03a/12.2/lecture-script",
+      "batch": "IITREICT-DSAI-EN-III-2609",
+      "module": "SQL",
+      "module_id": "03a",
+      "session": "12.2",
+      "title": "Window Functions",
+      "date": "2026-12-02",
+      "minutes": 120,
+      "path": "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.2-window-functions",
+      "objectives": [
+        "Explain what a window function does versus a GROUP BY, by intuition",
+        "Use ranking functions such as ROW_NUMBER and RANK with PARTITION BY",
+        "Compute running totals and moving aggregates over a window",
+        "Answer a ranking question such as top products per category",
+        "Apply window functions to cohort-style questions such as ranking within groups over time"
+      ],
+      "topics": [
+        "Window Functions",
+        "Ranking",
+        "Running Totals",
+        "Cohort-style Analysis"
+      ],
+      "authoring_notes": [],
+      "artifact": "lecture-script",
+      "existing_status": "scaffold",
+      "create_model": {
+        "model": "gpt-6.1-terra",
+        "effort": "high"
+      },
+      "verify_model": {
+        "model": "gpt-6.1-terra",
+        "effort": "high"
+      },
+      "generation": "generated",
+      "verification": "passed",
+      "checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "Compared the script with the task input and curriculum_context.py: all five objectives appear verbatim in the agenda, across four topics, with 120 minutes total. No prior delivery is claimed."
+        },
+        {
+          "name": "pedagogy",
+          "state": "passed",
+          "evidence": "The four topics follow one product-report scenario, include predictions and variations, and end in four quizzes. The closing answers the opening question and reveals the poll."
+        },
+        {
+          "name": "math",
+          "state": "passed",
+          "evidence": "Recomputed from the CSV with Python: January Books total is 260; Atlas revenues 100, 110 and 120 produce running totals 100, 210 and 330, and moving averages 100, 105 and 115."
+        },
+        {
+          "name": "code_examples",
+          "state": "passed",
+          "evidence": "Coordinator executed all eight exact SQL blocks against the supplied 120-row fixture on disposable MySQL 8.4.11 in VS Code Terminal. Every result matched independently computed expectations. Recorded output blocks match captured stdout; query text matches the executed source."
+        },
+        {
+          "name": "quizzes",
+          "state": "passed",
+          "evidence": "Independently checked the four answers: A preserves rows, B gives ranks 1, 1, 3, C gives a two-row average of 115, and D retains tied leaders within each category."
+        },
+        {
+          "name": "mermaid",
+          "state": "passed",
+          "evidence": "Coordinator rendered the exact embedded Mermaid block in local VS Code with Markdown Preview Mermaid Support and visually inspected every label and arrow; no syntax or clipping defects remained. Diagram source was preserved through supplemental output/chart corrections."
+        },
+        {
+          "name": "dependencies",
+          "state": "passed",
+          "evidence": "Prepared Python and MySQL 8.4.11 runtime executed in local VS Code Terminal. The SQL fixture and CSV resolve beside the lecture, and all four embedded PNG paths resolve. All charts were generated from the captured query results, rendered at 200 dpi and visually inspected in VS Code; label collisions were repaired and re-rendered."
+        },
+        {
+          "name": "instructor_suitability",
+          "state": "passed",
+          "evidence": "The independent review confirmed pacing, explanations and poll guidance. The coordinator filled all eight outputs from actual MySQL results, checked the closing against those results, added four charts, corrected label collisions and inspected the Markdown with relative assets in VS Code. No pending execution placeholders remain."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "PASS: 0 fail, 0 warn  (IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.2-window-functions/lecture-script.md)"
+        }
+      ],
+      "handoff": [
+        "Share this lecture-script.md together with its images/ and data/ folders. Use an isolated MySQL 8.0-or-later teaching database and load the supplied SQL fixture before running examples."
+      ],
+      "attempts": [
+        {
+          "stage": "create",
+          "route": {
+            "model": "gpt-6.1-terra",
+            "effort": "high"
+          },
+          "revision": 0,
+          "start": "2026-11-28T02:17:02.940509+00:00",
+          "state": "completed",
+          "seconds": 179.9
+        },
+        {
+          "stage": "verify",
+          "route": {
+            "model": "gpt-6.1-terra",
+            "effort": "high"
+          },
+          "revision": 0,
+          "start": "2026-11-28T02:20:03.185333+00:00",
+          "state": "completed",
+          "seconds": 70.3
+        }
+      ],
+      "blocked_reason": null,
+      "checkpoint": "900aec55108c87632f4e8fa8a8c729a1c3bd1a0f",
+      "branch": "curriculum/2026-11-28/iitreict-dsai-en-iii-2609",
+      "revision": 0,
+      "base": "e5602f1794abb7e5110d9e7f015626423729dfc4",
+      "create_checkpoint": "e2f89b5d6b76af82662ee77b0bb8e8a9c023c7a2",
+      "structural_precheck": {
+        "name": "structural_checker",
+        "state": "passed",
+        "evidence": "PASS: 0 fail, 0 warn  (IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.2-window-functions/lecture-script.md)"
+      },
+      "verify_checkpoint": "e2f89b5d6b76af82662ee77b0bb8e8a9c023c7a2",
+      "verification_notes": "Original independent Terra-high model review retained. Coordinator supplemental execution, chart corrections and local VS Code visual review resolved the original unverified checks; this is separate from human approval.",
+      "finished": true,
+      "included": true,
+      "original_model_checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "Compared the script with the task input and curriculum_context.py: all five objectives appear verbatim in the agenda, across four topics, with 120 minutes total. No prior delivery is claimed."
+        },
+        {
+          "name": "pedagogy",
+          "state": "passed",
+          "evidence": "The four topics follow one product-report scenario, include predictions and variations, and end in four quizzes. The closing answers the opening question and reveals the poll."
+        },
+        {
+          "name": "math",
+          "state": "passed",
+          "evidence": "Recomputed from the CSV with Python: January Books total is 260; Atlas revenues 100, 110 and 120 produce running totals 100, 210 and 330, and moving averages 100, 105 and 115."
+        },
+        {
+          "name": "code_examples",
+          "state": "unverified",
+          "evidence": "The supplied MySQL client and socket returned ERROR 2002 (HY000), socket error 1, while loading data/sales.sql. None of the eight queries could be executed; their output placeholders remain in the draft. The coordinator must restore access to the specified disposable database, load the fixture and run each query, recording exact output."
+        },
+        {
+          "name": "quizzes",
+          "state": "passed",
+          "evidence": "Independently checked the four answers: A preserves rows, B gives ranks 1, 1, 3, C gives a two-row average of 115, and D retains tied leaders within each category."
+        },
+        {
+          "name": "mermaid",
+          "state": "unverified",
+          "evidence": "Neither mmdc nor the code CLI was available on PATH when checked. The coordinator must render the script's flowchart in the installed VS Code Markdown Mermaid preview and record the result."
+        },
+        {
+          "name": "dependencies",
+          "state": "unverified",
+          "evidence": "Python inspection found 120 CSV rows, 120 matching SQL fixture rows and 120 unique IDs. The MySQL client exists but the supplied socket was inaccessible; database execution and the configured VS Code preview remain unverified."
+        },
+        {
+          "name": "instructor_suitability",
+          "state": "unverified",
+          "evidence": "The script supplies pacing, explanations and poll guidance, but eight output placeholders and the unperformed VS Code visual review prevent a ready-for-use verdict."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "PASS: 0 fail, 0 warn  (IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.2-window-functions/lecture-script.md)"
+        }
+      ],
+      "original_model_handoff": [
+        "The coordinator should repair access to the explicitly supplied disposable MySQL database, execute the fixture and all eight examples, replace the output placeholders with exact results, and rerun the artifact checker.",
+        "Review the Markdown, Mermaid diagram, code results and relative data links in local VS Code; record the input and observed rendering.",
+        "For instructor handoff, include data/sales.sql and data/sales.csv with the script and provide access to a disposable MySQL 8.0 or later database. No separate image assets are referenced.",
+        "Manual LMS publication and instructor distribution remain separate handoff steps."
+      ],
+      "original_verification_notes": "Independent verification was performed on the selected artifact. No artifact edits were made because the required MySQL output could not be observed. Verdict: Needs verification. The runner owns status metadata and pull requests.",
+      "supplemental_verification": {
+        "reviewer": "coordinator",
+        "at": "2026-11-28T08:52:37.238526+00:00",
+        "execution_evidence": "curriculum-reviews/2026-11-28/IITREICT-DSAI-EN-III-2609.json",
+        "final_source_sha256": {
+          "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.2-window-functions/lecture-script.md": "8f81a67c6405da09473f81727e6054f92e4f7bfd94fdcf6b4cfe62d768027041",
+          "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.2-window-functions/images/01-window-group.png": "dec52cd767ded8c86319d5d7d99a645ac9537b0994a6585357cbff26cbfb9f61",
+          "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.2-window-functions/images/02-ranking.png": "edf8e09cd1519c691304805f9268b573c18f4495fd35a31c4e4fdfd95a7a2d68",
+          "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.2-window-functions/images/03-running-moving.png": "5ad75cde12c93ccb186ca30f7eb06d2b2c271b23f91478fd795fd2909b89a1a5",
+          "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.2-window-functions/images/04-monthly-ranking.png": "eaceca50b11ba395e84e22e3bd278a7038cf184033990cb15c8d65be36eb202a",
+          "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.2-window-functions/data/sales.sql": "28edd40625e6876f45f004cb5d851901b2bb8566b919e4303d1fd66c6efed2dc",
+          "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-12.2-window-functions/data/sales.csv": "5fea84a66c620aa96f9461123cc07bfc19442db6d70234825ccaf8ec3b4c65cf"
+        },
+        "model_review_preserved": true
+      }
+    }
+  ],
+  "benchmark": {
+    "started_at": "2026-11-28T02:16:58.030499+00:00",
+    "state": "verification_completed_after_interruption",
+    "batch": "IITREICT-DSAI-EN-III-2609",
+    "week_start": "2026-11-28",
+    "sessions": [
+      "12.1",
+      "12.2"
+    ],
+    "model": "gpt-6.1-terra",
+    "effort": "high",
+    "jobs": 4,
+    "database_engine": "MySQL 8.4.11",
+    "generation_started_at": "2026-11-28T02:17:01.592122+00:00",
+    "runner_seconds": 255.95,
+    "runner_finished_at": "2026-11-28T02:21:13.983635+00:00",
+    "verification_completed_at": "2026-11-28T08:52:37.238526+00:00",
+    "complete_latency_target": "not_established",
+    "limitation": "The generation/review runner measured 255.95 seconds. Subsequent SQL recovery, charts and local visual review spanned interrupted sessions and a workspace disconnect. No uninterrupted complete-batch under-30-minute result is claimed."
+  },
+  "supplemental_execution": {
+    "surface": "VS Code integrated Terminal",
+    "started_at": "2026-11-28T02:27:16.191088+00:00",
+    "engine": "MySQL 8.4.11",
+    "sessions": {
+      "12.1": {
+        "fixture_rows": 120,
+        "queries": [
+          {
+            "cell": 1,
+            "sql": "WITH paid_orders AS (\n  SELECT order_id, city, amount FROM orders WHERE status = 'paid'\n)\nSELECT order_id, city, amount FROM paid_orders\nORDER BY order_id LIMIT 5;",
+            "stdout": "order_id\tcity\tamount\n1\tPune\t0\n2\tPune\t100\n3\tPune\t300\n4\tPune\t1000\n5\tPune\t200\n"
+          },
+          {
+            "cell": 2,
+            "sql": "WITH paid_orders AS (\n  SELECT order_id FROM orders WHERE status = 'paid'\n)\nSELECT COUNT(*) AS paid_count FROM paid_orders;",
+            "stdout": "paid_count\n108\n"
+          },
+          {
+            "cell": 3,
+            "sql": "SELECT COUNT(*) AS paid_count\nFROM (SELECT order_id FROM orders WHERE status = 'paid') AS p;",
+            "stdout": "paid_count\n108\n"
+          },
+          {
+            "cell": 4,
+            "sql": "WITH p AS (\n  SELECT order_id FROM orders WHERE status = 'paid'\n)\nSELECT COUNT(*) AS paid_count FROM p;",
+            "stdout": "paid_count\n108\n"
+          },
+          {
+            "cell": 5,
+            "sql": "WITH paid_orders AS (\n  SELECT city, amount FROM orders WHERE status = 'paid'\n), city_totals AS (\n  SELECT city, SUM(amount) AS total FROM paid_orders GROUP BY city\n)\nSELECT city, total FROM city_totals ORDER BY city;",
+            "stdout": "city\ttotal\nJaipur\t13700\nKochi\t12300\nPune\t12900\n"
+          },
+          {
+            "cell": 6,
+            "sql": "WITH paid_orders AS (\n  SELECT city, amount FROM orders WHERE status = 'paid'\n), city_totals AS (\n  SELECT city, COUNT(*) AS orders, SUM(amount) AS total\n  FROM paid_orders GROUP BY city\n)\nSELECT city, orders, total FROM city_totals ORDER BY city;",
+            "stdout": "city\torders\ttotal\nJaipur\t36\t13700\nKochi\t36\t12300\nPune\t36\t12900\n"
+          },
+          {
+            "cell": 7,
+            "sql": "WITH paid AS (\n  SELECT city, amount FROM orders WHERE status = 'paid'\n), totals AS (\n  SELECT city, SUM(amount) AS total FROM paid GROUP BY city\n), benchmark AS (\n  SELECT AVG(total) AS avg_total FROM totals\n)\nSELECT city, total, avg_total FROM totals CROSS JOIN benchmark\nWHERE total > avg_total ORDER BY total DESC, city;",
+            "stdout": "city\ttotal\tavg_total\nJaipur\t13700\t12966.6667\n"
+          },
+          {
+            "cell": 8,
+            "sql": "WITH paid AS (\n  SELECT city, amount FROM orders WHERE status = 'paid'\n), totals AS (\n  SELECT city, SUM(amount) AS total FROM paid GROUP BY city\n), benchmark AS (\n  SELECT AVG(total) AS avg_total FROM totals\n)\nSELECT city, total, avg_total FROM totals CROSS JOIN benchmark\nORDER BY total DESC, city;",
+            "stdout": "city\ttotal\tavg_total\nJaipur\t13700\t12966.6667\nPune\t12900\t12966.6667\nKochi\t12300\t12966.6667\n"
+          }
+        ],
+        "all_expected_results_matched": true
+      },
+      "12.2": {
+        "fixture_rows": 120,
+        "queries": [
+          {
+            "cell": 1,
+            "sql": "SELECT product, revenue,\n       SUM(revenue) OVER (PARTITION BY category) AS category_total\nFROM sales\nWHERE sale_month = '2025-01-01' AND category = 'Books'\nORDER BY product;",
+            "stdout": "product\trevenue\tcategory_total\nAtlas\t100\t260\nGuide\t100\t260\nNotes\t60\t260\n"
+          },
+          {
+            "cell": 2,
+            "sql": "SELECT category, SUM(revenue) AS category_total\nFROM sales\nWHERE sale_month = '2025-01-01' AND category = 'Books'\nGROUP BY category\nORDER BY category;",
+            "stdout": "category\tcategory_total\nBooks\t260\n"
+          },
+          {
+            "cell": 3,
+            "sql": "SELECT product, revenue,\n       ROW_NUMBER() OVER (PARTITION BY category\n                          ORDER BY revenue DESC, product) AS position_no\nFROM sales\nWHERE sale_month = '2025-01-01' AND category = 'Books'\nORDER BY position_no, product;",
+            "stdout": "product\trevenue\tposition_no\nAtlas\t100\t1\nGuide\t100\t2\nNotes\t60\t3\n"
+          },
+          {
+            "cell": 4,
+            "sql": "SELECT product, revenue,\n       RANK() OVER (PARTITION BY category ORDER BY revenue DESC) AS revenue_rank\nFROM sales\nWHERE sale_month = '2025-01-01' AND category = 'Books'\nORDER BY revenue_rank, product;",
+            "stdout": "product\trevenue\trevenue_rank\nAtlas\t100\t1\nGuide\t100\t1\nNotes\t60\t3\n"
+          },
+          {
+            "cell": 5,
+            "sql": "SELECT sale_month, revenue,\n       SUM(revenue) OVER (PARTITION BY product ORDER BY sale_month, sale_id\n           ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS running_total\nFROM sales\nWHERE product = 'Atlas' AND sale_month <= '2025-03-01'\nORDER BY sale_month, sale_id;",
+            "stdout": "sale_month\trevenue\trunning_total\n2025-01-01\t100\t100\n2025-02-01\t110\t210\n2025-03-01\t120\t330\n"
+          },
+          {
+            "cell": 6,
+            "sql": "SELECT sale_month, revenue,\n       AVG(revenue) OVER (PARTITION BY product ORDER BY sale_month, sale_id\n           ROWS BETWEEN 1 PRECEDING AND CURRENT ROW) AS moving_avg\nFROM sales\nWHERE product = 'Atlas' AND sale_month <= '2025-03-01'\nORDER BY sale_month, sale_id;",
+            "stdout": "sale_month\trevenue\tmoving_avg\n2025-01-01\t100\t100.0000\n2025-02-01\t110\t105.0000\n2025-03-01\t120\t115.0000\n"
+          },
+          {
+            "cell": 7,
+            "sql": "SELECT category, product, revenue, revenue_rank\nFROM (SELECT category, product, revenue,\n             RANK() OVER (PARTITION BY category ORDER BY revenue DESC) AS revenue_rank\n      FROM sales WHERE sale_month = '2025-01-01') AS ranked\nWHERE revenue_rank = 1\nORDER BY category, product;",
+            "stdout": "category\tproduct\trevenue\trevenue_rank\nBooks\tAtlas\t100\t1\nBooks\tGuide\t100\t1\nHome\tCup\t90\t1\n"
+          },
+          {
+            "cell": 8,
+            "sql": "SELECT sale_month, product, revenue,\n       RANK() OVER (PARTITION BY category, sale_month\n                    ORDER BY revenue DESC) AS monthly_rank\nFROM sales\nWHERE category = 'Books' AND sale_month <= '2025-02-01'\nORDER BY sale_month, monthly_rank, product;",
+            "stdout": "sale_month\tproduct\trevenue\tmonthly_rank\n2025-01-01\tAtlas\t100\t1\n2025-01-01\tGuide\t100\t1\n2025-01-01\tNotes\t60\t3\n2025-02-01\tAtlas\t110\t1\n2025-02-01\tGuide\t110\t1\n2025-02-01\tNotes\t70\t3\n"
+          }
+        ],
+        "all_expected_results_matched": true
+      }
+    },
+    "preread_python": {
+      "session": "12.2",
+      "source": "sales = [4, 4, 3, 2, 5]\nprint(sales)",
+      "stdout": "[4, 4, 3, 2, 5]\n",
+      "passed": true
+    },
+    "completed_at": "2026-11-28T02:27:17.680935+00:00"
+  },
+  "chart_provenance": {
+    "renderer": "Matplotlib, 200 dpi",
+    "source": "Exact MySQL query stdout retained in supplemental_execution",
+    "cte_chart_cells": [
+      1,
+      [
+        2,
+        3,
+        4
+      ],
+      5,
+      8
+    ],
+    "window_chart_cells": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ],
+      8
+    ],
+    "visual_review": "All eight charts and four Mermaid diagrams inspected in local VS Code; both lecture previews show relative image assets and code outputs. Mean-line labels and coincident numeric annotations were corrected and re-rendered."
+  },
+  "prevention_pr": "https://github.com/isparshchauhan-wq/isparsh-chauhan-curriculum/pull/11"
+}

@@ -31,8 +31,10 @@ class WeeklyPlanTests(unittest.TestCase):
             weekly.week_start("2026-11-22", start)
 
     def test_model_policy_and_usage_limit_fail_closed(self):
-        self.assertEqual(weekly.model_route(POLICY, "lecture-script", "verify"),
-                         {"model": "gpt-6.2-sol", "effort": "high"})
+        for artifact in weekly.ARTIFACTS:
+            for stage in ("create", "verify"):
+                self.assertEqual(weekly.model_route(POLICY, artifact, stage),
+                                 {"model": "gpt-6.1-terra", "effort": "high"})
         self.assertEqual(weekly.model_route(POLICY, "pre-read", "create", True)["model"], "gpt-6.2-astra")
         with self.assertRaises(ValueError):
             weekly.model_route({**POLICY, "automatic_escalation": True}, "pre-read", "create")

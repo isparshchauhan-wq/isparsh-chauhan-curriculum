@@ -2,11 +2,13 @@
 
 Run this in a Git clone of the repository in the selected connected runtime on macOS or Linux. It uses local Codex with your ChatGPT sign-in. GitHub CLI submission uses your GitHub sign-in. The two accounts can use different email addresses. Model access and remaining Codex usage depend on your active ChatGPT account. GitHub Actions runs deterministic checks on PRs and can run the same checks on demand.
 
-## Choose the execution environment first
+## Local execution and benchmark
 
-Run `python3 tools/curriculum_environment.py` in each available runtime before deciding where to generate. The current assessment on 28 November 2026 has a connected Mac and no accessible cloud execution workspace. The default Mac Python lacks NumPy, pandas, Matplotlib and Seaborn. Node, Mermaid CLI, MySQL and GitHub CLI are also absent from PATH. VS Code is installed with Python and Jupyter support, while a Mermaid preview extension was absent from the extension inventory. Prior stage logs used another prepared Python runtime, so select and activate that runtime explicitly.
+Use the prepared local environment for generation and local VS Code for diagram and code checks. Run `python3 tools/curriculum_environment.py` with the selected Python and confirm actual model access before starting. Both creator and verifier stages use GPT-6.1 Terra with high effort for pre-reads and lecture scripts.
 
-A cloud speed comparison remains pending. Confirm actual model execution with the repository policy and required dependencies before benchmarking. Use one complete representative batch, matching inputs, creator/verifier routes and validation. Include local VS Code handoff and checks in total time. Measure cloud and local separately without regenerating an already approved batch. Select cloud if the complete measured workflow is faster. The under-30-minute per-batch objective is a target until a live run demonstrates it. Shared account limits and model latency affect concurrent runs.
+The Mac environment now has Python 3.12.14, NumPy 2.5.5, pandas 3.1.1, Matplotlib 3.11.2 and Seaborn 0.13.2. VS Code Mermaid preview is installed and tested. The ten Subqueries examples ran on an isolated MySQL 8.4.11 instance from VS Code Terminal, and that instance was stopped after checking. Activate the prepared environment before each run and provision a new disposable database for SQL work.
+
+Benchmark one complete pending batch with the configured models and all verification checks. Include the VS Code review time. The 30-minute per-batch objective remains a target until measured in a live run. Shared account limits and model latency affect concurrent runs.
 
 ## Parallel batches and automatic correction
 
@@ -51,7 +53,7 @@ The runner launches separate creator and verifier executions for each artifact t
 
 ## Models, usage and checkpoints
 
-`automation/model-policy.json` selects GPT-6.2 Sol for daily work. Pre-read stages use medium effort and lecture stages use high. These are configured requests. Availability, reasoning support, and actual model execution must be confirmed against your signed-in CLI. A failed model or usage-limit response pauses processing. Automatic escalation is off. To request Astra, use `--astra` with exactly one batch, session and artifact (and module ID for an ambiguous session). An unavailable configured model requires your explicit choice before the policy changes.
+`automation/model-policy.json` selects `gpt-6.1-terra` with high effort for all four stages: pre-read creation and verification, and lecture-script creation and verification. These are configured requests. Availability, reasoning support, and actual model execution must be confirmed against your signed-in CLI. A failed model or usage-limit response pauses processing. Automatic escalation is off. To request Astra, use `--astra` with exactly one batch, session and artifact (and module ID for an ambiguous session). An unavailable configured model requires your explicit choice before the policy changes.
 
 Progress is saved under `.weekly-curriculum/<Saturday>/manifest.json`, with live per-stage logs in its tasks directory. Terminal shows stage starts, ends and elapsed times. On a model execution error, running calls can finish and save their checkpoints. The runner stops scheduling new stages after the error and preserves other completed checkpoints. Keep this folder and the Git worktrees until review is complete. Each creator and verifier pass checkpoints its changes. This leaves enough version history to resume at the next unfinished stage and retain the exact checklist results. Separate worktrees keep in-progress or blocked drafts out of the branch the team reviews.
 

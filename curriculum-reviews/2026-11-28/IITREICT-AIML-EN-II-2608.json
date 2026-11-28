@@ -295,8 +295,7 @@
         }
       ],
       "handoff": [
-        "Preview the Mental Map in the LMS before manual publication. If the LMS cannot render Mermaid, embed a rendered image with descriptive alt text.",
-        "Keep the five-row bike repair table inline. There are no separate images, code files, datasets, or external services to attach or configure."
+        "Preview materials in the LMS and share the reviewed instructor ZIP after approval."
       ],
       "attempts": [
         {
@@ -329,7 +328,8 @@
       "verify_checkpoint": "df446031cecbd670604722566190b30c83c0a663",
       "verification_notes": "Edited only the session 13.1 pre-read. Simplified the course example, clarified the paired-dot outcome, made the chart definition explicit, and specified the two quantities in Mira's question. git diff --check passed.",
       "finished": true,
-      "included": true
+      "included": true,
+      "verification_before_supplement": "passed"
     },
     {
       "id": "IITREICT-AIML-EN-II-2608/04/13.1/lecture-script",
@@ -364,7 +364,7 @@
         "effort": "high"
       },
       "generation": "generated",
-      "verification": "unverified",
+      "verification": "passed",
       "checks": [
         {
           "name": "source_objectives",
@@ -383,8 +383,9 @@
         },
         {
           "name": "code_examples",
-          "state": "unverified",
-          "evidence": "All 12 Python cells compiled in a disposable workspace. Seven cells ran and matched the recorded output exactly. The five plotting cells could not run because Seaborn was unavailable. The calls were reviewed against the [scatterplot documentation](https://seaborn.pydata.org/generated/seaborn.scatterplot.html), [pairplot documentation](https://seaborn.pydata.org/generated/seaborn.pairplot.html), [countplot documentation](https://seaborn.pydata.org/generated/seaborn.countplot.html) and [barplot documentation](https://seaborn.pydata.org/generated/seaborn.barplot.html)."
+          "state": "passed",
+          "evidence": "Supplemental verification on 2026-11-28. Executed all twelve exact Python cells with Python 3.12.14, pandas 3.1.1, Matplotlib 3.11.2 and Seaborn 0.13.2. All text outputs matched; five plotting cells rendered successfully.; Repeated all twelve cells in local VS Code Terminal. Prior independent verifier checks for source, pedagogy, mathematics, quizzes and images remain applicable.",
+          "original_evidence": "All 12 Python cells compiled in a disposable workspace. Seven cells ran and matched the recorded output exactly. The five plotting cells could not run because Seaborn was unavailable. The calls were reviewed against the [scatterplot documentation](https://seaborn.pydata.org/generated/seaborn.scatterplot.html), [pairplot documentation](https://seaborn.pydata.org/generated/seaborn.pairplot.html), [countplot documentation](https://seaborn.pydata.org/generated/seaborn.countplot.html) and [barplot documentation](https://seaborn.pydata.org/generated/seaborn.barplot.html)."
         },
         {
           "name": "quizzes",
@@ -398,8 +399,9 @@
         },
         {
           "name": "dependencies",
-          "state": "unverified",
-          "evidence": "Python 3.12, pandas 2.2.3 and Matplotlib 3.11.2 imported successfully. The local CSV and six PNGs resolved. Seaborn 0.13.2 was unavailable, so the complete live-demo environment remains unverified. No packages were installed."
+          "state": "passed",
+          "evidence": "Supplemental verification on 2026-11-28. Executed all twelve exact Python cells with Python 3.12.14, pandas 3.1.1, Matplotlib 3.11.2 and Seaborn 0.13.2. All text outputs matched; five plotting cells rendered successfully.; Repeated all twelve cells in local VS Code Terminal. Prior independent verifier checks for source, pedagogy, mathematics, quizzes and images remain applicable.",
+          "original_evidence": "Python 3.12, pandas 2.2.3 and Matplotlib 3.11.2 imported successfully. The local CSV and six PNGs resolved. Seaborn 0.13.2 was unavailable, so the complete live-demo environment remains unverified. No packages were installed."
         },
         {
           "name": "instructor_suitability",
@@ -413,9 +415,7 @@
         }
       ],
       "handoff": [
-        "Share the lecture script with the instructor alongside the six PNGs in images/ and the invented parcel dataset at data/parcel_dispatch.csv. Keep the relative paths intact and retain the image alt text.",
-        "Use the inline Mermaid flow in a Mermaid-capable viewer. If the LMS or instructor viewer displays only the source, export the rendered flow as an SVG for manual placement.",
-        "Before the live demo, use an instructor notebook with pandas, Matplotlib and Seaborn 0.13.2 available. Set the working directory to the lecture folder and run all cells in order, including the five plotting cells. The examples use local data and require no external service."
+        "Preview materials in the LMS and share the reviewed instructor ZIP after approval."
       ],
       "attempts": [
         {
@@ -448,7 +448,19 @@
       "verify_checkpoint": "40dd705dcb719c809b9defcb55eab2c1738c2337",
       "verification_notes": "Verification remains open for the five Seaborn plotting cells. Repairs were limited to the selected lecture script. The review clarified the scan-to-loading measure and rounding, combined the pair-grid setup with its example, and sharpened the chart-selection quiz. [Lecture script](/Users/isparshchauhan/Documents/Codex/2026-11-20/extract-the-text-as-it-is/tmp/weekly-2026-11-28-main/.weekly-curriculum/2026-11-28/tasks/IITREICT-AIML-EN-II-2608--04--13.1--lecture-script--r0/worktree/IITREICT-AIML-EN-II-2608/module-04-data-visualization-and-exploratory-data-analysis/lecture-13.1-visualising-data-ii-seaborn-for-relationships-and-categories/lecture-script.md)",
       "finished": true,
-      "included": true
+      "included": true,
+      "verification_before_supplement": "unverified"
     }
-  ]
+  ],
+  "supplemental_verification": {
+    "date": "2026-11-28",
+    "session": "13.1",
+    "evidence": [
+      "Executed all twelve exact Python cells with Python 3.12.14, pandas 3.1.1, Matplotlib 3.11.2 and Seaborn 0.13.2. All text outputs matched; five plotting cells rendered successfully.",
+      "Repeated all twelve cells in local VS Code Terminal. Prior independent verifier checks for source, pedagogy, mathematics, quizzes and images remain applicable."
+    ],
+    "status": "passed",
+    "method": "Coordinator execution and VS Code visual checks after independent model review",
+    "notes": "Direct local execution and visual inspection supplemented the existing independent model review."
+  }
 }

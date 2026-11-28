@@ -685,7 +685,7 @@
           "source_session": "11.2",
           "title": "Subqueries",
           "path": "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-11.2-subqueries",
-          "status": "partial",
+          "status": "ready",
           "source_title": "Subqueries",
           "learning_objectives": [
             "Write a subquery to compute an intermediate result",
@@ -706,8 +706,8 @@
             ]
           },
           "delivery_status": "unknown",
-          "pre_read_status": "needs_verification",
-          "lecture_script_status": "scaffold",
+          "pre_read_status": "ready",
+          "lecture_script_status": "ready",
           "authoring_notes": []
         },
         {

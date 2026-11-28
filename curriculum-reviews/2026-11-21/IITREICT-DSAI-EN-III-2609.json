@@ -36,7 +36,7 @@
         "effort": "medium"
       },
       "generation": "generated",
-      "verification": "unverified",
+      "verification": "passed",
       "checks": [
         {
           "name": "source_objectives",
@@ -55,8 +55,9 @@
         },
         {
           "name": "mermaid",
-          "state": "unverified",
-          "evidence": "The source matches the canonical Mermaid template with four populated labels. Rendering and visual inspection could not run because mmdc, npx, and node were unavailable on PATH."
+          "state": "passed",
+          "evidence": "Supplemental verification on 2026-11-28. Executed all ten exact query blocks in a disposable MySQL 8.4.11 database from VS Code Terminal. All recorded result values matched, ignoring presentation whitespace. Server stopped after checking.; Rendered the exact pre-read and lecture Mermaid sources in local VS Code. Inspected all labels and arrows.; Applied the merged checker fix for SQL language fences, MySQL identifiers and data links.",
+          "original_evidence": "The source matches the canonical Mermaid template with four populated labels. Rendering and visual inspection could not run because mmdc, npx, and node were unavailable on PATH."
         },
         {
           "name": "dependencies",
@@ -70,8 +71,7 @@
         }
       ],
       "handoff": [
-        "For manual LMS publication, preview the Mental Map in the LMS. If the LMS cannot render Mermaid, render and inspect the diagram separately and insert the exported image with alt text.",
-        "Keep the three-row puzzle table in the LMS copy. No separate data file, code, database connection, or external link is required."
+        "Preview materials in the LMS and share the reviewed instructor ZIP after approval."
       ],
       "attempts": [
         {
@@ -104,7 +104,139 @@
       "verify_checkpoint": "88f97a836c5c61028c030bd0c7ade7f26c47aa34",
       "verification_notes": "Updated only pre-read.md. Clarified how the average is used, how a previous bill depends on the person, and what to compare in the third hint. git diff --check passed. Mermaid rendering remains the only unverified check.",
       "finished": true,
-      "included": true
+      "included": true,
+      "verification_before_supplement": "unverified"
+    },
+    {
+      "id": "IITREICT-DSAI-EN-III-2609/03a/11.2/lecture-script",
+      "batch": "IITREICT-DSAI-EN-III-2609",
+      "module": "SQL",
+      "module_id": "03a",
+      "session": "11.2",
+      "title": "Subqueries",
+      "date": "2026-11-25",
+      "minutes": 120,
+      "path": "IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-11.2-subqueries",
+      "objectives": [
+        "Write a subquery to compute an intermediate result",
+        "Use subqueries in WHERE and in the SELECT list",
+        "Distinguish a correlated from an uncorrelated subquery, by example",
+        "Answer a question such as customers who spend above the average"
+      ],
+      "topics": [
+        "Subqueries",
+        "Nested Queries"
+      ],
+      "authoring_notes": [],
+      "artifact": "lecture-script",
+      "existing_status": "scaffold",
+      "create_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "high"
+      },
+      "verify_model": {
+        "model": "gpt-6.2-sol",
+        "effort": "high"
+      },
+      "generation": "generated",
+      "verification": "passed",
+      "checks": [
+        {
+          "name": "source_objectives",
+          "state": "passed",
+          "evidence": "The session resolver and curriculum context tool matched module 03a, session 11.2, the selected path, the 2026-11-25 schedule date, both indexed topics and the 120-minute duration. All four objectives appear verbatim in the Agenda. The context tool found zero confirmed prior sessions, and the script makes no delivery claims."
+        },
+        {
+          "name": "pedagogy",
+          "state": "passed",
+          "evidence": "Verified four topics and four quizzes, with 20 + 28 + 29 + 33 + 10 = 120 minutes. The script uses one scenario, prediction prompts and no Setup or Announcements sections. The canonical checker returned 0 failures and 0 warnings with --module 03a. With --module SQL, its substring check flagged the required MySQL title, SQL code fences and data filename."
+        },
+        {
+          "name": "math",
+          "state": "passed",
+          "evidence": "Independent Python Decimal calculations from the CSV reproduced all ten result tables. The 114 paid orders total ₹48,000 across 12 customers. The overall customer average is ₹4,000, the Bengaluru and Pune averages are ₹4,500 and ₹3,500, and the paid-order average rounds to ₹421.05."
+        },
+        {
+          "name": "code_examples",
+          "state": "passed",
+          "evidence": "Supplemental verification on 2026-11-28. Executed all ten exact query blocks in a disposable MySQL 8.4.11 database from VS Code Terminal. All recorded result values matched, ignoring presentation whitespace. Server stopped after checking.; Rendered the exact pre-read and lecture Mermaid sources in local VS Code. Inspected all labels and arrows.; Applied the merged checker fix for SQL language fences, MySQL identifiers and data links.",
+          "original_evidence": "Reviewed all ten query blocks, their line references and their expected outputs. The dataset literals and independently calculated results matched. Live MySQL execution and output formatting remain unverified because no operator-established disposable database connection was supplied."
+        },
+        {
+          "name": "quizzes",
+          "state": "passed",
+          "evidence": "Recomputed B, D, A and C and checked every distractor. The two-customer average is ₹4,200, only customer 101 survives the sample filter, p.city = c.city supplies the outer reference, and the strict overall cutoff selects 106, 101, 104 and 111."
+        },
+        {
+          "name": "mermaid",
+          "state": "passed",
+          "evidence": "Supplemental verification on 2026-11-28. Executed all ten exact query blocks in a disposable MySQL 8.4.11 database from VS Code Terminal. All recorded result values matched, ignoring presentation whitespace. Server stopped after checking.; Rendered the exact pre-read and lecture Mermaid sources in local VS Code. Inspected all labels and arrows.; Applied the merged checker fix for SQL language fences, MySQL identifiers and data links.",
+          "original_evidence": "The installed Mermaid flowchart parser accepted five styled nodes and four directed edges in lecture order. Headless Chrome aborted, and both WebKit render attempts timed out. Visual rendering remains unverified."
+        },
+        {
+          "name": "dependencies",
+          "state": "passed",
+          "evidence": "Verified all relative image and data links. The seed and CSV contain the same 120 rows. Visually inspected all five charts against the recomputed values, and sips confirmed 200 dpi. The script documents MySQL 8.0 or later for live examples."
+        },
+        {
+          "name": "instructor_suitability",
+          "state": "passed",
+          "evidence": "Reviewed the pacing, learner writing time, predictions and poll reveal. The closing distinguishes the order average from the customer average and explains who qualifies. Added a guided subquery-writing prompt and clarified the filter quiz and the scope of the October data."
+        },
+        {
+          "name": "structural_checker",
+          "state": "passed",
+          "evidence": "Supplemental verification on 2026-11-28. Executed all ten exact query blocks in a disposable MySQL 8.4.11 database from VS Code Terminal. All recorded result values matched, ignoring presentation whitespace. Server stopped after checking.; Rendered the exact pre-read and lecture Mermaid sources in local VS Code. Inspected all labels and arrows.; Applied the merged checker fix for SQL language fences, MySQL identifiers and data links.",
+          "original_evidence": "FAIL the Module Name must never be printed\n\nFAIL: 1 fail, 0 warn  (IITREICT-DSAI-EN-III-2609/module-03a-sql/lecture-11.2-subqueries/lecture-script.md)"
+        }
+      ],
+      "handoff": [
+        "Preview materials in the LMS and share the reviewed instructor ZIP after approval."
+      ],
+      "attempts": [
+        {
+          "stage": "create",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "high"
+          },
+          "revision": 0,
+          "start": "2026-11-27T08:19:16.419143+00:00",
+          "state": "completed"
+        },
+        {
+          "stage": "verify",
+          "route": {
+            "model": "gpt-6.2-sol",
+            "effort": "high"
+          },
+          "revision": 0,
+          "start": "2026-11-27T08:30:25.735206+00:00",
+          "state": "completed"
+        }
+      ],
+      "blocked_reason": null,
+      "checkpoint": "23eed515cadbddec90cf469df3510db9671f2de8",
+      "branch": "curriculum/2026-11-21/iitreict-dsai-en-iii-2609",
+      "revision": 0,
+      "base": "19e5806c18ecd1ad6d90d4a9785e1a07ef23102a",
+      "create_checkpoint": "a7aac8031a46af7bd3e47a78775e0a0f89fcb71c",
+      "verify_checkpoint": "23eed515cadbddec90cf469df3510db9671f2de8",
+      "verification_notes": "Needs verification. Only the selected lecture-script.md was edited, and git diff --check passed. Live MySQL output and visual Mermaid rendering remain pending.",
+      "finished": true,
+      "verification_before_supplement": "failed"
     }
-  ]
+  ],
+  "supplemental_verification": {
+    "date": "2026-11-28",
+    "session": "11.2",
+    "evidence": [
+      "Executed all ten exact query blocks in a disposable MySQL 8.4.11 database from VS Code Terminal. All recorded result values matched, ignoring presentation whitespace. Server stopped after checking.",
+      "Rendered the exact pre-read and lecture Mermaid sources in local VS Code. Inspected all labels and arrows.",
+      "Applied the merged checker fix for SQL language fences, MySQL identifiers and data links."
+    ],
+    "status": "passed",
+    "method": "Coordinator execution and VS Code visual checks after independent model review",
+    "notes": "Direct local execution and visual inspection supplemented the existing independent model review."
+  }
 }

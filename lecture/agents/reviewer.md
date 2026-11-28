@@ -94,3 +94,12 @@ Use the prepared runtime and run required dependency checks once before authorin
 Treat the module name as metadata. Valid language fences, file paths, and technical identifiers such as MySQL may contain the same letters. Keep module labels out of prose.
 
 Correct reproducible artifact findings within this task and re-verify. Report missing dependencies and tool failures with the exact failing check. The coordinator diagnoses recurring failures and raises a separate workflow PR updating the applicable creator, reviewer and deterministic checker with a regression check. Record unresolved findings accurately.
+
+
+## Local execution evidence handoff
+
+Probe the actual task runtime once with a trivial command before loading a fixture. A working operator Terminal does not prove a nested Codex process can use the same MySQL socket or VS Code preview. If the task reports MySQL ERROR 2002 with socket error 1, preserve that failure and the exact query/fixture paths; do not repeatedly restart services, change permissions or invent outputs. Keep execution unverified and continue the independent content checks. The coordinator executes the saved blocks in local VS Code's Terminal against the designated disposable database, records engine/version, exact inputs and outputs, then reruns the checker and resolves the specific review gaps. Confirm matching source content before applying supplemental evidence; stale evidence cannot establish readiness. A missing code CLI on PATH does not imply the graphical VS Code app or its preview extension is unavailable.
+
+For code-based lectures, explicitly count four to six distinct charts, generated from the observed query or code outputs, and inspect every embedded image in local VS Code. SQL sessions need these charts too. No referenced images is a defect, not a not-applicable visual check. A structural PASS alone does not prove the chart count, output accuracy or visual appearance. Pending execution messages below Output headings cannot be accepted as completed outputs.
+
+When building charts from a DataFrame, use bracket column access such as df["product"] for columns that collide with DataFrame methods. Attribute access such as df.product refers to a method and can fail when passed to a plotting function. Re-run the chart code after correcting a collision and inspect the regenerated image.

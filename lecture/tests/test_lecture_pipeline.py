@@ -65,6 +65,22 @@ class CheckerTests(unittest.TestCase):
   with tempfile.TemporaryDirectory(dir=source.parent) as tmp:
    p=Path(tmp)/'script.md';p.write_text(source.read_text().replace('**Output**','**Recorded result**',1))
    _,output=self.check(p);self.assertIn('block is not followed by **Output**',output)
+ def test_pending_output_cannot_pass_as_an_executed_example(self):
+  source=ROOT/'lecture/examples/Example_1_Probability_Distributions/lecture_script.md'
+  p=source.parent/'test-script-temporary.md'
+  try:
+   for pending in ['Pending execution in the designated MySQL database.', 'Not verified: execute before use.']:
+    p.write_text(source.read_text().replace('**Output**','**Output**\n\n'+pending,1))
+    code,output=self.check(p);self.assertEqual(code,1);self.assertIn('output is still pending execution',output)
+  finally:p.unlink(missing_ok=True)
+ def test_missing_charts_cannot_pass_a_code_lecture(self):
+  import re
+  source=ROOT/'lecture/examples/Example_1_Probability_Distributions/lecture_script.md'
+  p=source.parent/'test-script-temporary.md'
+  try:
+   p.write_text(re.sub(r'<img\s+[^>]*>','',source.read_text()))
+   code,output=self.check(p);self.assertEqual(code,1);self.assertIn('code-based lecture has no charts',output)
+  finally:p.unlink(missing_ok=True)
  def test_nonagenda_numeric_rows_do_not_change_pacing(self):
   source=ROOT/'lecture/examples/Example_1_Probability_Distributions/lecture_script.md'
   # Reuse the example directory so valid sibling assets resolve.
